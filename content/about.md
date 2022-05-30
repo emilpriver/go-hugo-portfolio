@@ -1,10 +1,10 @@
-+++
-title = "About"
-description = "Emil Privér, Software engineer"
-date = "2022-05-30"
-aliases = ["about-us"]
-author = "priver.dev"
-+++
+---
+title: "About"
+description: "Emil Privér, Software engineer"
+date: "2022-05-30"
+aliases: ["about-us"]
+author: "priver.dev"
+---
 
 Hi I'm Emil Privér. Software developer from Varberg, Sweden.
 
@@ -12,4 +12,4 @@ My works is mainly focused on backend and architecture. But also intersted in AI
 
 I love to explore the tech world, Love reading about tech and explore code, systems and stuffs in general.
 
-Now I'm a developer at [https://zimpler.com](Zimpler) in Gothenburg, Sweden.
+Now I'm a developer at TBA in Gothenburg, Sweden.
