@@ -32,8 +32,7 @@ title = "Emil Privér"
     weight = 2
 
 [taxonomies]
-category = "categories"
-series = "series"
+tag = "tags"
 
 [privacy]
 
