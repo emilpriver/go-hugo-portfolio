@@ -1,12 +1,11 @@
 ---
 title: About this portfolio
 date: "2022-02-14T08:11:41.782Z"
-seoTitle: "About this portfolio"
-description: "A note about how I build my portfolio using Gatsby, Markdown files, Instagram, Github Actions and Cloudflare."
+summary: "A note about how I build my portfolio using Gatsby, Markdown files, Instagram, Github Actions and Cloudflare."
 cover: ./cover.jpeg
 published: true
 tags: ["Gatsby", "Markdown", "Github Actions", "Gatsby Cloud", "Instagram"]
-type: blog
+categories: ["Gatsby"]
 ---
 
 This is a small post about this portfolio and how it's build and why I chose this technology.

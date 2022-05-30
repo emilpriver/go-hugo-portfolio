@@ -1,13 +1,10 @@
 baseURL = "https://priver.se"
-# title = "Hugo Themes"
 author = "Emil Privér"
 copyright = "Copyright © 2022–2022, Emil Privér; all rights reserved."
-paginate = 3
+paginate = 20
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
-# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
-# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 
 # ------------------------------
@@ -18,9 +15,7 @@ title = "Emil Privér"
   twitter = 'emil_priver'
   github = 'emilpriver'
   instagram = 'emil_priver'
-# ------------------------------
 
-# needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -28,14 +23,18 @@ title = "Emil Privér"
 
 [menu]
   [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 10
+    weight = 2
 
 [taxonomies]
 category = "categories"
-tag = "tags"
 series = "series"
 
 [privacy]
@@ -64,3 +63,16 @@ series = "series"
 
   [services.twitter]
     disableInlineCSS = true
+
+
+[imaging]
+  anchor = 'Smart'
+  bgColor = '#ffffff'
+  hint = 'photo'
+  quality = 75
+  resampleFilter = 'Box'
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

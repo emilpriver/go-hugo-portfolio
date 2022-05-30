@@ -2,11 +2,12 @@
 title: Sitemap with NextJS after 9.4 update.
 date: "2020-05-11T22:12:03.284Z"
 seoTitle: "Sitemap with Nextjs after 9.4 update"
-description: "Generate a sitemap.xml after Nextjs 9.4 update. Works with getServerSidedProps, getStaticProps update"
-cover: ./cover.jpeg
+summary: "Generate a sitemap.xml after Nextjs 9.4 update. Works with getServerSidedProps, getStaticProps update"
+banner: ./cover.jpeg
 published: true
 tags: ["next.js", "sitemap", "react"]
-type: blog
+categories: ["web", "nextjs"]
+keywords: ["nextjs", "sitemap"]
 ---
 
 Nextjs have done some changes since last post that I wrote. Since then was getStaticProps, getStaticPaths and getServerSidedProps introduced(You can read more about that here: https://nextjs.org/blog/next-9-4)
