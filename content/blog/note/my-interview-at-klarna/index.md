@@ -10,9 +10,9 @@ images:
 series:
 - Interview
 ---
-### This is a small article about when I was interviewed by Klarna where I am talking about my experience, what I learned and what the interview looked like, and all steps.
+### This is a small article about when I was interviewed by Klarna.
 
-The interview included 5 different steps where the steps were
+The interview included 5 different steps where the steps was:
 
 -   A simple call to get introduced to how the flow will be like and salary talk
 -   A smaller interview on my thought about different topics
@@ -20,13 +20,13 @@ The interview included 5 different steps where the steps were
 -   Technical interview
 -   More of a mental type of interview.
 
-The first call was a 30 minutes call where the guy who called me talked about what the interview will look like if a total time of 3-4 weeks was ok with me for the interview and what salary I was expected. This call was a fast one and was finished in less than 15 minutes. After this call, I was booked into an interview talking about my opinion on for example failure, what I was thinking of telling people about my thoughts, and so on. This call was also a really simple and smooth call which I passed. After this test, I booked into an IQ test where the goal was to find patterns out of 9 images that matched should match which I also passed. But the most interesting interviews are the next 2.
+The first call was a 30 minutes call where the guy who called me talked about what the interview will look like and if a total time of 3-4 weeks was ok with me for the interview and what salary I was expected. This call was a fast one and was finished in less than 15 minutes. After this call, I was booked into an interview talking about my opinion on for example failure, what I was thinking of telling people about my thoughts, and so on. This call was also a really simple and smooth call which I passed. After this test, I was booked into an IQ test where the goal was to find patterns out of 9 images that matched should match which I also passed. But the most interesting interviews are the next 2.
 
 The IQ test looked like this
 
 ![](provtest_exempel.jpeg)
 
-The most fun part was the technical interview as it was the most challenged one and probably because it was my first time doing this kind of interview. The tech interview was 2 different tasks, 1 task where the goal was to onboard other developers onto a team and a project, and my goal was to describe
+The most fun part was the technical interview as it was the most challenging one and probably because it was my first time doing this kind of interview. The tech interview was 2 different tasks, 1 task where the goal was to onboard other developers onto a team and a project, and my goal was to describe
 
 -  How the project looked like
    -   What it was built on
@@ -36,7 +36,7 @@ The most fun part was the technical interview as it was the most challenged one 
 - How the team worked
 - What tools the team used
 
-I chose to talk about a simple Next.JS e-commerce website project which was using an e-commerce system, Meilisearch, and Elasticsearch for the whole e-commerce part of the website including products, categories, and payment. The other part of the website was content that was fetched from WordPress using WP Graphql, hosted on Kinsta. The tricky part about this is not that I don't understand how the system we have works, but more that it's harder than you think to talk about it. For me the project cristal clear but for a new individual which has never worked on the project, it's probably the project a labyrinth. While I was talking about the project did the individual who interviewed me ask side questions, such as "Why didn't you use Docker". What I noticed during this part of the tech interview was that the interviewer wanted to find out wherever I understood what I was working on how it was working, but also how I acted when there could be an improvement on a part of the system. Was I open to improvements or did I think that what we already worked on was the best? The first part was harder than the second part is I am more confident in my skills than talking about something I work with.
+I chose to talk about a simple Next.JS e-commerce website project which was using an e-commerce system, Meilisearch, and Elasticsearch for the whole e-commerce part of the website including products, categories, and payment. The other part of the website was content that was fetched from WordPress using WP Graphql, hosted on Kinsta. The tricky part about this is not that I don't understand how the system we works, but more that it's harder than you think to talk about it. For me the project cristal clear but for a new individual which has never worked on the project, it's probably the project a labyrinth. While I was talking about the project did the individual who interviewed me ask side questions, such as "Why didn't you use Docker". What I noticed during this part of the tech interview was that the interviewer wanted to find out wherever I understood what I was working on and how  it worked, but also how I acted when there could be an improvement on a part of the system. Was I open to improvements or did I think that what we already had the best solution? The first part was harder than the second part is I am more confident in my skills than talking about something I work with.
 
 ## Tech interview
 
@@ -70,7 +70,7 @@ getLastThreeValues(values)
 
 ```
 
-Something the interviewer said before we started was "this is a pair programming, I'm here to help.". When I started to code didn't I use the interviewer at all the reason was that I wanted to show that I know how to code this problem. But something I didn't think of is that at a company of this size is that pair-programming is important, this means collaboration is important and something that an interviewer looks at during the interview. 
+Something the interviewer said before we started was "this is a pair programming, I'm here to help.". When I started to code didn't I use the interviewer at all and the reason was that I wanted to show that I know how to solve the problem. But something I didn't think of is that at a company of this size is that pair-programming is important, this means collaboration is important and something that an interviewer looks at during the interview. 
 My first solution to the problem was the code below.
 
 ```javascript
@@ -113,7 +113,7 @@ function getLastThreeValues(value) {
 
 getLastThreeValues(values)
 ```
-My solution was to create a function inside of the `getLastThreeValues` function which I recalled inside the function if there is any next value. And this works fine if we don't have too much data. What happens if we increase the object to a million values. Then we have an issue. The main issue is that when we call a function that has a function inside the function we allocate a lot of memory. This means that sooner or later will we have an issue where the instance that runs the code, runs out of memory and dies.
+My solution was to create a function inside of the `getLastThreeValues` function which I recalled inside the function if there is any next value. And this works fine if we don't have too much data. What happens if we increase the object to a million values?. Then we have an issue. The main issue is that when we call a function that has a function inside the function do we allocate a lot of memory. This means that sooner or later will we have an issue where the instance that runs the code, runs out of memory and dies.
 
 When I was finished did the interview asks me if I had any idea of a way to improve the code, and I said no as couldn't think of a better solution at the time. At that time did I realize that it was probably a good idea to use the interviewer, so I asked him if he had any ideas. He then talked about the problem of memory and asked me if I could think of a solution by using a while loop. So at that point did I and during the interview together work on a solution where he mostly told me keywords such as, "while loop", and "splice".  
 
@@ -171,10 +171,12 @@ It's more important to be able to work together and collaborate than have a lot 
 
 
 ## Mental interview
-The next part of the interview series was what I understood as a mental type of interview the interview where the interview wanted to understand my thoughts on different topics and how my thoughts were to solve the problem. 
-I don't remember all the topics, but 1 I remember is a failure. I said that I don't think failure is necessarily bad as you can learn from them, and they can show you a solution to another problem.
+The next part of the interview series was what I understood as a mental type of interview. Where the interviewer wanted to understand my thoughts on different topics and how my thoughts were to solve the problem. 
+I don't remember all the topics, but 1 I remember is failure. I said that I don't think failure is necessarily bad as you can learn from them, and they can show you a solution to another problem.
 
-But something we also talked about was how I acted when I wanted to find the best solution for something or which service works the best. And I started to talk about how I bought my TV. The way I bought the TV was that I first checked which TV led type that could work with the current room, and then I checked which TV had the best hardware that I wanted, and then I checked PriceRunner where the tv is cheapest and then I bought it. Which I understood the interviewer liked as a story. Maybe he wanted to understand the way I found the best solution which in this case was by looking at different options and then removing the solutions which weren't better than the others.
+But something we also talked about was how I acted when I wanted to find the best solution for something or which service works the best. And I started to talk about how I bought my TV. The way I bought the TV was that I first checked which TV led type that could work with the current room, and then I checked which TV had the best hardware that I wanted, and then I checked PriceRunner to find where the tv is cheapest and then I bought it. Which I understood the interviewer liked as a story. Maybe he wanted to understand the way I found the best solution which in this case was by looking at different options and then removing the solutions which weren't better than the others.
+
+This interviewers goal was also to find out which team I could fit in.
 
 ## The end
 I applied for the job as I wanted to try new areas in system engineering. The system engineering space is BIG and a lot to explore and try out. And my goal was probably not to get hired, but rather to learn which is one reason that I write this article. I also learned that these types of companies are probably not the most interested in your skills and that they are more interested in how you find solutions and how well you can take criticism and work together to be able to develop the best solution that is possible.
