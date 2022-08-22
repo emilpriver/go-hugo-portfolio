@@ -7,9 +7,9 @@ type: "blog"
 tags: ["projects", "Edgar Image"]
 series:
 - Edgar Image
-images: ["https://cf-worker-cache.edgar-image.com/image?src=https://images.unsplash.com/photo-1591710668263-bee1e9db2a26&h=400&fit=fill&w=700&q=100"]
+images: ["https://cdn.priver.dev?src=https://images.unsplash.com/photo-1591710668263-bee1e9db2a26&h=400&fit=fill&w=700&q=100"]
 ---
-![](https://cf-worker-cache.edgar-image.com/image?src=https://images.unsplash.com/photo-1591710668263-bee1e9db2a26&h=400&fit=fill&w=700&q=100)
+![](https://cdn.priver.dev?src=https://images.unsplash.com/photo-1591710668263-bee1e9db2a26&h=400&fit=fill&w=700&q=100)
 
 Edgar Image is an image transformation service whose goal is to make it easy for you to host and run. The goal of the service is not to be a CDN, but rather a point in a whole series of services.There are many of these types of services that cost a lot but are also hard to work with or require you to upload all the images onto their platforms, But there is none(as for what I've found) where you can host and own all the images yourself. 
 
