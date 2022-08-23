@@ -80,8 +80,8 @@ series = "series"
   description = "Emil Privér"
   copyright = "Copyright © 2021-{year} Emil Privér"
   # copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
-  logofile = "https://cdn.priver.dev/?src=https://avatars.githubusercontent.com/u/34039674&w=100&h=100"
-  faviconfile = "https://cdn.priver.dev/?src=https://avatars.githubusercontent.com/u/34039674&w=50&h=50"
+  logofile = https://cdn.priver.dev/?src=https://priver.dev/images/me.png?w=100&w=100
+  faviconfile = https://cdn.priver.dev/?src=https://priver.dev/images/me.png?w=100&w=100
   highlightjs = true
   progressively = true
   share = true
