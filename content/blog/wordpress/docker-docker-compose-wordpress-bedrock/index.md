@@ -58,7 +58,7 @@ Working with environments
 As Bedrock supports use of env, is it really simple to use different .env files. If you add an environments folder with different .env are you able to load different .env files depending of which docker-compose file you will choose(Use of different docker-compose file will come later in this post).
 Exempel of .env file:
 
-```
+```dotenv
 DB_NAME=database_name
 DB_USER=database_user
 DB_PASSWORD=database_password
