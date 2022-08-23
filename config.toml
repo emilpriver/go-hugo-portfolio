@@ -79,9 +79,8 @@ series = "series"
   dateformfull = "Mon Jan 2 2006 15:04:05 MST"
   description = "Emil Privér"
   copyright = "Copyright © 2021-{year} Emil Privér"
-  # copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
-  logofile = https://cdn.priver.dev/?src=https://priver.dev/images/me.png?w=100&w=100
-  faviconfile = https://cdn.priver.dev/?src=https://priver.dev/images/me.png?w=100&w=100
+  logofile = "https://cdn.priver.dev/?src=https://priver.dev/images/me.png&w=100&w=100"
+  faviconfile = "https://cdn.priver.dev/?src=https://priver.dev/images/me.png&w=100&w=100"
   highlightjs = true
   progressively = true
   share = true
