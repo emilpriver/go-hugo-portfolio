@@ -5,6 +5,7 @@ seoTitle: "Docker(Docker-compose) + Wordpress/Bedrock"
 description: "Develop a Wordpress site using Docker and Docker compose"
 images: 
 - https://cdn.priver.dev?src=https://priver.dev/blog/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg
+cover: "https://cdn.priver.dev?src=https://priver.dev/blog/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg"
 published: true
 tags: ["docker", "wordpress"]
 type: blog
@@ -43,7 +44,7 @@ From a folder you like run the
 This command will create a Bedrock folder with necessary files and folders.
 Files and folder inside the Bedrock folder:
 
-![Folder](https://cd.priver.dev?src=https://priver.dev/blog/wordpress/docker-docker-compose-wordpress-bedrock/folder.png)
+![Folder](https://cdn.priver.dev?src=https://priver.dev/blog/wordpress/docker-docker-compose-wordpress-bedrock/folder.png)
 
 Information about the folders
 Config:
@@ -57,7 +58,7 @@ Working with environments
 As Bedrock supports use of env, is it really simple to use different .env files. If you add an environments folder with different .env are you able to load different .env files depending of which docker-compose file you will choose(Use of different docker-compose file will come later in this post).
 Exempel of .env file:
 
-```dotenv
+```
 DB_NAME=database_name
 DB_USER=database_user
 DB_PASSWORD=database_password

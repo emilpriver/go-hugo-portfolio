@@ -5,8 +5,10 @@ draft: false
 description: "Blog posts about when I was interviewed at Klarna"
 type: "blog"
 tags: ["Interview"]
+best: true
 images:
 - https://cdn.priver.dev?src=https://priver.dev/blog/note/my-interview-at-klarna/klarna.png
+hero: "https://cdn.priver.dev?src=https://priver.dev/blog/note/my-interview-at-klarna/klarna.png"
 series:
 - Interview
 ---

@@ -6,13 +6,8 @@ languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
-theme = "paper"
+theme = "cocoa-eh"
 title = "Emil Privér"
-
-[params]
-  twitter = 'emil_priver'
-  github = 'emilpriver'
-  instagram = 'emil_priver'
 
 [markup]
   [markup.goldmark]
@@ -73,3 +68,36 @@ series = "series"
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
+
+[social]
+  twitter= "https://twitter.com/emil_priver"
+  github= "https://github.com/emilpriver"
+  linkedin= "https://www.linkedin.com/in/emilpriver"
+
+[params]
+  dateform = "Jan 2, 2006"
+  dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+  description = "Emil Privér"
+  copyright = "Copyright © 2021-{year} Emil Privér"
+  # copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
+  logofile = "https://cdn.priver.dev/?src=https://avatars.githubusercontent.com/u/34039674&w=100&h=100"
+  faviconfile = "https://cdn.priver.dev/?src=https://avatars.githubusercontent.com/u/34039674&w=50&h=50"
+  highlightjs = true
+  progressively = true
+  share = true
+  # Share to googleplus, twitter, fb, linkedin by default
+  # disable by setting share_on_<social network> = false
+  # example: share_on_googleplus = false
+  latestpostcount = 5
+  github = "emilpriver"
+  email = "hello@priver.dev"
+  linkedin = "emil-priver"
+  twitter = "emil_priver"
+  social_banner = "img/banner.png"
+  usesmallsummarycard = true
+  posts_navigation = true
+  # issoHost = "comments.domain.tld:1234"
+  # githubRepo = "githubUsername/repositoryName/tree/master"
+  small_banner_logo = false
+  paginate = 6
+
