@@ -29,6 +29,7 @@ div.header {
 background-color: transparent;
 }
 div.header .container {
+  display: block;
 -webkit-justify-content: flex-start;
 -moz-justify-content: flex-start;
 -ms-justify-content: flex-start;
@@ -38,8 +39,7 @@ div.header .container .logo {
 margin: 0;
 }
 div.header-home .container .logo {
-max-width: 216px;
-margin-left: 24px;
+max-width: 75px;
 }
 div.header-home .name-home {
 padding-top: 30px;
