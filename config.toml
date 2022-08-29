@@ -86,7 +86,7 @@ series = "series"
   share = true
   # Share to googleplus, twitter, fb, linkedin by default
   # disable by setting share_on_<social network> = false
-  # example: share_on_googleplus = false
+  share_on_googleplus = false
   latestpostcount = 5
   github = "emilpriver"
   email = "hello@priver.dev"
