@@ -6,6 +6,7 @@ description: "Develop a Wordpress site using Docker and Docker compose"
 images: 
 - https://cdn.priver.dev?src=https://priver.dev/blog/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg
 cover: "https://cdn.priver.dev?src=https://priver.dev/blog/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg"
+hero: "https://cdn.priver.dev?src=https://priver.dev/blog/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg"
 published: true
 tags: ["docker", "wordpress"]
 type: blog

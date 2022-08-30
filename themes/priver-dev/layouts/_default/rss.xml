@@ -33,10 +33,19 @@
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
-      {{- $coverImage := .Resources.GetMatch "cover*" -}}
-        {{- if $coverImage -}}
-          <image> {{ .$coverImage.RelPermalink }} </image>
-        {{- end -}}
+      {{- $coverImage := .Params.Hero -}}
+      {{- if $coverImage -}}
+      <image>
+         <title>{{ .Title }}</title>
+         <link>{{ $coverImage }}</link>
+         <url>{{ $coverImage }}</url>
+        </image>
+      {{- end -}}
+       <categories>
+         {{range .Params.Tags }}
+          {{ . }},
+        {{end }}
+      </categories>
     </item>
     {{ end }}
   </channel>

@@ -1,0 +1,14 @@
+{
+  "title": "{{ .Title }}",
+  "date": {{ .Date | jsonify }},
+  "type": "{{ .Type }}",
+  "permalink" : "{{ .Permalink }}",
+  "summary": {{.Summary | jsonify}},
+  {{- $coverImage := .Params.Hero -}}
+  {{- if $coverImage -}}
+  "hero": "{{ $coverImage }}",
+  {{- else -}}
+  "hero": null,
+  {{- end -}}
+  "tags": "{{- range .Params.Tags -}} {{ . }}, {{ end }}"
+}
