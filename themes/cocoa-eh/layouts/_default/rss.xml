@@ -37,11 +37,11 @@
       {{- if $coverImage -}}
         <image> {{ $coverImage }} </image>
       {{- end -}}
-       <Categories>
+       <categories>
          {{range .Params.Tags }}
           {{ . }},
         {{end }}
-      </Categories>
+      </categories>
     </item>
     {{ end }}
   </channel>
