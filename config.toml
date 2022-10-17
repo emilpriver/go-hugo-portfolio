@@ -8,6 +8,9 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 theme = "priver-dev"
 title = "Emil Privér"
+pygmentsUseClasses = false
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
 
 [outputs]
   page = ["HTML", "json"]
