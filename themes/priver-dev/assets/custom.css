@@ -1,0 +1,32 @@
+/* Place custom css here. */
+
+.archive-description {
+  display: block;
+}
+
+.header-margin-bottom {
+  margin-bottom: 10px !important;
+}
+
+.home-info-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.home-info-area .image {
+  padding-right: 50px;
+}
+
+.home-info-area img {
+  width: 100px;
+  height: 100px;
+  max-width: 200px;
+}
+
+@media screen and (max-width: 700px) {
+  .home-info-area .image {
+    display: none;
+  }
+}

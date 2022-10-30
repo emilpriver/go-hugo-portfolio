@@ -8,9 +8,6 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 theme = "priver-dev"
 title = "Emil Privér"
-pygmentsUseClasses = false
-pygmentsCodeFences = false
-pygmentsStyle = "monokai"
 
 [outputs]
   page = ["HTML", "json"]
@@ -35,6 +32,8 @@ pygmentsStyle = "monokai"
     weight = 2
 
 [taxonomies]
+category = "categories"
+tag = "tags"
 series = "series"
 
 [privacy]
@@ -92,8 +91,6 @@ series = "series"
   highlightjs = true
   progressively = true
   share = true
-  # Share to googleplus, twitter, fb, linkedin by default
-  # disable by setting share_on_<social network> = false
   share_on_googleplus = false
   latestpostcount = 5
   github = "emilpriver"
@@ -103,8 +100,6 @@ series = "series"
   social_banner = "img/banner.png"
   usesmallsummarycard = true
   posts_navigation = true
-  # issoHost = "comments.domain.tld:1234"
-  # githubRepo = "githubUsername/repositoryName/tree/master"
   small_banner_logo = false
   paginate = 6
 

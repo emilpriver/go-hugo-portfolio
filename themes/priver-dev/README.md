@@ -1,76 +1,66 @@
-# Cocoa Enhanced
+<div align="center">
+<h1>Paper <sup><sup><sub>5.1</sub></sup></sup></h1>
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mtn/cocoa-eh-hugo-theme/blob/master/LICENSE)
+Demo → [hugo-paper.vercel.app](https://hugo-paper.vercel.app/)
 
-**Cocoa Enhanced** is a clean, fast, and responsive [Hugo](http://gohugo.io) [theme](https://github.com/spf13/hugoThemes/) with cool typography. The main goal of this theme is to be simple and fast but also highly customizable.
+<hr />
 
-A demo is available [here](https://themes.gohugo.io/theme/cocoa-eh-hugo-theme/).
+A simple, clean, flexible Hugo theme.
 
-> This is a fork from the original [Cocoa](https://www.github.com/nishanths/cocoa-hugo-theme) theme, with some improvements.
+⚡️ Fast | 🦋 Fluent | 🪀 Smooth
 
-[![screenshot](https://raw.githubusercontent.com/mtn/cocoa-eh-hugo-theme/master/images/screenshot.png)](https://raw.githubusercontent.com/mtn/cocoa-eh-hugo-theme/master/images/screenshot.png)
+</div>
 
-## Table of Contents
+---
 
-* [Features](#features)
-* [Getting Started](#getting-started)
-* [Contributing](#contributing)
-* [License](#license)
+## Links
 
-## Features
+Product Hunt: [producthunt.com/posts/hugo-paper](https://www.producthunt.com/posts/hugo-paper)
 
-* Possibility to have sections with a header and a list of articles.
-* Possibility to have single pages.
-* Homepage with latest and best posts.
-* Syntax highlighting with `hightlightjs`.
-* Progressive images.
-* Twitter cards support.
-* Disqus and Isso support.
-* LaTeX support with MathJax ([use `.mmark`](https://github.com/mtn/cocoa-eh-hugo-theme/issues/92)).
+Hugo themes: [themes.gohugo.io/hugo-paper](https://themes.gohugo.io/hugo-paper/)
 
-#### Typography
+## Overview
 
-The **typography** is what makes Cocoa-EH look cool. The fonts used are:
+![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)
+![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot_dark.png)
+![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot_mobile.png)
 
-* *Nexa Bold* for the blog name, a strong and opinionated font
-* *Raleway* for the titles, light but clearly visible
-* *Merriweather* for the text, an awesome sans serif font to read without difficulties
-* *Ubuntu Mono* for the code
+## Install
 
-#### Blazing fast
+Inside the folder of your Hugo project, run:
 
-Everything is made here to make the theme **really fast** to load: inline CSS, deferred Javascript, fonts loaded in an asynchronous way with replacement fonts when they're not loaded, etc. ... Even with a GPRS connection, your blog is readable.
+```bash
+git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+```
 
-> With gzip enabled, this theme takes less than **400**ms to load entirely, and the content is readable at only **50**ms. Also scores 99/100 on Pagespeed.
+Open `config.toml`, change `theme` to `"paper"`:
 
-### Differences from the original Cocoa
+```toml
+theme = "paper"
+```
 
-This theme is less minimalist than the original Cocoa, with some new features :
+For more information, please read the [official guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) of Hugo.
 
-* Displays a logo on the side of the header, and there is a title different from the author name.
-* Very modular with sections and single pages.
-* Group articles by month and year.
-* Progressive images.
-* Fonts are different : stronger and sharper, with a clear identity.
-* The font size in articles is higher, the text justified and lines are more spaced.
-* and more...
+## Options
 
-## Getting Started 
+Available options to `config.toml`:
 
-From the root of your Hugo site, clone the theme into `themes/cocoa-eh` by running:
+```toml
+disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # add disqus comments
 
-````
-git clone https://github.com/mtn/cocoa-eh-hugo-theme.git themes/cocoa-eh
-````
-
-Then, generate your site's files by running:
-
-````
-hugo -t cocoa-eh
-````
-
-If you want a simple blog you can just use the `exampleSite`. The [wiki](https://github.com/mtn/cocoa-eh-hugo-theme/wiki) includes helpful details should you need more.
+[params]
+  disableHLJS = true                         # don't use highlight.js
+  twitter = 'YOUR_TWITTER_ID'                # twitter.com/YOUR_TWITTER_ID
+  github = 'YOUR_GITHUB_ID'                  # github.com/YOUR_GITHUB_ID
+  instagram = 'YOUR_INSTAGRAM_ID'            # instagram.com/YOUR_INSTAGRAM_ID
+```
 
 ## License
 
-Licensed under the MIT License. See the [LICENSE](https://github.com/mtn/cocoa-eh-hugo-theme/blob/master/LICENSE) file for more details.
+[MIT License](https://github.com/nanxiaobei/hugo-paper/blob/master/LICENSE) (c) [nanxiaobei](https://lee.so/)
+
+## FUTAKE
+
+Try [**FUTAKE**](https://sotake.com/f) in WeChat. A mini app for your inspiration moments. 🌈
+
+![FUTAKE](https://s3.jpg.cm/2021/09/21/IFG3wi.png)
