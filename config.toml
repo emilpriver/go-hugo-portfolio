@@ -9,7 +9,7 @@ ignoreErrors = ["error-remote-getjson"]
 theme = "priver-dev"
 title = "Emil Privér"
 pygmentsUseClasses = false
-pygmentsCodeFences = true
+pygmentsCodeFences = false
 pygmentsStyle = "monokai"
 
 [outputs]
