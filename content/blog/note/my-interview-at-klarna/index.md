@@ -7,7 +7,7 @@ type: "blog"
 tags: ["Interview"]
 best: true
 images:
-  - ./blog/note/my-interview-at-/klarna.png
+  - /blog/note/my-interview-at-klarna/klarna.png
 hero: "https://cdn.priver.dev?src=https://priver.dev/blog/note/my-interview-at-klarna/klarna.png"
 series:
 - Interview

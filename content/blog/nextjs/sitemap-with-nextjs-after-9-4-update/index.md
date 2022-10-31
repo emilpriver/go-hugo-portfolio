@@ -9,7 +9,6 @@ published: true
 tags: ["next.js", "sitemap", "react"]
 categories: ["web", "nextjs"]
 keywords: ["nextjs", "sitemap"]
-images: ["https://cdn.priver.dev?src=https://priver.dev/blog/nextjs/sitemap-with-nextjs-after-9-4-update/cover.jpeg"]
 hero: "https://cdn.priver.dev?src=https://priver.dev/blog/nextjs/sitemap-with-nextjs-after-9-4-update/cover.jpeg"
 ---
 
