@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Emil Privér, Software engineer"
+description: "Emil Privér, Software Developer"
 date: "2022-05-30"
 aliases: ["about-us"]
 author: "priver.dev"
