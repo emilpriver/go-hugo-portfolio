@@ -7,7 +7,8 @@ type: "blog"
 tags: ["projects", "Edgar Image"]
 series:
 - Edgar Image
-images: ["https://cdn.priver.dev?src=https://images.unsplash.com/photo-1591710668263-bee1e9db2a26&h=400&fit=fill&w=700&q=100"]
+images:
+ - https://og.priver.dev/api/og?title=Edgar%20Image,%20the%20self-hosted%20image%20transformation%20service
 hero: "https://cdn.priver.dev?src=https://images.unsplash.com/photo-1591710668263-bee1e9db2a26&h=400&fit=fill&w=700&q=100"
 ---
 ![](https://cdn.priver.dev?src=https://images.unsplash.com/photo-1591710668263-bee1e9db2a26&h=400&fit=fill&w=700&q=70)
