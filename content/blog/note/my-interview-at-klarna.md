@@ -8,10 +8,11 @@ tags: ["Interview"]
 best: true
 images:
   - https://og.priver.dev/api/og?title=My%20interview%20at%20Klarna 
-hero: "https://cdn.priver.dev?src=https://priver.dev/blog/note/my-interview-at-klarna/klarna.png"
 series:
 - Interview
 ---
+![Klarna](images/note/my-interview-at-klarna/klarna.png)
+
 ### This is a small article about when I was interviewed by Klarna.
 
 The interview included 5 different steps where the steps was:
@@ -26,7 +27,7 @@ The first call was a 30 minutes call where the guy who called me talked about wh
 
 The IQ test looked like this
 
-![](https://cdn.priver.dev?src=https://priver.dev/blog/note/my-interview-at-klarna/provtest_exempel.jpeg&w=560)
+![IQ test](images/note/my-interview-at-klarna/provtest_exempel.jpeg)
 
 The most fun part was the technical interview as it was the most challenging one and probably because it was my first time doing this kind of interview. The tech interview was 2 different tasks, 1 task where the goal was to onboard other developers onto a team and a project, and my goal was to describe
 
@@ -185,7 +186,7 @@ I applied for the job as I wanted to try new areas in system engineering. The sy
 
 I didn't prepare at all, and I don't think you need to prepare a lot, But something good is to maybe read about the area you will work with. And what I mean by this is that you could read basic about the language, maybe the area the company works within (Klarna works in fintech, so I did read basic about fintech and Klarna as a company). Also, you don't need to know everything. To enter the interview and be honest about yourself is the best as a developer you constantly learn new stuff, so you are never at a level where you know everything and even a developer who has coded for 20 years doesn't know everything. 
 
-Klarna never told me if I did get the job at the end, probably as they removed 10% of the [employees 2 weeks later](https://www.klarna.com/se/blogg/company-announcement-from-ceo-sebastian/). But feedback would be great.
+Klarna never told me if I did get the job at the end, probably as they removed 10% of the [employees 2 weeks later](https://www.klarna.com/s/blogg/company-announcement-from-ceo-sebastian/). But feedback would be great.
 
 ✌️
 

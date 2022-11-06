@@ -5,12 +5,11 @@ seoTitle: "Sitemap with Nextjs after 9.4 update"
 summary: "Generate a sitemap.xml after Nextjs 9.4 update. Works with getServerSidedProps, getStaticProps update"
 images:
   - https://og.priver.dev/api/og?title=Sitemap%20with%20NextJS%20after%209.4%20update.
-published: true
 tags: ["next.js", "sitemap", "react"]
 categories: ["web", "nextjs"]
 keywords: ["nextjs", "sitemap"]
-hero: "https://cdn.priver.dev?src=https://priver.dev/blog/nextjs/sitemap-with-nextjs-after-9-4-update/cover.jpeg"
 ---
+![Cover image](images/nextjs/sitemap-with-nextjs-after-9-4-update/cover.jpeg)
 
 Nextjs have done some changes since last post that I wrote. Since then was getStaticProps, getStaticPaths and getServerSidedProps introduced(You can read more about that here: https://nextjs.org/blog/next-9-4)
 One way to generate a sitemap with nextjs after the update on SSG and SSR with a dynamic output based on the pages the application have is to create an API route that fetches data and return it as XML which could be used to read what pages you have on your application.

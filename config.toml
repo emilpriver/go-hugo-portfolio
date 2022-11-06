@@ -68,7 +68,7 @@ series = "series"
   anchor = 'Smart'
   bgColor = '#ffffff'
   hint = 'photo'
-  quality = 75
+  quality = 20
   resampleFilter = 'Box'
 
 [sitemap]

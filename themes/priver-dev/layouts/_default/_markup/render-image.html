@@ -1,0 +1,30 @@
+{{- if strings.HasPrefix .Destination "http" -}}
+  <img loading="lazy" 
+    src="{{ .Destination | safeURL }}" 
+    alt="{{ .Text }}" 
+    {{ with .Title}} title="{{ . }}"{{ end }} />
+{{- else -}}
+  {{ $image := resources.Get .Destination }}
+
+  {{ with $image }}
+  {{- $imageSmall := $image.Resize "640x q80" -}}
+  {{- $imageSmallWebp := $image.Resize "640x webp 180" -}}
+  {{- $imageMedium := $image.Resize "800x q80" -}}
+  {{- $imageMediumWebp := $image.Resize "800x webp q80" -}}
+  
+  <picture>
+    <source media="(max-width: 640px)" 
+            srcset="{{ $imageSmallWebp.RelPermalink }}"
+      type="image/webp">
+    <source media="(min-width: 640px)"
+            srcset="{{ $imageMediumWebp.RelPermalink }}"
+      type="image/webp">
+
+    <img 
+      srcset="{{ $imageSmall.RelPermalink }} 640w, {{ $imageMedium.RelPermalink }} 800w"
+      sizes="(max-width: 640px) 640px, 800px"
+      src="{{ $imageSmall.RelPermalink }}" 
+    >
+  </picture>
+  {{- end -}}
+{{- end -}}
