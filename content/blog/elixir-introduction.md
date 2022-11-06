@@ -1,8 +1,8 @@
 ---
+date: 2022-11-06T22:53:58+01:00
 title: "Elixir: Introduction"
-date: 2022-11-05T11:13:20+01:00
 seoTitle: "Introduction to Elixir"
-summary: "Generate a sitemap.xml after Nextjs 9.4 update. Works with getServerSidedProps, getStaticProps update"
+summary: "Introduction to Elixir, What is it, How does it work, What does it ship"
 images:
   - https://og.priver.dev/api/og?title=Introduction%20to%20Elixir
 draft: true
@@ -170,3 +170,5 @@ Also want to thank the community at Kodsnack for answering my questions regardin
 
 ## End
 Do you have any input or stuff I could add or change? I would love feedback! I am using a Twitter post for comments here:
+
+I want to explore this language more and the next step in this series of Elixir posts will be to test Elixirs concurrency.
