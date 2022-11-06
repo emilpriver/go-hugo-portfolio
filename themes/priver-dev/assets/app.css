@@ -452,7 +452,7 @@ img {
 
 .post-content h2 {
   margin-top: 6rem;
-  font-size: 3.5rem;
+  font-size: 3.8rem;
 }
 
 .post-content h3 {
@@ -493,9 +493,6 @@ img {
 }
 
 .post-content p,
-.post-content ul,
-.post-content ol,
-.post-content dl,
 .post-content details {
   margin-bottom: 3rem;
 }

@@ -9,8 +9,8 @@ series:
 - Edgar Image
 images:
  - https://og.priver.dev/api/og?title=Edgar%20Image,%20the%20self-hosted%20image%20transformation%20service
+cover: "images/edgar-image/cover.jpg"
 ---
-![Edgar image cover](images/edgar-image/cover.jpg)
 
 Edgar Image is an image transformation service whose goal is to make it easy for you to host and run. The goal of the service is not to be a CDN, but rather a point in a whole series of services.There are many of these types of services that cost a lot but are also hard to work with or require you to upload all the images onto their platforms, But there is none(as for what I've found) where you can host and own all the images yourself. 
 

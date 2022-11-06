@@ -6,28 +6,28 @@ description: "Develop a Wordpress site using Docker and Docker compose"
 images:
   - https://og.priver.dev/api/og?title=Docker(Docker-compose)%20+%20Wordpress/Bedrock.
 tags: ["docker", "wordpress"]
+cover: "images/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg"
 type: blog
 ---
-![cover](images/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg)
 
 This is a small article on how you can work with Docker and Wordpress(bedrock) to be able to host an wordpress site inside a docker machine.
-Information
+#Information
 
-### Wordpress:
+## Wordpress:
 
 Wordpress are one of the most used CMS system for websites. Wordpress is baded on PHP and MySQL. Wordpress was released fist time May 27 2003 by WordpressFoundation. As Wordpress are a big CMS system does a lot of people create plugins, themes and so on for Wordpress which later on, Other people can use.
 
-### Bedrock:
+## Bedrock:
 
 Bedrock are an "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure" - Roots. Bedrock makes it possible to easy handle a Wordpress installation and plugins through an PHP dependency manager named [composer](https://getcomposer.org/). Bedrock is using Dotenv to be able to easy work with different environments for different purpose. This makes you able to work with production, staging and dev environments etc.
 Bedrock is also providing security by isolate web root to limit access to non-web files and also more secure passwords by working with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt).
 
-### Docker:
+## Docker:
 
 Docker is an set coupled SaaS(Software-as-a-service) and PaaS(Platform-as-a-service) products that are using Operating-System-Level Virtualization. This systems or projects that are hosted as a package inside docker are called containers. Multiple Containers are able to to run on the same machine and share the OS kernel that the operativ system provide. Container compared to and Virtual Machine use less space and can handle more applications and require fewer VMs and Operating systems.
 ![Docker](images/wordpress/docker-docker-compose-wordpress-bedrock/docker.png)
 
-### Composer:
+## Composer:
 Composer is a Dependency Manager(Not a Package Manager). Composer makes it possible, in this scenario, to be able to install plugins through command line. More information about composer can you read here
 Bedrock and Wordpress
 What you need in order to start
@@ -35,7 +35,7 @@ What you need in order to start
 - Composer
 - A MySQL database setup.
 
-### Setup
+## Setup
 From a folder you like run the
 
 `composer create-project roots/bedrock`

@@ -86,17 +86,18 @@ series = "series"
   dateformfull = "Mon Jan 2 2006 15:04:05 MST"
   description = "Emil Privér"
   copyright = "Copyright © 2021-{year} Emil Privér"
-  logofile = "https://cdn.priver.dev/?src=https://priver.dev/images/me.png&w=100&h=100"
-  faviconfile = "https://cdn.priver.dev/?src=https://priver.dev/images/me.png&w=100&h=100"
+  logofile = "images/me.png"
+  faviconfile = "images/me.png"
   highlightjs = true
   progressively = true
   share = true
   share_on_googleplus = false
   latestpostcount = 5
   github = "emilpriver"
-  email = "hello@priver.dev"
-  linkedin = "emil-priver"
+  email = "emil@priver.dev"
   twitter = "emil_priver"
+  instagram = "emil_priver"
+  linkedin = "emilpriver"
   social_banner = "img/banner.png"
   usesmallsummarycard = true
   posts_navigation = true

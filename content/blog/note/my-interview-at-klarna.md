@@ -9,9 +9,9 @@ best: true
 images:
   - https://og.priver.dev/api/og?title=My%20interview%20at%20Klarna 
 series:
-- Interview
+  - Interview
+cover: "images/note/my-interview-at-klarna/klarna.png"
 ---
-![Klarna](images/note/my-interview-at-klarna/klarna.png)
 
 ### This is a small article about when I was interviewed by Klarna.
 

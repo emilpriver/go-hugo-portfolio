@@ -7,10 +7,10 @@
   {{ $image := resources.Get .Destination }}
 
   {{ with $image }}
-  {{- $imageSmall := $image.Resize "640x q80" -}}
-  {{- $imageSmallWebp := $image.Resize "640x webp 180" -}}
-  {{- $imageMedium := $image.Resize "800x q80" -}}
-  {{- $imageMediumWebp := $image.Resize "800x webp q80" -}}
+  {{- $imageSmall := $image.Resize "1280x q80" -}}
+  {{- $imageSmallWebp := $image.Resize "1280x webp q80" -}}
+  {{- $imageMedium := $image.Resize "1920x q80" -}}
+  {{- $imageMediumWebp := $image.Resize "1920x webp q80" -}}
   
   <picture>
     <source media="(max-width: 640px)" 
