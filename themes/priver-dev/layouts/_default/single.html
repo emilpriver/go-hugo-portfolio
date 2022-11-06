@@ -38,11 +38,12 @@
   </picture>
     <br />
   {{- end -}}
-
-  <aside class="table-of-content">
-    <span> Table of Content </span>
-    {{ .TableOfContents }}
-  </aside>
+  {{ if .Params.toc }}
+    <aside class="table-of-content">
+      <span> Table of Content </span>
+      {{ .TableOfContents }}
+    </aside>
+  {{ end }}
   {{ .Content }}
   </section>
   <!-- Post Tags -->

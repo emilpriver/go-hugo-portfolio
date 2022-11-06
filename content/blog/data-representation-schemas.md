@@ -1,16 +1,14 @@
 ---
 title: "Data Representation Schemas"
 date: 2022-11-06T22:53:58+01:00
-seoTitle: ""
+seoTitle: "Data Representation Schemas"
 summary: ""
 images:
-  - https://og.priver.dev/api/og?title=Introduction%20to%20Elixir
+  - https://og.priver.dev/api/og?title=Data%20Representation%20Schemas
 draft: true
-tags: ["Elixir"]
-categories: ["Elixir"]
-cover: images/elixir/elixir.jpg
-keywords: ["Elixir", "Introduction to elixir"]
-series:
-  - Elixir
+tags: ["JSON", "XML"]
+cover: images/data-representation-schemas/cover.jpg
+keywords: ["JSON", "XML", "Data Representation Schemas"]
+toc: true
 ---
 

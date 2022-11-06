@@ -12,6 +12,7 @@ cover: images/elixir/elixir.jpg
 keywords: ["Elixir", "Introduction to elixir"]
 series:
   - Elixir
+toc: true
 ---
 
 I did recently visit a small Elixir and Erlang talk in Varberg, Sweden and I learned some stuff that is something I want to share in this article. The first impression I got was that elixir is a language that is made to be understood by developers easily (short time to get started) but is also built quite smart when it comes to stuff such as spreading running code over multiple cores. But also do elixir have support for releasing a new update to the server without needing to restart the server (hot swap).

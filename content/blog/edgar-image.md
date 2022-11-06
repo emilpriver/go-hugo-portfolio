@@ -10,6 +10,7 @@ series:
 images:
  - https://og.priver.dev/api/og?title=Edgar%20Image,%20the%20self-hosted%20image%20transformation%20service
 cover: "images/edgar-image/cover.jpg"
+toc: true
 ---
 
 ## Intro

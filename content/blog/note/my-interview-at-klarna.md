@@ -11,6 +11,7 @@ images:
 series:
   - Interview
 cover: "images/note/my-interview-at-klarna/klarna.png"
+toc: true
 ---
 
 This is a small article about when I was interviewed by Klarna.

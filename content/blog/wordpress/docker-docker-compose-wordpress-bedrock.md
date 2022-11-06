@@ -7,7 +7,7 @@ images:
   - https://og.priver.dev/api/og?title=Docker(Docker-compose)%20+%20Wordpress/Bedrock.
 tags: ["docker", "wordpress"]
 cover: "images/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg"
-type: blog
+toc: true
 ---
 
 This is a small article on how you can work with Docker and Wordpress(bedrock) to be able to host an wordpress site inside a docker machine.

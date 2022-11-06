@@ -10,8 +10,8 @@ theme = "priver-dev"
 title = "Emil Privér"
 
 [outputs]
-  page = ["HTML", "json"]
-  home = ["HTML", "RSS", "json"]
+  page = ["HTML"]
+  home = ["HTML", "RSS"]
   section = ["HTML", "RSS", "json"]# Everything
 
 [markup]

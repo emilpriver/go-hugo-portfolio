@@ -9,6 +9,7 @@ tags: ["next.js", "sitemap", "react"]
 categories: ["web", "nextjs"]
 keywords: ["nextjs", "sitemap"]
 cover: "images/nextjs/sitemap-with-nextjs-after-9-4-update/cover.jpeg"
+toc: true
 ---
 
 Nextjs have done some changes since last post that I wrote. Since then was getStaticProps, getStaticPaths and getServerSidedProps introduced(You can read more about that here: https://nextjs.org/blog/next-9-4)

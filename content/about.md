@@ -2,8 +2,8 @@
 title: "About"
 description: "Emil Privér, Software Developer"
 date: "2022-05-30"
-aliases: ["about-us"]
 author: "priver.dev"
+tac: false
 ---
 
 Hi I'm Emil Privér. Software developer from Varberg, Sweden.
