@@ -3,11 +3,19 @@
 <div class="home-info-area">
   {{ if .Params.Image  }}
   {{ $image := resources.Get .Params.Image }}
-  {{- $image := $image.Fit "100x q80" -}}
-  {{- $imageWebp := $image.Fit "100x webp 180" -}}
+  {{ with $image }}
+  {{- $image := $image.Fit "100x100 q80" -}}
+  {{- $imageWebp := $image.Fit "100x100 webp q80" -}}
   <div class="image">
-    <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" />
+    <picture>
+      <source 
+        srcset="{{ $imageWebp.RelPermalink }}"
+        type="image/webp"
+      >
+      <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" />
+    </picture>
   </div>
+  {{ end }}
   {{ end }}
   <div class="">
     {{ if .Title }}
