@@ -5,7 +5,7 @@
   {{ $image := resources.Get .Params.Image }}
   {{ with $image }}
   {{- $image := $image.Fit "100x100 q80" -}}
-  {{- $imageWebp := $image.Fit "100x100 webp q80" -}}
+  {{- $imageWebp := $image.Fit "100x100 webp q100" -}}
   <div class="image">
     <picture>
       <source 
