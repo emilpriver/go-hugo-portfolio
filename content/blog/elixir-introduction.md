@@ -170,6 +170,6 @@ Thanks to Lars Wikman for the great Elixir talk he had, But also for wanting to 
 Also want to thank the community at Kodsnack for answering my questions regarding the language and sharing information on how they use it. Great community with great people.
 
 ## End
-Do you have any input or stuff I could add or change? I would love feedback! I am using a Twitter post for comments here:
+Do you have any input or stuff I could add or change? I would love feedback! I am using a Twitter post for comments here: [https://twitter.com/emil_priver/status/1589632749446438912](https://twitter.com/emil_priver/status/1589632749446438912)
 
 I want to explore this language more and the next step in this series of Elixir posts will be to test Elixirs concurrency.
