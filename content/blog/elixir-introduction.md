@@ -57,7 +57,7 @@ Phoenix is a web framework built on Elixir which implements a server-sided Model
 More info about Phoenix [here](https://www.phoenixframework.org/)
 
 ### Phoenix's LiveView
-The first thought I had when I first did see Phoenix's live view was that it looked like React Server Components which is not the case. It's more like Blazors' live view. Phoenix live view works by listening to a WebSocket which broadcasts messages to the socket telling it to re-render parts of the HTML/template. This means that if you make a change to the server side for example, that an SMS is sent into the system and your users need this information without reloading the page then phoenix can show that message without reloading the page by sending the message into the socket.
+The first thought I had when I first did see Phoenix's live view was that it looked like React Server Components which is not the case. It's more like Blazor's live view. Phoenix live view works by listening to a WebSocket which broadcasts messages to the socket telling it to re-render parts of the HTML/template. This means that if you make a change to the server side for example, that an SMS is sent into the system and your users need this information without reloading the page then phoenix can show that message without reloading the page by sending the message into the socket.
 
 
 ## Livebook
