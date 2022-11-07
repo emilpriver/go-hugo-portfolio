@@ -5,7 +5,7 @@ seoTitle: "Introduction to Elixir"
 summary: "Introduction to Elixir, What is it, How does it work, What does it ship"
 images:
   - https://og.priver.dev/api/og?title=Introduction%20to%20Elixir
-draft: true
+draft: false
 tags: ["Elixir"]
 categories: ["Elixir"]
 cover: images/elixir/elixir.jpg
@@ -27,13 +27,13 @@ Elixir runs your code in lightweight threads when your code is executed, called 
 Erlangs OTP could you say is a part of the code of Erlang which is providing modules, libraries, and behaviors that represent standard implementations of common practices like message passing or spawning tasks. This means that instead of inventing the wheel again for common services like GenServer, Elixirs OTP provides these tools for you to just grab and use. BEAM uses 1 os thread per core and runs a scheduler on every os thread to schedule tasks to be executed on that core.
 
 
-An OTP that Erlang provides which can be used in Elixir is called GenServer. A library that Erlang provides which can be used in Elixir is called GenServer which is a long-running stateful process allowed to send and receive messages. As GenServer or generic server process is that you can keep GenServer always up to date but also execute code async, create a standard set of functions that can be re-used, and also a good way to log errors via GenServer. But it does also provide a good way to handle monitoring events and system messages. GenServer is part of a supervisor and works as a client-server relation between your code and the GenServer. But GenServer is not the only way to work with a state in your application, Erlang also provides ETS or Erlang Term Storage which is a robust in-memory storage store built into OTP which makes it usable within Elixir.  ETS is able to store large amounts of data available to processes.
+An OTP that Erlang provides which can be used in Elixir is called GenServer. A library that Erlang provides which can be used in Elixir is called GenServer which is a long-running stateful process allowed to send and receive messages. As GenServer or generic server process is that you can keep GenServer always up to date but also execute code async, create a standard set of functions that can be re-used, and also a good way to log errors via GenServer. But it does also provide a good way to handle monitoring events and system messages. GenServer is part of a supervisor and works as a client-server relation between your code and the GenServer. But GenServer is not the only way to work with a state in your application, Erlang also provides ETS or Erlang Term Storage which is a robust in-memory storage store built into OTP which makes it usable within Elixir.  ETS can store large amounts of data available to processes.
 
 Outside of platform and language features does also Elixir provide good tooling features which are built to help you develop your application. The mix is the tool used to create, build, manage tasks, and run tests in your application. But Elixir does also provide tooling to interact with your code, the same way Django has interactive tooling. Here are you able to run different functionality such as code reloading, reading formatted docs, or debugging a problem by executing functions in a shell environment. But these interactive tools are also reachable from a website that enables you to run functionality in your code from a website called Livebook.
 
 ## Atoms
 
-An atom is a constant whose value is its own name with no static type assigned to the atom as Elixir is a dynamic language. Some of those are defined by the system to create a standard for how the code is running. One of these atoms is ":ok" which can be used to tell a function that the execution of the function was ok and no error happened. To be able to create an atom in another language would you need to create a constant and assign a value to it with a static type. Meaning that a language that is strict on types would probably create problems as you could check if a return value which is a string is the same as a constant which is a number, but with the same data in both the return and the constant.
+An atom is a constant whose value is its name with no static type assigned to the atom as Elixir is a dynamic language. Some of those are defined by the system to create a standard for how the code is running. One of these atoms is ":ok" which can be used to tell a function that the execution of the function was ok and no error happened. To be able to create an atom in another language would you need to create a constant and assign a value to it with a static type. Meaning that a language that is strict on types would probably create problems as you could check if a return value which is a string is the same as a constant which is a number, but with the same data in both the return and the constant.
 
 ```elixir
 iex>:apple
@@ -155,9 +155,9 @@ More use-cases at [Elixirs website](https://elixir-lang.org/cases.html)
 ### Discord
 Discord has been using Elixir since the beginning and handling the core of its products which is the chat infrastructure. Discord is a real-time communication service with both voice and messaging support which as of 8 October 2020 handles 100 million active users each month. Elixir was picked to power relaying messages, real-time applications, and Discord's WebSocket which is used for real-time communication within all apps they provide. While Discord uses Python to power its API. While the Python part of the infrastructure is a monolith while the Elixir part has multiple services distributed to multiple servers running each task concurrently with GenServer and GenStage.
 
-### All Aboard
-All Aboard is a Swedish company selling train tickets all around the world by searching different APIs and calculating the best route. All Board uses Elixir for their backend, allowing them to wait for a response at APIs which are slow without interrupting other users that want to use their system at the same time.
-TBA
+### Cars.com
+
+Cars.com is one of the leading platforms for selling cars and buying cars online serving more than 400 million visitors annually. Adopting Elixir as the primary language for its application enabled developers to get started faster and understand the code faster helping cars.com to grow faster and enabling 0 downtimes with a scalable and reliable platform. Cars.com uses Phoenix for its front end enabling Cars.com to show real-time data for its users.
 
 ## My thoughts
 I think Elixir is a great language that can handle tons of work at the same time due to its concurrent model but also how easy it is to get started with Elixir and get up and running. I don't think programming should be hard and many languages make it hard to get up and running quickly, but also hard to write your program in general. This is something that Elixir doesn't have due to the tooling they have created and the way the language is written. Something I don't like is that it doesn't come as required, mostly because I think types help prevent problems and enable us to remove some tests that we don't need to write as we typed them and tested all cases by using the types. On the other hand are you able to use types in Elixir and could set a standard for the project to type the code. 
