@@ -247,7 +247,7 @@ An exempel of an site using this setup are Leagueshop. This website have Gitlabs
 
 DM me for any questions.
 
-Github project that you can use as template: https://github.com/emilpriver/wordpress-docker-bedrock-starter
+GitHub project that you can use as template: https://github.com/emilpriver/wordpress-docker-bedrock-starter
 
 Twitter for DMs: https://twitter.com/emil_priver
 
