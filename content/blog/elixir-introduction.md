@@ -4,7 +4,7 @@ title: "Elixir: Introduction"
 seoTitle: "Introduction to Elixir"
 summary: "Introduction to Elixir, What is it, How does it work, What does it ship"
 images:
-  - /og-images/elixir.jpg
+  - https://og.priver.dev/api/og?title=Introduction%20to%20Elixir&bgImage=https://priver.dev/og-images/elixir.jpg
 draft: false
 tags: ["Elixir"]
 categories: ["Elixir"]
