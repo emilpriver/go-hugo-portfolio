@@ -19,7 +19,6 @@ backticks
 baded
 bcrypt
 bhn
-Blazors
 blockquote
 blog
 blogg
@@ -35,7 +34,6 @@ changefreq
 charset
 chste
 cje
-cloudflare
 Clx
 commosa
 Concat
@@ -339,7 +337,6 @@ webp
 website
 Wikman
 Wmv
-wordpress
 workflow
 WPLUVM
 www
