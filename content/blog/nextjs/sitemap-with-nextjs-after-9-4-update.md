@@ -165,6 +165,6 @@ res.end();
 };
 ```
 
-Github gist with the same code: [Github Gist](https://gist.github.com/emilpriver/475ab666d3155f84f9739cbf8567e640)
+GitHub gist with the same code: [GitHub Gist](https://gist.github.com/emilpriver/475ab666d3155f84f9739cbf8567e640)
 
 Hope this help you to generate a dynamic sitemap for your Nextjs application
