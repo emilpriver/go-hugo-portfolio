@@ -4,7 +4,7 @@ date: "2020-05-11T22:12:03.284Z"
 seoTitle: "Sitemap with Nextjs after 9.4 update"
 summary: "Generate a sitemap.xml after Nextjs 9.4 update. Works with getServerSidedProps, getStaticProps update"
 images:
-  - https://og.priver.dev/api/og?title=Sitemap%20with%20NextJS%20after%209.4%20update.
+  - /og-images/nextjs.jpg
 tags: ["next.js", "sitemap", "react"]
 categories: ["web", "nextjs"]
 keywords: ["nextjs", "sitemap"]

@@ -7,7 +7,7 @@ type: "blog"
 tags: ["Interview"]
 best: true
 images:
-  - https://og.priver.dev/api/og?title=My%20interview%20at%20Klarna 
+  - /og-images/klarna.png
 series:
   - Interview
 cover: "images/note/my-interview-at-klarna/klarna.png"

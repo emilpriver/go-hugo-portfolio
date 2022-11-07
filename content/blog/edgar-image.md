@@ -8,7 +8,7 @@ tags: ["projects", "Edgar Image"]
 series:
 - Edgar Image
 images:
- - https://og.priver.dev/api/og?title=Edgar%20Image,%20the%20self-hosted%20image%20transformation%20service
+  - /og-images/edgar.jpg
 cover: "images/edgar-image/cover.jpg"
 toc: true
 ---

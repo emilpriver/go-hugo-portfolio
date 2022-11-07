@@ -4,7 +4,7 @@ date: "2018-09-07T22:12:03.284Z"
 seoTitle: "Docker(Docker-compose) + Wordpress/Bedrock"
 description: "Develop a Wordpress site using Docker and Docker compose"
 images:
-  - https://og.priver.dev/api/og?title=Docker(Docker-compose)%20+%20Wordpress/Bedrock.
+  - /og-images/docker.jpeg
 tags: ["docker", "wordpress"]
 cover: "images/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg"
 toc: true
