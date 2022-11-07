@@ -57,7 +57,6 @@ Gcv
 getcomposer
 getjson
 gina
-Github
 githubusercontent
 gitignore
 Gitlabs
@@ -86,7 +85,6 @@ ini
 instagram
 intersted
 isset
-Javascript
 javascript
 JGf
 jpeg
