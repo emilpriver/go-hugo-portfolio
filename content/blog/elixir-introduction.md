@@ -160,12 +160,27 @@ Discord has been using Elixir since the beginning and handling the core of its p
 
 Cars.com is one of the leading platforms for selling cars and buying cars online serving more than 400 million visitors annually. Adopting Elixir as the primary language for its application enabled developers to get started faster and understand the code faster helping cars.com to grow faster and enabling 0 downtimes with a scalable and reliable platform. Cars.com uses Phoenix for its front end enabling Cars.com to show real-time data for its users.
 
+### All Aboard
+
+All Aboard is a Swedish company selling train tickets all over the world.  They use Elixir to run their backend in a pretty cool way. As All Aboard needs to fetch information from multiple APIs could this mean that they need to way a long time for the response they need for their users, and sometimes they fetch APIs returning links to other APIs which need to also be fetched. They solved this by creating a struct that returns 
+
+```elixir
+{:async, fn -> fetch_the_other_thing() end}
+```
+When the whole struct is built do they go through each value and put them into a queue in GenServer which creates tasks with the respective function and executes it and as fast as a new task is done will a new task start. And as fast as they have a new response, they add a new message to their WebSocket which updates user's view.
+In this case, does Elixirs Concurrency work really well as some responses could take a really long time and still don't interrupt other tasks that are running.
+
+I did ask Patrik at All Aboard for a comment on what he thought about Elixir and how they use Elixir. Patrik told that as he comes from Python and Ruby and thinks this quite magical because it's easy to understand Elixir, and it's model, but also works really well.
+
+Thanks to Patrik at All Aboard for wanting to share his experience and how he use Elixir. You can find more information about All Aboard on their [website](https://allaboard.eu/)
+
 ## My thoughts
 I think Elixir is a great language that can handle tons of work at the same time due to its concurrent model but also how easy it is to get started with Elixir and get up and running. I don't think programming should be hard, and many languages make it hard to get up and running quickly, but also hard to write your program in general. This is something that Elixir doesn't have due to the tooling they have created and the way the language is written. Something I don't like is that it doesn't come as required, mostly because I think types help prevent problems and enable us to remove some tests that we don't need to write as we typed them and tested all cases by using the types. On the other hand are you able to use types in Elixir and could set a standard for the project to type the code. 
 
 I think the way I would use Elixir is with real-time data or message queues. For example, building a notification queue for apps and using Elixir to concurrently send all the messages to the devices as I think this would be the best use-case for it, but I want to explore it in more areas than queues.
 
 ## Thanks
+
 Thanks to Lars Wikman for the great Elixir talk he had, But also for wanting to read this post and give feedback. Lars is doing great things for the Elixir community. I recommend checking him out at [https://underjord.io/](https://underjord.io/) or his [YouTube](https://www.youtube.com/c/Underjord) 
 
 Also want to thank the community at Kodsnack for answering my questions regarding the language and sharing information on how they use it. Great community with great people.
