@@ -71,7 +71,7 @@ More info about Livebook [here](https://livebook.dev/)
 
 ## Pattern Matching
 
-I've heard that pattern matching was something good within Elixir so I looked into it.  In elixir is `=` a match operator which you can compare to the equal sign in algebra, where the goal is that the value on the left side of  `=` is the same as the value on the right side of `=`. And if the values match does Elixir return the value or it throws an error if it fails.
+I've heard that pattern matching was something good within Elixir, so I looked into it.  In elixir is `=` a match operator which you can compare to the equal sign in algebra, where the goal is that the value on the left side of `=` is the same as the value on the right side of `=`. And if the values match does Elixir return the value, or it throws an error if it fails.
 
 ```elixir 
 iex> x = 1
@@ -148,11 +148,12 @@ iex> 1 = 2
 ```
 
 ## Use-cases of Elixir or Erlang in production
-There are plenty of use cases for Elixir or Erlang or Erlang by companies but most of the companies I've seen using the languages in production use it for real-time communication or messages queues and some of these companies are Spotify, Discord, Klarna, Ericsson, and WhatsApp. But Elixir is also popular in e-commerce, banking, advertising, and IoT maybe because it has plenty of libraries and frameworks built on top of it, such as Phoenix. And one of the main reasons is that Elixir handles a lot of traffic concurrently and scales easily due to Erlang's VM. Elixir, on the other hand, will probably not be the fastest choice but it handles tons of traffic on a high level.
+There are plenty of use cases for Elixir or Erlang by companies but most of the companies I've seen using the languages in production use it for real-time communication or messages queues and some of these companies are Spotify, Discord, Klarna, Ericsson, and WhatsApp. But Elixir is also popular in e-commerce, banking, advertising, and IoT maybe because it has plenty of libraries and frameworks built on top of it, such as Phoenix. And one of the main reasons is that Elixir handles a lot of traffic concurrently and scales easily due to Erlang's VM. Elixir, on the other hand, will probably not be the fastest choice, but it handles tons of traffic on a high level.
 
 More use-cases at [Elixirs website](https://elixir-lang.org/cases.html)
 
 ### Discord
+
 Discord has been using Elixir since the beginning and handling the core of its products which is the chat infrastructure. Discord is a real-time communication service with both voice and messaging support which as of 8 October 2020 handles 100 million active users each month. Elixir was picked to power relaying messages, real-time applications, and Discord's WebSocket which is used for real-time communication within all apps they provide. While Discord uses Python to power its API. While the Python part of the infrastructure is a monolith while the Elixir part has multiple services distributed to multiple servers running each task concurrently with GenServer and GenStage.
 
 ### Cars.com
@@ -160,12 +161,12 @@ Discord has been using Elixir since the beginning and handling the core of its p
 Cars.com is one of the leading platforms for selling cars and buying cars online serving more than 400 million visitors annually. Adopting Elixir as the primary language for its application enabled developers to get started faster and understand the code faster helping cars.com to grow faster and enabling 0 downtimes with a scalable and reliable platform. Cars.com uses Phoenix for its front end enabling Cars.com to show real-time data for its users.
 
 ## My thoughts
-I think Elixir is a great language that can handle tons of work at the same time due to its concurrent model but also how easy it is to get started with Elixir and get up and running. I don't think programming should be hard and many languages make it hard to get up and running quickly, but also hard to write your program in general. This is something that Elixir doesn't have due to the tooling they have created and the way the language is written. Something I don't like is that it doesn't come as required, mostly because I think types help prevent problems and enable us to remove some tests that we don't need to write as we typed them and tested all cases by using the types. On the other hand are you able to use types in Elixir and could set a standard for the project to type the code. 
+I think Elixir is a great language that can handle tons of work at the same time due to its concurrent model but also how easy it is to get started with Elixir and get up and running. I don't think programming should be hard, and many languages make it hard to get up and running quickly, but also hard to write your program in general. This is something that Elixir doesn't have due to the tooling they have created and the way the language is written. Something I don't like is that it doesn't come as required, mostly because I think types help prevent problems and enable us to remove some tests that we don't need to write as we typed them and tested all cases by using the types. On the other hand are you able to use types in Elixir and could set a standard for the project to type the code. 
 
-I think the way I would use Elixir is with real-time data or message queues. For example, building a notification queue for apps and using Elixir to concurrently send all the messages to the devices as I think this would be the best use-case for it but I want to explore it in more areas than queues.
+I think the way I would use Elixir is with real-time data or message queues. For example, building a notification queue for apps and using Elixir to concurrently send all the messages to the devices as I think this would be the best use-case for it, but I want to explore it in more areas than queues.
 
 ## Thanks
-Thanks to Lars Wikman for the great Elixir talk he had, But also for wanting to read this post and give feedback. Lars is doing great things for the Elixir community. I recommend checking him out at [https://underjord.io/](https://underjord.io/) or his [Youtube](https://www.youtube.com/c/Underjord) 
+Thanks to Lars Wikman for the great Elixir talk he had, But also for wanting to read this post and give feedback. Lars is doing great things for the Elixir community. I recommend checking him out at [https://underjord.io/](https://underjord.io/) or his [YouTube](https://www.youtube.com/c/Underjord) 
 
 Also want to thank the community at Kodsnack for answering my questions regarding the language and sharing information on how they use it. Great community with great people.
 
