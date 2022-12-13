@@ -15,15 +15,16 @@
   <picture>
     <source media="(max-width: 640px)" 
             srcset="{{ $imageSmallWebp.RelPermalink }}"
-      type="image/webp">
+      type="image/webp" loading="lazy">
     <source media="(min-width: 640px)"
             srcset="{{ $imageMediumWebp.RelPermalink }}"
-      type="image/webp">
+      type="image/webp" loading="lazy">
 
     <img 
       srcset="{{ $imageSmall.RelPermalink }} 640w, {{ $imageMedium.RelPermalink }} 800w"
       sizes="(max-width: 640px) 640px, 800px"
       src="{{ $imageSmall.RelPermalink }}" 
+      loading="lazy"
     >
   </picture>
   {{- end -}}
