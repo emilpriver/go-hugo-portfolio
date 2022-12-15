@@ -13,3 +13,6 @@ My works is mainly focused on backend and architecture. But also intersted in AI
 I love to explore the tech world, Love reading about tech and explore code, systems and stuffs in general.
 
 Now I'm a developer at [Zimpler](https://zimpler.com) in Gothenburg, Sweden.
+
+And this is me:
+![Emil Privér](images/profil.jpeg)
