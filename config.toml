@@ -106,5 +106,4 @@ series = "series"
 
 [security]
   [funcs]
-    [getenv]
-      - ^VERCEL_
+    getenv = ["^VERCEL_"]
