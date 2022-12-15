@@ -105,5 +105,5 @@ series = "series"
   paginate = 6
 
 [security]
-  [funcs]
-    getenv = ["^VERCEL_"]
+  [security.funcs]
+    getenv = ["^VERCEL_", "^HUGO_"]
