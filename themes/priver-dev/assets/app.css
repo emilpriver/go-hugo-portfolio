@@ -12,7 +12,7 @@
   --gap: 3.5rem;
   --y-gap: 8rem;
   --wide: 140rem;
-  --narrow: 80rem;
+  --narrow: 110rem;
   --side: calc((var(--wide) - var(--narrow)) / 2);
   --header: 8rem;
   --footer: calc(8rem + var(--safe-bottom));
@@ -269,7 +269,7 @@ img {
 /* Main
  -------------------------------------------------- */
 .main {
-  max-width: var(--narrow);
+  max-width: var(--wide);
   min-height: calc(100% - var(--header) - var(--footer));
   padding-top: var(--y-gap);
   padding-bottom: var(--y-gap);
