@@ -4,15 +4,15 @@
   {{ if .Params.Image  }}
   {{ $image := resources.Get .Params.Image }}
   {{ with $image }}
-  {{- $image := $image.Fit "100x100 q80" -}}
-  {{- $imageWebp := $image.Fit "100x100 webp q100" -}}
+  {{- $image := $image.Fit "200x200 q80" -}}
+  {{- $imageWebp := $image.Fit "200x200 webp q100" -}}
   <div class="image">
     <picture>
       <source 
         srcset="{{ $imageWebp.RelPermalink }}"
         type="image/webp"
       >
-      <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" />
+      <img width="{{ $image.Width }}" height="{{ $image.Height }}" src="{{ $image.RelPermalink }}" alt="{{ .Title }}" />
     </picture>
   </div>
   {{ end }}
