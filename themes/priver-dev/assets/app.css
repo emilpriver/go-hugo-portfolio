@@ -224,7 +224,8 @@ img {
 }
 
 .menu a.active {
-  opacity: 0.44;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .social {
