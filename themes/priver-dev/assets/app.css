@@ -473,6 +473,7 @@ img {
 }
 
 .post-content img {
+  object-fit: contain;
   margin-inline: auto;
 }
 

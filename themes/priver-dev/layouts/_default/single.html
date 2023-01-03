@@ -36,7 +36,8 @@
       srcset="{{ $imageSmall.RelPermalink }} 640w, {{ $imageMedium.RelPermalink }} 800w"
       sizes="(max-width: 640px) 640px, 800px"
       src="{{ $imageSmall.RelPermalink }}" 
-      loading="lazy"
+      width={{ $imageSmall.Width }}
+      height={{ $imageSmall.Height }}
       alt="{{ $.Page.Title }}"
       >
   </picture>
