@@ -343,7 +343,7 @@ img {
   display: flex;
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
-  color: var(--air);
+  color: #000;
   transform: translateY(0.4rem);
 }
 
