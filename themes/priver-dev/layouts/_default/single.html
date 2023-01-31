@@ -13,36 +13,6 @@
     <h1>{{ .Title }}</h1>
   </header>
   <section class="post-content">  
-    {{ with .Params.cover }}
-    {{ $image := resources.Get . }}
-    {{- $imageSmall := $image.Resize "1280x q100" -}}
-    {{- $imageSmallWebp := $image.Resize "1280x webp q100" -}}
-    {{- $imageMedium := $image.Resize "1920x q100" -}}
-    {{- $imageMediumWebp := $image.Resize "1920x webp q100" -}}
-    <picture>
-      <source 
-        media="(max-width: 640px)" 
-        srcset="{{ $imageSmallWebp.RelPermalink }}"
-        type="image/webp"
-        loading="lazy"
-      >
-    <source 
-      media="(min-width: 640px)"
-      srcset="{{ $imageMediumWebp.RelPermalink }}"
-      type="image/webp"
-      loading="lazy"
-    >
-    <img 
-      srcset="{{ $imageSmall.RelPermalink }} 640w, {{ $imageMedium.RelPermalink }} 800w"
-      sizes="(max-width: 640px) 640px, 800px"
-      src="{{ $imageSmall.RelPermalink }}" 
-      width={{ $imageSmall.Width }}
-      height={{ $imageSmall.Height }}
-      alt="{{ $.Page.Title }}"
-      >
-  </picture>
-    <br />
-  {{- end -}}
   {{ if .Params.toc }}
     <aside class="table-of-content">
       <span> Table of Content </span>

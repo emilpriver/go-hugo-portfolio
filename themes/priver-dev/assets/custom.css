@@ -36,7 +36,6 @@
 
 body.dark .post-content .table-of-content {
   border-bottom: 1px solid #474747;
-  border-top: 1px solid #474747;
 }
 
 .post-content .table-of-content span {
@@ -50,10 +49,5 @@ body.dark .post-content .table-of-content {
   font-size: 12px;
   padding-bottom: 3rem;
   margin-bottom: 3rem;
-  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-}
-
-#TableOfContents a {
-  line-height: 30px;
 }
