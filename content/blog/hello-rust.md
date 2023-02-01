@@ -53,7 +53,7 @@ async fn main() -> Result<()> {
 
 In most cases are there some runtimes/frameworks which fit most of the needs for using Async rust but all of them are probably not suitable for most cases, for example, async in WebAssembly might not work on all async runtimes as they rely on primitives that might not be available or optimal for WebAssembly, in this case changing your runtime for async to [wasm-rs/async-executor](https://github.com/wasm-rs/async-executor) could be handy.
 
-But the language is not only flexible in a way that you can use different runtimes, but you are also able to use code depending on if the config has enabled the feature or if a build is targeted to a special runtime, such as WASM. This is done by using the `cfg-if` crate and to be used in the code like this:
+But the language is not only flexible in a way that you can use different runtimes, but you are also able to use code depending on if the config has enabled the feature or if a build is targeted to a special runtime, such as WASM. This is done by using the `cfg-if` crate and can be used in the code like this:
 
 ```rust 
 // This function only gets compiled if the target OS is linux
@@ -261,7 +261,7 @@ macro_rules! vec {
 ```
 
 ## The borrow checker can be a living hell but is great.
-Rust is memory-safe, non-garbage-collected language, does it come with a borrow checker to ensure that we don't work with any non-valid memory points in our systems. This is done during the compilation time and can cause a lot of headaches for the developers. On the other hand, the developers of rust spent a lot of time working on a good developer experience for the users and describing the issues in the simplest way possible.
+Rust is memory-safe, non-garbage-collected language, does it come with a borrow checker to ensure that we don't work with any non-valid memory points in our systems. This is done during the compilation time and can cause a lot of headaches for the developers. On the other hand, the developers of Rust spent a lot of time working on a good developer experience for the users and describing the issues in the simplest way possible.
 
 This is a small example of what I mean:
 ```rust

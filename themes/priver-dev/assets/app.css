@@ -554,6 +554,13 @@ img {
 .post-content pre {
   margin-bottom: 2rem;
 }
+
+.post-content code {
+  background: #2e3440;
+  color: #8fbcbb;
+  padding: 3px;
+}
+
 .post-content ul pre {
   margin-left: calc(var(--gap) * -2);
 }
