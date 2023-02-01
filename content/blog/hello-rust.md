@@ -1,7 +1,7 @@
 ---
 title: "Hello Rust"
 date: 2023-02-01T07:37:57+01:00
-draft: true
+draft: false
 toc: true
 description: Good rust stuffs I learned when working with rust.
 type: "blog"
