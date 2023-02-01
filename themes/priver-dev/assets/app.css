@@ -479,7 +479,7 @@ img {
 .post-content a {
   padding-bottom: 0.2rem;
   font-weight: 500;
-  // border-bottom: 2px solid var(--pro);
+  border-bottom: 2px solid #000;
 }
 
 .post-content a code {
@@ -550,15 +550,10 @@ img {
   margin-inline: 0;
 }
 
-/*
 .post-content .highlight,
 .post-content pre {
-  margin: 0 calc(var(--gap) * -1) 4rem;
-  overflow-x: auto;
-  background: var(--hljs-bg) !important;
-  border-radius: 0.5rem;
+  margin-bottom: 2rem;
 }
-*/
 .post-content ul pre {
   margin-left: calc(var(--gap) * -2);
 }
