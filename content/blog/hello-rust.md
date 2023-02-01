@@ -51,7 +51,7 @@ async fn main() -> Result<()> {
 
 
 
-In most cases are there some runtimes/frameworks which fit most of the needs for using Async rust but all of them are probably not suitable for most cases, for example, async in WebAssembly might not work on all async runtimes as they rely on primitives that might not be available or optimal for WebAssembly, in this case changing your runtime for async to [wasm-rs/async-executor](https://github.com/wasm-rs/async-executor) could be handy.
+In most cases are there some runtimes/frameworks which fit most of the needs for using async Rust but all of them are probably not suitable for most cases, for example, async in WebAssembly might not work on all async runtimes as they rely on primitives that might not be available or optimal for WebAssembly, in this case changing your runtime for async to [wasm-rs/async-executor](https://github.com/wasm-rs/async-executor) could be handy.
 
 But the language is not only flexible in a way that you can use different runtimes, but you are also able to use code depending on if the config has enabled the feature or if a build is targeted to a special runtime, such as WASM. This is done by using the `cfg-if` crate and can be used in the code like this:
 
