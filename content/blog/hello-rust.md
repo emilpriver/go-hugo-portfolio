@@ -309,6 +309,11 @@ The rust community is getting bigger and bigger and more libraries and tooling i
 
 I found out rust has a really good developer experience, which is something I talked about earlier in this post. Many languages don't provide an easy why-to-understand error message easily which is something Rust has been working hard to achieve. I love that Rust tries to standardize ways of writing stuff and working with the different tooling and so on which is great because we prevent the situation where we have a lot of different ways to write the same code which creates confusion because one developer is experienced in writing the code in 1 way and another developer in another way.
 
+## Some stuff I don't like about Rust
+Even if I like the language a lot, is there some stuff that I don't like and most of the stuff comes from working with Rust in teams or when learning Rust. The learning curve in Rust is huge if you are new to programming, and can be huge if you are experienced in programming and just started to learn Rust. Which could make people stop using this beautiful language. On the other hand, when you have learned the language is everything way easier.
+
+Onboarding people to new teams could be way harder and it could take time before that individual feels productive or that the individual feels that they contribute to the team. And I think this is closely connected to the learning curve.
+
 ## The end
 
 I love working with rust and love to see the growing community and functionality the language provides. The language is not for everyone, it can be quite hard to work with and sometimes a tiny bit of a headache. But it's flexible, fast, and written well. My initial thought when I started to work with Rust was the design of the language are very well thought out and but it was so hard to understand the borrow checker, but as fast as I started to get a small understanding of how I should write my code was the borrow checker way easier to work with. I don't think Rust is the JavaScript killer which is something I do read mostly on Twitter, and not also the greatest language of all time. But I love to see that other languages are using Rust to enhance the tooling around the language or the language itself.
