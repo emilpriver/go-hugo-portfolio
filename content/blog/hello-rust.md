@@ -112,7 +112,7 @@ func main() {
 	case "Hej", "hello":
 		fmt.Println("Either Swedish or English")
 	case "Hola":
-		fmt.Println("spanic")
+		fmt.Println("spanish")
 	default:
 		fmt.Println("I dont speak this language")
 	}
