@@ -37,7 +37,7 @@ fn main() {
 }
 ```
 
-And to run it with Tokio do call `tokio::spawn` with the async function as a parameter:
+And to run it with Tokio do we call `tokio::spawn` with the async function as a parameter:
 
 ```rust
 #[tokio::main]
