@@ -18,7 +18,7 @@ I started to write Rust in the autumn of 2022 and have loved it ever since, even
 Rust is a highly flexible, type-safe, blazingly fast high-performance language without a runtime or garbage collector that can be used on a wide area of domains ranging from web to embedded. The Rust compiler targets [LLVM](https://llvm.org/) making it available on many platforms including the most common ones: Linux, Mac and Windows. Rust enforces memory safety by pointing all references to valid memory without the need for a garbage collector and to prevent data races Rust's borrow checker tracks the object lifetime of all references in the code during compile time.
 
 ## Rust is a flexible language
-Rust is built to be easy flexible and it doesn't force you to use language-created stuff, such as async runtimes or loggers. Instead, does rust create standardized high-level functionality that allows you to write the functions and then choose which runtime to use, which is great as it allows you to write the code the same way for all types of platforms and if you for example want to change from using [async-std](https://async.rs/) to [tokio](https://tokio.rs) as async runtime, is this done quite easy with often minimal changes.
+Rust is built to be easy flexible and it doesn't force you to use language-created stuff, such as async runtimes or loggers. Instead, Rust have added functionality that allows you to write your code and then choose which runtime to use, which is great as it allows you to write the code the same way for all types of platforms and if you for example want to change from using [async-std](https://async.rs/) to [tokio](https://tokio.rs) as async runtime, is this done quite easy with often minimal changes.
 
 Same example but in code:
 
@@ -292,7 +292,7 @@ What happens here is that we create a mutable value which is needed as we are go
 let later_reused_value = &value.clone()[6..];
 ```
 
-But if it wasn't for the borrow checker and all the "headache" it can create would we create performance issues and bugs that we don't like.
+But if it wasn't for the borrow checker would we have performance issues and bugs that we don't like.
 
 But as you might see, the error description is really useful and well-defined. And we also get a more in-depth explanation by running `rustc --explain E0502` in the command line. This is the part the developer behind rust has worked hard on to develop a good developer experience.
 
