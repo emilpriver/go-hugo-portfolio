@@ -189,7 +189,7 @@ to
 ```rust
 macro_rules! say_hello {
     ($a:expr) => {
-        say_hello!($a, "this is the default if you only parse in 1 required paramater")
+        say_hello!($a, "this is the default if you only parse in 1 required parameter")
     };
     // if second statement is type i64
     ($a:expr; i64) => {
