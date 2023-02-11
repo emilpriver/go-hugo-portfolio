@@ -82,7 +82,7 @@ Macros have different types of parameters inputs that you can use to create your
 - `block`: a block; a Rust block is a group of statements that are executed together as a single unit, delimited by curly braces (`{` and `}`).
 - `stmt`: a statement; something that performs an action and does not return anything.
 - `pat`: a pattern; patterns are a way of specifying the structure of values, such as literals, variables, or more complex data structures.
-- `expr`: an expression; expressions in Rust are codes that return a value, for example `let x = 5 + 10;`.
+- `expr`: an expression; expressions in Rust are codes that return a value, for example `5 + 10;`.
 - `ty`: a type; types are labels that specify the kind of value a variable or expression can hold.
 - `ident`: an identifier; identifiers are names used to identify a variable, function, type, constant, module, or any other item.
 - `path`: a path; paths are a way to refer to an item, such as a module, a struct, an enum, a function, or a constant, by its fully-qualified name.
