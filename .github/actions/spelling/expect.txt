@@ -19,15 +19,19 @@ cfg
 charset
 clippy
 cloudflare
+codebase
 config
 controll
 cristal
+dda
+ddb
 destructure
 Digitalocean
 Django
 DMs
 dockerfile
 dotenv
+eaf
 ecosytem
 Elasticsearch
 emails
@@ -59,6 +63,7 @@ html
 http
 iex
 ini
+itterate
 javascript
 JGf
 jpeg
@@ -88,6 +93,7 @@ mysql
 nextjs
 nginx
 npm
+Onboarding
 operativ
 OQx
 OTP
@@ -116,8 +122,8 @@ sebastian
 seo
 sitemap
 SITEURL
-spanic
 Spotify
+stmt
 structs
 telecom
 thrue
@@ -138,7 +144,6 @@ VLq
 VMs
 VUj
 wasm
-WEBP
 website
 wiki
 wikipedia
