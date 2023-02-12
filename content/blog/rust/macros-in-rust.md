@@ -1,6 +1,6 @@
 ---
 title: "Rust: Declarative macros"
-date: 2023-02-05T23:00:45+01:00
+date: 2023-02-11T23:00:45+01:00
 draft: false
 toc: true
 description: "Article about developing " 
