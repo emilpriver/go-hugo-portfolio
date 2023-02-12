@@ -1,9 +1,9 @@
 ---
-title: "Rust: Macros"
+title: "Rust: Declarative macros"
 date: 2023-02-05T23:00:45+01:00
 draft: false
 toc: true
-description: "Article about developing your first macro using rust" 
+description: "Article about developing " 
 type: "blog"
 tags: ["rust", "macros"]
 series:
@@ -89,6 +89,10 @@ Macros have different types of parameters inputs that you can use to create your
 - `meta`: a meta item; meta items refer to information about the code that’s not part of the code but which is used by the compiler.
 - `tt`: a single token tree; single token trees are sequences of one or more tokens that can be treated as a single unit when expanding macros.
 - `vis`: a `Visibility` qualifier; visibility qualifiers are used to control the visibility and accessibility of items, such as functions, structs, enums, and modules. Two of these visibility qualifiers in Rust are `pub` and `pub(crate)`. You can read more about this [here](https://doc.rust-lang.org/reference/visibility-and-privacy.html).
+
+### Procedural macros
+
+This article focuses mainly on declarative macros, which are defined using `macro_rules!`. It's also worth mentioning procedural macros, which are widely used and provide a powerful way to extend the Rust programming language. For example, procedural macros can be used to add custom behaviors to structs and to generate boilerplate code using `#[derive(Serialize)]`. This type of procedural macro expands to an implementation of the `Serialize` trait, meaning that the struct will automatically be serialized when it is used with a serialization library. As a result, procedural macros can be very useful for speeding up development time. For more information, see the Rust docs [here](https://doc.rust-lang.org/reference/procedural-macros.html). They provide a detailed overview of how to create and use procedural macros, as well as the various features and advantages of using them.
 
 ## Defining a simple macro
 
