@@ -146,8 +146,9 @@ Macros are incredibly powerful and enable us to create complex functions by allo
 ```
 macro_rules! say_hello {
     ($a:expr) => {
-        say_hello!($a, "this is the default if you only parse in one required parameter")
+        say_hello!($a, "this is the default if you only pass in one required parameter")
     };
+    //  the trailing * means that we can add inifity amount of parameters with same type as $opt variable
     ($a:expr, $($opt:expr),*) => {
         {
             print!("Hello {}! ", $a);
@@ -168,7 +169,7 @@ fn main() {
 
 [Rust Playground link](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=6667867206eaf0e3dda64c41c1a6897c)
 
-The macro `say_hello` allows us to pass in two parameters, one required and one optional, thus making it possible to customize the output. By passing in the optional parameter, we are able to add more information to the output of the macro. For example, if we pass in the argument `"I", "like", "pizza"`, the output of the macro will be `"Hello Rust! I like pizza"`. This way, by utilizing macros, we can create powerful functions that can be customized to suit our needs.
+The macro `say_hello` enables us to pass in two or more parameters, with only two being required. This makes it possible to customize the output.. By passing in the optional parameter, we are able to add more information to the output of the macro. For example, if we pass in the argument `"I", "like", "pizza"`, the output of the macro will be `"Hello Rust! I like pizza"`. This way, by utilizing macros, we can create powerful functions that can be customized to suit our needs.
 
 We can match on various parameters, such as statements or the parameter divider argument. This time, we change `,` to `;`, which allows us to call our macro using `say_hello!("Changed divider char to ;"; 1 > 2)`. This is easily done in the code by editing the parameter input from
 
