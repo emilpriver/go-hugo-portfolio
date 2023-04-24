@@ -1,8 +1,8 @@
 {
   "redirects": [
     {
-      "source": "/blog/rust/macros-in-rust",
-      "destination": "/blog/rust/declarative-macros"
+      "source": "/blog/rust/macros-in-rust*",
+      "destination": "/blog/rust/declarative-macros/"
     }
   ]
 }
