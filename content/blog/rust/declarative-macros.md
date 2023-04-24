@@ -3,11 +3,12 @@ title: "Rust: Declarative macros"
 date: 2023-02-05T23:00:45+01:00
 draft: false
 toc: true
-description: "Article about developing " 
+description: "Article about developing declarative macros in Rust" 
 type: "blog"
 tags: ["rust", "macros"]
 series:
-- Rust 
+- Rust
+- Rust Macros
 images:
   - /og-images/rust-og.jpg
 cover: "images/rust-og.jpg"
