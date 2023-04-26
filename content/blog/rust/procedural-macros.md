@@ -1,7 +1,7 @@
 ---
 title: "Rust: Procedural Macros"
 date: 2023-04-26T19:33:19+02:00
-draft: true
+draft: false
 toc: true
 description: "Article about developing procedural macros in Rust" 
 type: "blog"
