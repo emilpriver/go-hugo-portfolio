@@ -241,7 +241,7 @@ The example above can be used as follows:
 ```rust
 #[my_attribute_macro]
 fn my_function() {
-   printLn!("hello");	
+   println!("hello");	
 }
 ```
 
