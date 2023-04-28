@@ -25,7 +25,7 @@ Procedural macros are defined using the `proc_macro` crate, which provides a set
 
 ## Procedural vs Declarative Macros in Rust
 
-There are significant differences between procedural and declarative macros in Rust. One of the biggest differences is that procedural macros operate based on Rust's syntax tree to generate new code at compile time, while declarative macros generate code that matches a pattern at compile time. Procedural macros are defined as functions that take a TokenStream as input and output a TokenStream.
+There are significant differences between procedural and declarative macros in Rust. One of the biggest differences is that procedural macros operate over token streams to generate new code at compile time, while declarative macros generate code that matches a pattern at compile time. Procedural macros are defined as functions that take a TokenStream as input and output a TokenStream.
 
 Declarative macros, on the other hand, use patterns to understand what code to generate based on rules defined using `macro_rules!`. Declarative macros are easier to write but are not as flexible as procedural macros.
 
