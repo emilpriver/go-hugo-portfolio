@@ -99,3 +99,15 @@ pub fn main() !void {
 ```
 
 *Running the code above won't work. It's a stripped-down example from the [code-examples](https://ziglang.org/learn/samples/#using-curl-from-zig)*
+
+## Zig Syntax
+
+## Recommended Articles
+
+This area contains some articles that I recommend reading, which might help you on your Zig journey.
+
+### **What is Zig's Comptime? by Loris Cro**
+
+[https://kristoff.it/blog/what-is-zig-comptime/](https://kristoff.it/blog/what-is-zig-comptime/)
+
+This article discusses `comptime`, which refers to code that runs only during compile time. It works kind of like macros in Rust.
