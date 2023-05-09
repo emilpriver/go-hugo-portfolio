@@ -1,7 +1,7 @@
 ---
 title: "Initial Commit: Zig"
 date: 2023-05-05T22:29:13+02:00
-draft: true
+draft: false
 toc: true
 description: "Article about the programming language Zig." 
 type: "blog"
@@ -27,16 +27,26 @@ Zig is a relatively new programming language, designed by Andrew Kelly, that fir
 
 Zig has four different modes for compiling code: Debug, ReleaseFast, ReleaseSafe, and ReleaseSmall. You can read more about them [here](https://ziglang.org/documentation/master/#Debug). These modes can be applied to different scopes with various combinations, allowing you to modify the settings in your code and apply them to different functionalities.
 
-```
+```zig 
 test "@setRuntimeSafety" {
-    // The builtin applies to the scope that it is called in. So here, integer overflow    // will not be caught in ReleaseFast and ReleaseSmall modes:    // var x: u8 = 255;    // x += 1; // undefined behavior in ReleaseFast/ReleaseSmall modes.    {
-        // However this block has safety enabled, so safety checks happen here,        // even in ReleaseFast and ReleaseSmall modes.        @setRuntimeSafety(true);
+    // The builtin applies to the scope that it is called in. So here, integer overflow
+    // will not be caught in ReleaseFast and ReleaseSmall modes:
+    // var x: u8 = 255;
+    // x += 1; // undefined behavior in ReleaseFast/ReleaseSmall modes.
+    {
+        // However this block has safety enabled, so safety checks happen here,
+        // even in ReleaseFast and ReleaseSmall modes.
+        @setRuntimeSafety(true);
         var x: u8 = 255;
         x += 1;
 
         {
-            // The value can be overridden at any scope. So here integer overflow            // would not be caught in any build mode.            @setRuntimeSafety(false);
-            // var x: u8 = 255;            // x += 1; // undefined behavior in all build modes.        }
+            // The value can be overridden at any scope. So here integer overflow
+            // would not be caught in any build mode.
+            @setRuntimeSafety(false);
+            // var x: u8 = 255;
+            // x += 1; // undefined behavior in all build modes.
+        }
     }
 }
 ```
@@ -47,7 +57,7 @@ Zig has a different way of handling builds than what I've seen before. To create
 
 And the output from the above command in the `build.zig` file mostly looks like this (Zig is still in development, so the output may differ in different versions of Zig.):
 
-```
+```zig
 const std = @import("std");
 
 pub fn build(b: *std.build.Builder) void {
@@ -71,7 +81,7 @@ pub fn build(b: *std.build.Builder) void {
 
 ```
 
-Defining how to build your code this way is not something I’ve experienced earlier. I believe it is not essential to elaborate on every aspect of this code. However, if you wish to acquire more knowledge regarding the build step, I highly recommend referring to this guide on [zig.news](https://zig.news/xq/zig-build-explained-part-1-59lf). In brief, we specify the target operating system and build mode. Then, we instruct Zig to register and compile a new executable called `fresh`, which is located at `src/main.zig`. We also tell Zig to install all code dependencies we need.
+Defining how to build your code this way is not something I’ve experienced earlier. I believe it is not essential to elaborate on every aspect of this code. However, if you wish to acquire more knowledge regarding the build step, I highly recommend referring to this guide on [zig.news](https://zig.news/xq/zig-build-explained-part-1-59lf). In brief, we specify the target operating system and build mode. Then, we instruct Zig to register and compile a new executable called `fresh`, with it's main file located at `src/main.zig`. We also tell Zig to install all code dependencies we need.
 
 Finally, we register a run command with the description "Run the app", which we can use when building our code.
 
@@ -85,7 +95,7 @@ This means that we can register different commands that suit each application. W
 
 A useful feature of Zig is the ability to import C code directly using the `@cImport()` and `@cInclude()` annotations. This allows us to include libraries such as `curl/curl.h` in our Zig applications.
 
-```
+```zig
 const std = @import("std");
 const cURL = @cImport({
     @cInclude("curl/curl.h");
@@ -101,13 +111,144 @@ pub fn main() !void {
 *Running the code above won't work. It's a stripped-down example from the [code-examples](https://ziglang.org/learn/samples/#using-curl-from-zig)*
 
 ## Zig Syntax
+Most of the content in this section of the article comes from [https://ziglearn.org/chapter-1/](https://ziglearn.org/chapter-1/). This section of the post contains interesting information that I haven't seen before in other languages, and I thought it would be good to write about.
 
-## Recommended Articles
+### Arrays
 
-This area contains some articles that I recommend reading, which might help you on your Zig journey.
+Zig allows you to define the length of an array, or not define it at all. To not define the length, add an underscore (_) to the array declaration. For example, creating an array without a defined length looks like this:
+
+```zig
+const test = [_]u8{ 'w', 'o', 'r', 'l', 'd' };
+```
+
+And creating an array with a defined length looks like this:
+
+```zig
+const test = [5]u8{ 'h', 'e', 'l', 'l', 'o' };
+```
+
+### Loops
+
+Zig also provides a good syntax for loops that I personally like. Zig defines its loops with a condition and then values.
+
+```zig 
+while (i <= 10) : (i += 1) {
+   sum += i;
+}
+```
+
+When using for loops, you can define which fields you want to use inside the loop. For example, if you want to iterate over a for loop and have the index for each loop, you can define your code like this:
+
+```zig
+const string = [_]u8{ 'a', 'b', 'c' };
+for (string, 0..) |character, index| {
+  _ = character;
+  _ = index;
+}
+
+```
+
+If you only care about the array value you are currently working with and not the index, you can define your for loop like this:
+
+```zig
+for (string) |character| {
+   _ = character;
+}
+```
+
+### Switch
+
+I am familiar with Zig's switch statements and personally like them. They share similarities with Rust's switch statements, such as the need to handle every edge case or use a default "else" clause. This means that if there are five different edge cases and only two of them are handled, the "else" clause will handle the rest of the cases. Switching on enums, unions, and so on is also allowed. However, Zig allows you to use switch outside of functions and assign values to a const. For example, you can use the value inside of functions. An example of this type of switch statement is switching on which OS the user is using and displaying different messages.
+
+```zig
+const os_msg = switch (builtin.target.os.tag) {
+    .linux => "we found a linux user",
+    else => "not a linux user",
+};
+```
+
+*Example taken from Zig docs* 
+
+## Zig Error Handling
+
+Zig's error handling mechanism uses an enum called "error set". At compile time, each variant of the enum is assigned an integer greater than 0 that is used to identify the error message displayed to the user. If you declare the same error set multiple times, the variants will be assigned the same integer values. I see Zig error handling as similar to how Golang handles errors: as values with which we can work.
+
+Developers familiar with Rust may be familiar with the `Result<T, Error>` return type for error handling. In contrast, Zig returns the type `Error!u64`.
+
+As an example, let's say we create the following error set:
+
+```zig
+const FileOpenError = error {
+    AccessDenied,
+    OutOfMemory,
+    FileNotFound,
+};
+```
+
+We can then use this error set in a function that returns the error type `FileOpenError!u64`. If this function returns the `OutOfMemory` error, Zig would return the error value `FileOpenError2`.
+
+However, Zig has more to offer than just this. The compiler automatically adds all error tags to an `anyerror` type. This allows you to specify that a function can either return a specific error tag or `anyerror`. Each caller of a function can handle specific errors but must also include an `else` statement in its switch statements to handle any unexpected errors. All error tags from all functions used anywhere in the codebase are automatically collected to form the contents of the `anyerror` enum.
+
+### Zig's "try/catch" keyword
+
+Zig has a cool feature called `try` that can be used in front of a function to catch errors and return them easily. For example:
+
+```zig
+const number = try parseU64(str, 10);
+```
+
+If this function fails to parse the input string, it will return an error that we can work with. If it parses the value without any errors, it will continue with the rest of the code. `try` is a shorthand for `catch |err| return err`. In the code example above, this would be:
+
+```zig
+const number = parseU64(str, 10) catch |err| return err;
+```
+
+As you can see in this example, there is a `catch` keyword which is part of Zig's error handling. Being able to do logic if we get an error with Zig is easy. For example, if we want to assign a default number if it fails, we can do so via:
+
+```zig
+const number = parseU64(str, 10) catch 13;
+```
+
+We can run functions or return values if our code breaks as well:
+
+```zig
+// panic if it fails:
+const number = parseU64("1234", 10) catch unreachable;
+
+// Run a function if it fails:
+const number = parseU64("1234", 10) catch runSomeFunction();
+```
+
+## Ending
+
+I hope you enjoyed reading this post. It covers some of the topics that I found most interesting when I first looked into Zig. My thoughts on Zig may change in the future, but for now, here are some links that you might find useful when exploring Zig. 😄 I'm looking forward to seeing how Zig improves in the future.
+
+### Awesome Zig
+
+[https://github.com/C-BJ/Awesome-Zig](https://github.com/C-BJ/Awesome-Zig)
+
+This repository contains useful links and projects that could help you with your development.
+
+### Zig LSP
+
+[https://github.com/zigtools/zls](https://github.com/zigtools/zls)
+
+Zig's Language Server Protocol. I recommend using the latest release and matching your Zig version with the ZLS version.
+
+### Zig News
+
+[zig.news](http://zig.news/)
+
+This is a forum for Zig-related articles.
 
 ### **What is Zig's Comptime? by Loris Cro**
 
 [https://kristoff.it/blog/what-is-zig-comptime/](https://kristoff.it/blog/what-is-zig-comptime/)
 
-This article discusses `comptime`, which refers to code that runs only during compile time. It works kind of like macros in Rust.
+This article explains comptime in Zig.
+
+### Zig build explained
+
+[https://zig.news/xq/zig-build-explained-part-1-59lf](https://zig.news/xq/zig-build-explained-part-1-59lf)
+
+This is a series of three posts that explains Zig's build system. I found it to be helpful for understanding the build system in Zig.
