@@ -253,3 +253,9 @@ This article explains comptime in Zig.
 [https://zig.news/xq/zig-build-explained-part-1-59lf](https://zig.news/xq/zig-build-explained-part-1-59lf)
 
 This is a series of three posts that explains Zig's build system. I found it to be helpful for understanding the build system in Zig.
+
+### Bun.sh
+
+https://bun.sh/
+
+Run, test, transpile, and bundle JavaScript & TypeScript projects — all in Bun. Bun is a new JavaScript runtime built for speed, with a native bundler, transpiler, test runner, and npm-compatible package manager baked-in. Built in Zig.
