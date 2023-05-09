@@ -50,6 +50,7 @@ test "@setRuntimeSafety" {
     }
 }
 ```
+Functions prefixed with a @ are provided by the Zig language.
 
 ### Zig's Unique Approach to Building Applications
 
