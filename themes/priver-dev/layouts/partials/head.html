@@ -19,19 +19,18 @@
   {{ $app_css := resources.Get "app.css" }}
   <!---->
   {{ $custom_css := resources.Get "custom.css" }}
+
+  {{ $prism_css := resources.Get "prism.css" }}
   <!---->
-  {{ $css := slice $app_css $custom_css | resources.Concat "app.css" | minify }}
+  {{ $css := slice $app_css $custom_css $prism_css | resources.Concat "app.css" | minify }}
   <link rel="preload stylesheet" as="style" href="{{ $css.Permalink }}" />
 
   {{ if and .IsPage (not site.Params.disableHLJS) }}
-  <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/nord.min.css">
-
   <script
     defer
-    src="{{ `highlight.min.js` | absURL }}"
-    onload="hljs.initHighlightingOnLoad();"
+    src="{{ `prism.js` | absURL }}"
   ></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" defer></script>
   {{ end }}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,5 +77,8 @@
   {{ template "_internal/twitter_cards.html" . }}
   <!---->
   {{ end }}
-  <script async src="https://stats.priver.dev/script.js" data-website-id="113a4515-f867-43a7-a7ff-ce45ed3a079c"></script>
+
+  {{ if hugo.IsProduction }}
+    <script async src="https://stats.priver.dev/script.js" data-website-id="113a4515-f867-43a7-a7ff-ce45ed3a079c"></script>
+  {{ end }}
 </head>
