@@ -224,6 +224,8 @@ const number = parseU64("1234", 10) catch runSomeFunction();
 
 I hope you enjoyed reading this post. It covers some of the topics that I found most interesting when I first looked into Zig. My thoughts on Zig may change in the future, but for now, here are some links that you might find useful when exploring Zig. 😄 I'm looking forward to seeing how Zig improves in the future.
 
+Also, If you want to talk about this post did I post it on [Reddit](https://www.reddit.com/r/Zig/comments/13ckyyu/wrote_an_article_about_zig/)
+
 ### Awesome Zig
 
 [https://github.com/C-BJ/Awesome-Zig](https://github.com/C-BJ/Awesome-Zig)
