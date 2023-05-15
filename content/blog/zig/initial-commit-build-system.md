@@ -28,7 +28,7 @@ Before explaining how to import packages into Zig, let me first give a brief exp
 
 Adding a new step to your `build.zig` file is quite easy. Simply define a new step using the `step` function exported from `std.build.Builder`. Here is an example:
 
-```
+```zig
 const std = @import("std");
 
 pub fn build(b: *std.build.Builder) void {
@@ -38,7 +38,7 @@ pub fn build(b: *std.build.Builder) void {
 
 We can use the new `step` variable to add dependencies that must be run before the step. To compile our code and make it executable, we need to add our code to the build step by using:
 
-```
+```zig
 const std = @import("std");
 
 pub fn build(b: *std.build.Builder) void {
@@ -67,7 +67,7 @@ Now we can easily compile and run our code. However, in most cases, we also want
 - The `exe.addPackagePath(name, path)` method registers a Zig library located at a specified path. We can then call this library in our projects and make use of it.
 - To install anything, use `b.installArtifacts(executable)`. This creates a new `InstallArtifactStep` that will be called when executing either `zig build` or `zig build install`. To remove the executed file, use `zig build uninstall`. This removes all files. The command also has a shorthand named `install()` that does the same thing. However, you need to call this function from the executable that you registered earlier. For example:
 
-```
+```zig
 const std = @import("std");
 
 pub fn build(b: *std.build.Builder) void {
@@ -78,7 +78,7 @@ pub fn build(b: *std.build.Builder) void {
 
 With this information, we can now create a new executable that can be installed and run using the following code:
 
-```
+```zig
 const std = @import("std");
 
 pub fn build(b: *std.build.Builder) void {
@@ -105,7 +105,7 @@ pub fn build(b: *std.build.Builder) void {
 
 I created this blog post because currently there is no package manager for Zig, and I've been struggling to import an HTTP library that I wanted to try out. I've been testing different ways of handling imports and found a solution that works. The solution involves creating a `zig-packages` folder where each package is a submodule added via Git. Then, in my code, I add each package and refer to its main file. 
 
-```jsx
+```zig
 // zig-release: zig-macos-aarch64-0.11.0-dev.3097+7f7bd206d.tar.xz
 
 const std = @import("std");
@@ -142,7 +142,7 @@ This is my folder structure. As you can see from the example above, the main fil
 
 This allows me to later require the package in my code and use it like this:
 
-```
+```zig
 const web = @import("zhp");
 
 pub fn main() anyerror!void {
