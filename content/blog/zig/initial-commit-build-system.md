@@ -67,8 +67,8 @@ pub fn build(b: *std.build.Builder) void {
     const step = b.step("you-new-step", "This is what is shown in help");
     step.dependOn(&exe.step);
 
-		// Register run command
-		const run_cmd = exe.run();
+	  // Register run command
+	  const run_cmd = exe.run();
     run_cmd.step.dependOn(b.getInstallStep());
     const run_step = b.step("run", "Run the app");
     run_step.dependOn(&run_cmd.step);
