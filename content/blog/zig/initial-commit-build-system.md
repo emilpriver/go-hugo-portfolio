@@ -52,6 +52,32 @@ pub fn build(b: *std.build.Builder) void {
 
 Now we can easily compile and run our code. However, in most cases, we also want to include different requirements in our build. For example, we may want to specify which mode we want to use (Debug, ReleaseFast, ReleaseSafe, or ReleaseSmall), or we may want to specify a target platform (Windows, Unix, Linux, WASM, etc.).
 
+If you want to run the new step `your-new-step`, you can do so by running: `zig build your-new-step`. 
+
+### Running Step After Compilation
+
+In Zig, you can register a run command that executes your code after compilation. You can accomplish this easily by using the `.Run()` function that is exposed from the executable:
+
+```zig
+const std = @import("std");
+
+pub fn build(b: *std.build.Builder) void {
+    const exe = b.addExecutable("program", "src/main.zig");
+
+    const step = b.step("you-new-step", "This is what is shown in help");
+    step.dependOn(&exe.step);
+
+		// Register run command
+		const run_cmd = exe.run();
+    run_cmd.step.dependOn(b.getInstallStep());
+    const run_step = b.step("run", "Run the app");
+    run_step.dependOn(&run_cmd.step);
+
+}
+```
+
+This code compiles your program and then executes it directly, which is very useful for development purposes.
+
 ### Explanation of Basic Common Build Functions in Zig
 
 - The `b.Step(step, description)` function adds a new step that can be used in our code to compile our program. Later on, dependencies can be added for this step.
