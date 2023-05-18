@@ -56,7 +56,7 @@ If you want to run the new step `your-new-step`, you can do so by running: `zig 
 
 ### Running Step After Compilation
 
-In Zig, you can register a run command that executes your code after compilation. You can accomplish this easily by using the `.Run()` function that is exposed from the executable:
+In Zig, you can register a run command that executes your code after compilation. You can accomplish this easily by using the `.run()` function that is exposed from the executable:
 
 ```zig
 const std = @import("std");
