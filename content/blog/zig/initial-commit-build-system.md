@@ -124,8 +124,42 @@ pub fn build(b: *std.build.Builder) void {
     const run_step = b.step("run", "Run the app");
     run_step.dependOn(&run_cmd.step);
 }
+```
+
+### Building multiple executables from a single command.
+
+You can build to multiple targets using a single command with `zig build`. This allows you to build for different targets and modes, while still utilizing the code and logic you have developed.
+
+For example, the following `build.zig` file creates two executables, `test` and `test-2`, using different targets:
+
+```zig
+const std = @import("std");
+
+pub fn build(b: *std.build.Builder) void {
+    // Standard target options allows the person running `zig build` to choose
+    // what target to build for. Here we do not override the defaults, which
+    // means any target is allowed, and the default is native. Other options
+    // for restricting supported target set are available.
+    const target = b.standardTargetOptions(.{});
+
+    // Standard release options allow the person running `zig build` to select
+    // between Debug, ReleaseSafe, ReleaseFast, and ReleaseSmall.
+    const mode = b.standardReleaseOptions();
+
+    const exe = b.addExecutable("test", "src/main.zig");
+    exe.setTarget(target);
+    exe.setBuildMode(mode);
+    exe.install();
+
+    const exe_2 = b.addExecutable("test-2", "src/main.zig");
+    exe_2.setTarget("add your other target here");
+    exe_2.setBuildMode(mode);
+    exe_2.install();
+}
 
 ```
+
+You can use `b.standardTargetOptions(.{})` and `b.standardReleaseOptions()` to specify CLI flags for building different targets and modes. However, importing a target into `build.zig` is currently a bit difficult, as the type `CrossTarget` needs to be located first.
 
 ## **How to Import Packages into Zig without a Package Manager until 0.11.0 is Released**
 
