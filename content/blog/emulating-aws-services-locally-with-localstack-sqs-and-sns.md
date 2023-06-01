@@ -2,7 +2,6 @@
 title: "Emulating Aws Services Locally With Localstack Sqs and Sns"
 date: 2023-06-01T11:28:41+02:00
 draft: false
-seoTitle: "Emulating AWS Services Locally with Localstack, SQS, and SNS: A Comprehensive Guide"
 summary: "Learn how to emulate AWS services like SNS, SQS, and S3 on your local machine using Localstack. This guide walks you through setting up Localstack and creating queues using AWS CLI. You'll also learn how to set up SQS and SNS client with GO, and get tips on using custom endpoints. Test your code locally against AWS services without worrying about AWS costs. Check out this guide for developers."
 draft: false
 images:
@@ -22,7 +21,7 @@ After doing some research, I stumbled upon a solution that I thought could be he
 
 ## Localstack
 
-Localstack is a fantastic open-source tool that lets you emulate AWS services like SNS, SQS, and S3 on your local machine. This is a great way to test your code without worrying about AWS costs.
+Localstack is a fantastic open-source tool that lets you emulate most of AWS services like SNS, SQS, and S3 on your local machine. This is a great way to test your code without worrying about AWS costs.
 
 The free plan offers core features like the ability to quickly spin up a mock environment. However, if you're looking for more advanced features, Localstack's pro plan has you covered. With the pro plan, you get a working Web UI that lets you easily monitor your mock environment. Unfortunately, this post's example doesn't showcase that feature as I'm using the free tier for development.
 
