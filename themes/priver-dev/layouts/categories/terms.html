@@ -1,45 +1,53 @@
-{{ define "main"}}
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <a name="top"></a>
-            {{ if not (eq (len $.Data.Terms) 0) }}
-                <div>
-                    <div class="tagcloud03">
-                        <ul>
-                            {{ range .Data.Terms.Alphabetical }}
-                                <li>
-                                    <a href="#{{ .Page.Title | urlize}}">{{ .Page.Title }}
-                                        <span class="badge">{{ .Count }}</span>
-                                    </a>
-                                </li>
-                            {{ end }}
-                        </ul>
-                    </div>
-                    <div>
-                        {{ range .Data.Terms.Alphabetical }}
-                            <h3>
-                                <a name="{{ .Page.Title | urlize }}"></a>{{ .Page.Title}}
-                                <i class="badge">{{ .Count }}</i>
-                            </h3>
-                            <ul class="list-group striped-list">
-                                {{ range .Pages }}
-                                    <li class="list-group-item">
-                                        <a href="{{ .RelPermalink }}">
-                                            {{ .Title }} {{ if .Params.subheadline }} ({{ .Params.subheadline }}){{ end }} -
-                                            <small>{{ .PublishDate.Format "Jan 02, 2006" }}{{ partial "draft" . }}</small></a>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                            <a href="#top">
-                                <small>back to top</small>
-                            </a>
-                        {{ end }}
-                    </div>
-                </div>
-            {{ end }}
-        </div>
-    </div>
+{{ define "main" }}
+
+<div class="home-info-area">
+  {{ if .Params.Image  }}
+  {{ $image := resources.Get .Params.Image }}
+  {{ with $image }}
+  {{- $image := $image.Fit "200x200 q80" -}}
+  {{- $imageWebp := $image.Fit "200x200 webp q100" -}}
+  <div class="image">
+    <picture>
+      <source 
+        srcset="{{ $imageWebp.RelPermalink }}"
+        type="image/webp"
+      >
+      <img width="{{ $image.Width }}" height="{{ $image.Height }}" src="{{ $image.RelPermalink }}" alt="{{ .Title }}" />
+    </picture>
+  </div>
+  {{ end }}
+  {{ end }}
+  <div class="">
+    {{ if .Title }}
+    <header class="post-title header-margin-bottom">
+      <h1>{{ .Title }}</h1>
+    </header>
+    {{ end }} {{ if .Description }}
+    <span class="archive-description">{{ .Description }}</span>
+    {{ end }}
+  </div>
 </div>
+<!-- $pages -->
+
+<!-- Articles -->
+{{ $paginator := .Paginate .Pages }} {{ range $index, $page := $paginator.Pages }}
+<article class="post-entry">
+  <h2>{{ .Title }}</h2>
+  <time>{{ .Date | time.Format ":date_medium" }}</time>
+  <a aria-label="{{ .Title }}" href="{{ .Permalink }}"></a>
+</article>
+{{ end }}
+
+<!-- Main Nav -->
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="main-nav">
+  {{ if $paginator.HasPrev }}
+  <a class="prev" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
+  {{ end }}<!---->
+  {{ if $paginator.HasNext }}
+  <a class="next" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} →</a>
+  {{ end }}
+</nav>
+{{ end }}<!---->
+
 {{ end }}

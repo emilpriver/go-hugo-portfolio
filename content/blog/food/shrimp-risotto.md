@@ -4,8 +4,7 @@ date: 2023-07-16T22:03:43+02:00
 description: "Make a delicious shrimp risotto with this easy recipe for four. It takes an hour to make and comes with step-by-step instructions and a list of ingredients. Accompanied by a music playlist to set the perfect mood for your cooking experience."
 draft: false
 type: "recipe"
-recipes: ["Risotto"]
-series: Interview
+food: ["Risotto"]
 images:
   - /og-images/shrimp-risotto.jpeg
 cover: "images/recipe/shrimp-risotto.jpeg"
