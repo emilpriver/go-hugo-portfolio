@@ -31,16 +31,15 @@ title = "Emil Privér"
     url = "/about/"
     weight = 2
  [[menu.main]]
-    identifier = "food"
-    name = "Food"
-    url = "/food/"
+    identifier = "recipe"
+    name = "Recipes"
+    url = "/recipe/"
     weight = 3
 
 [taxonomies]
-category = "categories"
 tag = "tags"
 series = "series"
-food = "food"
+recipes = "recipes"
 
 [privacy]
 

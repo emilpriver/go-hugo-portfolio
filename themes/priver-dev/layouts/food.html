@@ -27,13 +27,8 @@
     {{ end }}
   </div>
 </div>
-<!-- $pages -->
-{{ $pages := union .RegularPages .Sections }}
-<!---->{{ if .IsHome }} {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{ end }}
-
 <!-- Articles -->
-{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages }}
+{{ $paginator := .Paginate .Pages }} {{ range $index, $page := $paginator.Pages }}
 <article class="post-entry">
   <h2>{{ .Title }}</h2>
   <time>{{ .Date | time.Format ":date_medium" }}</time>
