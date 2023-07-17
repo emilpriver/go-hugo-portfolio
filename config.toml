@@ -33,7 +33,7 @@ title = "Emil Privér"
  [[menu.main]]
     identifier = "recipe"
     name = "Recipes"
-    url = "/recipe/"
+    url = "/recipes/"
     weight = 3
 
 [taxonomies]
@@ -42,7 +42,6 @@ series = "series"
 recipes = "recipes"
 
 [privacy]
-
   [privacy.vimeo]
     disabled = false
     simple = true
