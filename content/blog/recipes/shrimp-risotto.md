@@ -38,6 +38,8 @@ This is an easy recipe for shrimp risotto that serves 4 people and takes about a
 4. Pour in 5-7 dl of water and add 2 vegetable broth cubes. Let it simmer for 10-15 minutes.
 5. After 10-15 minutes, strain the shrimp stock, so you're left with only the liquid.
 
+![shrimp stock](images/recipes/IMG_2477.jpeg)
+
 ## Risotto
 
 1. In a separate saucepan, add a little butter and olive oil, then sauté the shallot and garlic for a minute without browning them.
