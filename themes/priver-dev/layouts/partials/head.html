@@ -80,5 +80,10 @@
 
   {{ if hugo.IsProduction }}
     <script async src="https://stats.priver.dev/script.js" data-website-id="113a4515-f867-43a7-a7ff-ce45ed3a079c"></script>
+    <script async src="https://portfolio-analytics.fly.dev/scripts/script.js" data-app-id="1e3bb66b-4029-4945-b6a0-d17069da388b"> </script>
+  {{ end }}
+
+  {{ if !hugo.IsProduction}}
+  <script async src="http://localhost:4000/scripts/script.js" data-app-id="1e3bb66b-4029-4945-b6a0-d17069da388b"> </script>
   {{ end }}
 </head>
