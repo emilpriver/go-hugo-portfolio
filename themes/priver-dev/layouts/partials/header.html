@@ -79,6 +79,16 @@
 
     let setDark = (isDark) => {
       bodyClx[isDark ? 'add' : 'remove']('dark');
+
+      window.yummi.track("dark-toggle", {
+        event_name: "Dark Toggle",
+        data:{
+          key: "dark-toggle",
+          bool_value: isDark,
+          date: window.yummi.formatDate(new Date())
+        }
+      });
+
       localStorage.setItem('dark', isDark ? 'yes' : 'no');
     };
 
