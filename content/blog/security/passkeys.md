@@ -3,7 +3,7 @@ title: "Passkeys - The password killer"
 date: 2023-07-21T12:03:22+02:00
 draft: false
 toc: true
-description: "Article about developing declarative macros in Rust" 
+description: "This article explores the future of passwords and the potential replacement of traditional username and password authentication with PassKeys. PassKeys use biometric sensors, a PIN, or a pattern to authenticate users, making it easier and more secure to sign in. The article discusses the benefits of PassKeys over traditional passwords, potential risks, and the future of authentication." 
 type: "blog"
 tags: ["security", "passkeys"]
 series:
