@@ -57,7 +57,9 @@ As passkeys become more widespread, we can expect more companies to adopt this m
 
 I started to discover more about passkeys when I began working on my vacation hobby project, Yummi Analytics. Yummi Analytics is a Google Analytics replacement where I plan to use passkeys whenever possible.
 
-If you would like to try PassKeys now, click on this link: [https://passkeys-demo.appspot.com](https://passkeys-demo.appspot.com/)
+This post is the first in a series about Passkeys. The next part will cover integrating and developing Passkeys.
+
+If you would like to try Passkeys now, click on this link: [https://passkeys-demo.appspot.com](https://passkeys-demo.appspot.com/)
 
 I hope you enjoyed the article and learned something new! :D
 
