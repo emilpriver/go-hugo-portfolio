@@ -1,5 +1,5 @@
 ---
-title: "Zimpler Data Warehouse"
+title: "Building a data warehouse"
 date: 2023-08-22T19:25:53+02:00
 draft: false
 description: "Blog posts about working on my first data warehouse"
