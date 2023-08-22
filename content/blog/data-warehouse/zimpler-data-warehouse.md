@@ -9,7 +9,7 @@ best: true
 images:
   - /og-images/data-warehouse.webp
 series:
-  - Interview
+  - Data Warehouse
 cover: "images/data-warehouse/data-warehouse.webp"
 toc: true
 ---
