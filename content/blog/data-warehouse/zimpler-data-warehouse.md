@@ -7,10 +7,10 @@ type: "blog"
 tags: ["Data Warehouse"]
 best: true
 images:
-  - /og-images/data-warehouse.webp
+  - /og-images/data-warehouse.png
 series:
   - Data Warehouse
-cover: "images/data-warehouse/data-warehouse.webp"
+cover: "images/data-warehouse/data-warehouse.png"
 toc: true
 ---
 
