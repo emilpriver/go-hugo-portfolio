@@ -1,5 +1,5 @@
 ---
-title: "Solving GitHub Actions Issues for Go Projects"
+title: "Using Github Actions with Private Repositories in the Same Organization: A Solution for Golang Projects"
 date: 2023-09-10T00:57:08+02:00
 draft: false
 description: "This article explains how to use Github Actions for Go projects and addresses two common issues: reading from private repositories and installing Go packages. The solution involves creating a personal access token and adding it to an organization-wide token with read access to repositories and their contents, and logging in to the git user for Go using the `little-core-labs/netrc-creds@master` Github Actions script. The article provides YAML code examples for implementing these solutions."
