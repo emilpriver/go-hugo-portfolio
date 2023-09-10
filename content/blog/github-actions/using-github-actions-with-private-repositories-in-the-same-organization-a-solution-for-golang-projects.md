@@ -13,10 +13,11 @@ series:
   - Data Warehouse
 cover: "images/github-actions/golang.jpeg"
 ---
-
 I have been struggling with Github Actions for a couple of hours now. My problem is that Github Actions cannot read from private repositories in the same organization. Additionally, I have been unable to install Go packages because Git does not know which username and password to use. This post describes a solution to these issues.
 
-For a hobby project, my friend and I have an organization where we store all our code. We use re-usable Github Actions workflows that are reused within all Go repositories. Our actions include running lints, security checks, and tests. We also have one repository named "go-utils", which contains a bunch of self-developed packages that can be used for different things, such as uploading images to Cloudflare R2. However, since this is a private repository, other repositories are unable to download it unless we either buy Github Enterprise (which is not feasible) or purchase Github Teams and create a Personal access token.
+For a hobby project, my friend and I have an organization where we store all our code. We use re-usable Github Actions workflows that are reused within all Go repositories. Our actions include running lints, security checks, and tests. We also have one repository named “go-utils”, which contains a bunch of self-developed packages that can be used for different things, such as uploading images to Cloudflare R2. However, since this is a private repository, other repositories are unable to download it unless we either buy Github Enterprise (which is not feasible) or purchase Github Teams and create a Personal access token.
+
+The problem in this post is not something unique to go. This would happen if you fetch a git repository for an npm package as well.
 
 The solution we came up with was to create a personal access token and add it to an organization-wide token. This token only had read access to repositories and their contents.
 
@@ -42,7 +43,7 @@ If this is a private repository, see <https://golang.org/doc/faq#git_https> for 
 
 ```
 
-This error occurred because we needed to log in to our git user for GO as well. We are not able to use SSH so we uses standard HTTPS login meaning we use `.NETRC` to store passwords and usernames. We used another Github Actions script called `little-core-labs/netrc-creds@master` to log in our git user. We passed in our personal access token and other required information as parameters, as shown in the following YAML code:
+This error occurred because we needed to tell git which username and password we want to use for our https git calls. The reason why GO gave us this error is due to the fact that we are using a private Github repository as a go module, and GO needs to clone the repository to vendor before it is able to build the go project. As this is a private git repository, we also need to provide a username and password for the call; otherwise, we haven't authenticated ourselves. We are not able to use SSH, so we use standard HTTPS login, meaning we use `.NETRC` to store passwords and usernames. We used another Github Actions script called `little-core-labs/netrc-creds@master` to log in our git user. We passed in our personal access token and other required information as parameters, as shown in the following YAML code:
 
 ```yaml
 name: Apply netrc creds with direct input
@@ -56,7 +57,7 @@ with:
 
 After this, we were able to use `go mod vendor` within our Github Action.
 
-Here's the full setup script:
+Here’s the full setup script:
 
 ```yaml
 jobs:
@@ -80,4 +81,3 @@ jobs:
 ```
 
 Hope this tiny article might help you :D
-
