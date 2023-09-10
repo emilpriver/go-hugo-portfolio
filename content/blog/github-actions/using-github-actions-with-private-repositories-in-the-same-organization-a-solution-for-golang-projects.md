@@ -1,5 +1,5 @@
 ---
-title: "Using Github Actions with Private Repositories in the Same Organization: A Solution for Golang Projects"
+title: "Using Github Actions with Private Repositories in the Same Organization"
 date: 2023-09-10T00:57:08+02:00
 draft: false
 description: "Learn how to use Github Actions with private repositories in the same organization for your Golang projects. This post provides a solution to the issue of Github Actions not being able to read from private repositories and Git not knowing which username and password to use. Follow the steps outlined in this post to be able to fetch and clone repositories and use go mod vendor without issues."
