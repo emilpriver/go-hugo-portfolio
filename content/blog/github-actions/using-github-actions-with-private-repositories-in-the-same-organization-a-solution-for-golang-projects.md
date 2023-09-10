@@ -42,7 +42,7 @@ If this is a private repository, see <https://golang.org/doc/faq#git_https> for 
 
 ```
 
-This error occurred because we needed to log in to our git user for GO as well. If git is now using ssh, it uses `.NETRC` to store passwords and usernames for some cases. We used another Github Actions script called `little-core-labs/netrc-creds@master` to log in our git user. We passed in our personal access token and other required information as parameters, as shown in the following YAML code:
+This error occurred because we needed to log in to our git user for GO as well. We are not able to use SSH so we uses standard HTTPS login meaning we use `.NETRC` to store passwords and usernames. We used another Github Actions script called `little-core-labs/netrc-creds@master` to log in our git user. We passed in our personal access token and other required information as parameters, as shown in the following YAML code:
 
 ```yaml
 name: Apply netrc creds with direct input
