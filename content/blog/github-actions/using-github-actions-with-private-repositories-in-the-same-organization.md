@@ -6,7 +6,7 @@ description: "Learn how to use Github Actions with private repositories in the s
 type: "blog"
 tags: ["Github Actions", "Go"]
 best: true
-toc: true
+toc: false
 images:
   - /og-images/golang.jpeg
 series:
