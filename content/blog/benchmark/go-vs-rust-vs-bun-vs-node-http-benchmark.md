@@ -73,7 +73,7 @@ Requests/sec: 128013.26
 Transfer/sec:     16.11MB
 ```
 
-The, bun:
+Then, bun:
 
 ```yaml
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/12|10:20am]
