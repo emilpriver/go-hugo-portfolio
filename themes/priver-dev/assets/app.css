@@ -573,6 +573,7 @@ img {
 
 .post-content .highlight pre code {
   padding: 10px;
+  display: block;
 }
 
 /* table */
