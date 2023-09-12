@@ -48,7 +48,7 @@ There is probably a better way to conduct this type of test, possibly by running
 First of, rust
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|18:17pm]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:17pm]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -62,7 +62,7 @@ Transfer/sec:     17.72MB
 Then, Go:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|18:18pm]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:18pm]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
 	  Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -76,7 +76,7 @@ Transfer/sec:     16.11MB
 Then, bun:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|18:20pm]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:20pm]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -90,7 +90,7 @@ Transfer/sec:     13.69MB
 And finally, Node:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|18:20pm]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:20pm]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -116,7 +116,7 @@ It is time to test the speed of each runtime in serializing and returning a simp
 Let's begin with Rust:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|18:21pm]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|06:21pm]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
 
@@ -131,7 +131,7 @@ Transfer/sec:     18.38MB
 Then, Go:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|18:22pm]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|06:22pm]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -145,7 +145,7 @@ Transfer/sec:     16.62MB
 Then Bun:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|18:23pm]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|06:23pm]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -159,7 +159,7 @@ Transfer/sec:     12.87MB
 Then Node
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|18:24pm]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|06:24pm]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -181,7 +181,7 @@ It is time to run the same tests in the cloud. This time, I have spun up a serve
 First, Rust:
 
 ```yaml
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|18:17pm]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|06:17pm]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -195,7 +195,7 @@ Transfer/sec:      3.01MB
 Then, GO:
 
 ```yaml
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|18:18pm]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|06:18pm]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -210,7 +210,7 @@ Transfer/sec:      2.92MB
 Then, Bun:
 
 ```yaml
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|18:20pm]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|06:20pm]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -226,7 +226,7 @@ Transfer/sec:      2.94MB
 Finally, Node:
 
 ```yaml
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|18:21pm]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|06:21pm]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -244,7 +244,7 @@ Transfer/sec:      3.05MB
 First of, rust:
 
 ```json
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|18:22pm]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|06:22pm]
 Running 30s test @ http://IP_ADDRESS/json
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -258,7 +258,7 @@ Transfer/sec:      3.10MB
 Then GO:
 
 ```json
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|18:23pm]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|06:23pm]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -272,7 +272,7 @@ Transfer/sec:      3.05MB
 Then, Bun:
 
 ```json
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|18:25pm]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|06:25pm]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -286,7 +286,7 @@ Transfer/sec:      3.07MB
 Finally Node:
 
 ```json
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|18:27pm]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|06:27pm]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
