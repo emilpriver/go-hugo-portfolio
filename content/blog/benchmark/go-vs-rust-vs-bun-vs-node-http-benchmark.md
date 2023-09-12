@@ -47,7 +47,7 @@ There is probably a better way to conduct this type of test, possibly by running
 
 First of, rust
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:17pm]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
@@ -61,7 +61,7 @@ Transfer/sec:     17.72MB
 
 Then, Go:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:18pm]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
@@ -75,7 +75,7 @@ Transfer/sec:     16.11MB
 
 Then, bun:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:20pm]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
@@ -89,7 +89,7 @@ Transfer/sec:     13.69MB
 
 And finally, Node:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:20pm]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
@@ -115,7 +115,7 @@ It is time to test the speed of each runtime in serializing and returning a simp
 
 Let's begin with Rust:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|06:21pm]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
@@ -130,7 +130,7 @@ Transfer/sec:     18.38MB
 
 Then, Go:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|06:22pm]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
@@ -144,7 +144,7 @@ Transfer/sec:     16.62MB
 
 Then Bun:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|06:23pm]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
@@ -158,7 +158,7 @@ Transfer/sec:     12.87MB
 
 Then Node
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|06:24pm]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
@@ -180,7 +180,7 @@ It is time to run the same tests in the cloud. This time, I have spun up a serve
 
 First, Rust:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|06:17pm]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
@@ -194,7 +194,7 @@ Transfer/sec:      3.01MB
 
 Then, GO:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|06:18pm]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
@@ -209,7 +209,7 @@ Transfer/sec:      2.92MB
 
 Then, Bun:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|06:20pm]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
@@ -225,7 +225,7 @@ Transfer/sec:      2.94MB
 
 Finally, Node:
 
-```yaml
+```bash
 ➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|06:21pm]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
@@ -243,7 +243,7 @@ Transfer/sec:      3.05MB
 
 First of, rust:
 
-```json
+```bash
 ➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|06:22pm]
 Running 30s test @ http://IP_ADDRESS/json
   16 threads and 1000 connections
@@ -257,7 +257,7 @@ Transfer/sec:      3.10MB
 
 Then GO:
 
-```json
+```bash
 ➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|06:23pm]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
@@ -271,7 +271,7 @@ Transfer/sec:      3.05MB
 
 Then, Bun:
 
-```json
+```bash
 ➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|06:25pm]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
@@ -285,7 +285,7 @@ Transfer/sec:      3.07MB
 
 Finally Node:
 
-```json
+```bash
 ➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|06:27pm]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
