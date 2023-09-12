@@ -1,6 +1,6 @@
 ---
 title: "Go vs Rust vs Bun vs Node, Simple Http Benchmark"
-date: 2023-09-12T11:49:57+02:00
+date: 2023-09-12T10:49:57+02:00
 draft: false
 description: "This post compares the performance of Bun, Rust, Go, and Node for handling HTTP requests. The author benchmarks each language using a simple benchmark test and tests returning a simple string and a JSON string. The post also discusses the author's reasons for conducting the test and provides a summary of the results."
 type: "blog"
@@ -48,7 +48,7 @@ There is probably a better way to conduct this type of test, possibly by running
 First of, rust
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/12|10:17am]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|18:17am]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -62,7 +62,7 @@ Transfer/sec:     17.72MB
 Then, Go:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/12|10:18am]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|18:18am]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
 	  Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -76,7 +76,7 @@ Transfer/sec:     16.11MB
 Then, bun:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/12|10:20am]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|18:20am]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -90,7 +90,7 @@ Transfer/sec:     13.69MB
 And finally, Node:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/12|10:20am]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|18:20am]
 Running 30s test @ http://localhost:3000/
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -116,7 +116,7 @@ It is time to test the speed of each runtime in serializing and returning a simp
 Let's begin with Rust:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/12|10:21am]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|18:21am]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
 
@@ -131,7 +131,7 @@ Transfer/sec:     18.38MB
 Then, Go:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/12|10:22am]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|18:22am]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -145,7 +145,7 @@ Transfer/sec:     16.62MB
 Then Bun:
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/12|10:23am]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|18:23am]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -159,7 +159,7 @@ Transfer/sec:     12.87MB
 Then Node
 
 ```yaml
-➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/12|10:24am]
+➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/json    [23/09/11|18:24am]
 Running 30s test @ http://localhost:3000/json
   16 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -181,7 +181,7 @@ It is time to run the same tests in the cloud. This time, I have spun up a serve
 First, Rust:
 
 ```yaml
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/12|11:17am]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|18:17am]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -195,7 +195,7 @@ Transfer/sec:      3.01MB
 Then, GO:
 
 ```yaml
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/12|11:18am]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|18:18am]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -210,7 +210,7 @@ Transfer/sec:      2.92MB
 Then, Bun:
 
 ```yaml
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/12|11:20am]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|18:20am]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -226,7 +226,7 @@ Transfer/sec:      2.94MB
 Finally, Node:
 
 ```yaml
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/12|11:21am]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000                                         [23/09/11|18:21am]
 Running 30s test @ http://IP_ADDRESS:3000
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -244,7 +244,7 @@ Transfer/sec:      3.05MB
 First of, rust:
 
 ```json
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/12|11:22am]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|18:22am]
 Running 30s test @ http://IP_ADDRESS/json
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -258,7 +258,7 @@ Transfer/sec:      3.10MB
 Then GO:
 
 ```json
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/12|11:23am]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|18:23am]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -272,7 +272,7 @@ Transfer/sec:      3.05MB
 Then, Bun:
 
 ```json
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/12|11:25am]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|18:25am]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -286,7 +286,7 @@ Transfer/sec:      3.07MB
 Finally Node:
 
 ```json
-➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/12|11:27am]
+➜  ~ wrk -t16 -c1000 -d30 http://IP_ADDRESS:3000/json                                    [23/09/11|18:27am]
 Running 30s test @ http://IP_ADDRESS:3000/json
   16 threads and 1000 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
