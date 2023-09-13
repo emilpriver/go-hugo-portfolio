@@ -45,7 +45,7 @@ There is probably a better way to conduct this type of test, possibly by running
 
 ## Running the tests locally
 
-First of, rust
+First of, Rust
 
 ```bash
 ➜  ~ wrk -t16 -c100 -d30 http://localhost:3000/        [23/09/11|06:17pm]
