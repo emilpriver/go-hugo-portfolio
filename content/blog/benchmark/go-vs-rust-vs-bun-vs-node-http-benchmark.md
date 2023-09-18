@@ -9,7 +9,7 @@ best: true
 images:
   - /og-images/star-trek.jpg
 series:
-  - Data Warehouse
+  - Benchmark
 cover: "images/general/star-trek.jpg"
 toc: true
 ---
