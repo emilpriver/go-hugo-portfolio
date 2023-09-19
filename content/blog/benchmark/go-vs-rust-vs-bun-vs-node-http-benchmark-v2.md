@@ -93,7 +93,13 @@ Why is Node falling behind? There can be multiple reasons, but two of them are t
 
 ## How important are this type of tests?
 
-This was a question I received, and the answer is that it's not really important at all. In the real world, you have many more dependencies in your application, such as a database or another service that you need to communicate with. However, the purpose of the test is primarily to test the runtime/language, mostly out of curiosity, but also to keep in mind when building your system. The capacity of your runtime/language may impose different requirements on how you run your service.
+This was a question I received, and the answer is that it's not really important, or well, it depends on what you are building. In the real world, you have many more dependencies in your application, such as a database or another service that you need to communicate with. However, in some cases, the language or the runtime can be the bottleneck. A simple URL shortener can be one such case.
+
+Let's imagine you are using Redis as your key-value storage system, where the shortened URLs are stored as keys and the corresponding real URLs are stored as values. If Redis is deployed alongside your application, such as in the same cluster or server, the latency between the app and Redis will be very low. Additionally, Redis is capable of handling a high volume of requests per second, potentially reaching thousands.
+
+In such a scenario, if you need to serve 50,000 requests per second, using a runtime/language like Bun or Go may require significantly more resources, such as horizontally scaled servers, compared to using Node.js. This is illustrated in the graph above. However, it's important to note that for many other scenarios, the choice of runtime/language may not have a significant impact. This is just my perspective on when the runtime/language choice matters.
+
+However, the purpose of the test is primarily to test the runtime/language, mostly out of curiosity, but also to keep in mind when building your system. The capacity of your runtime/language may impose different requirements on how you run your service.
 
 For example, with Node, we need a lot of servers to handle the same amount of requests per second as Rust. However, this is mostly solved with Serverless. But it still doesn’t change the fact that we need more resources to run a Node service compared to Rust, Go, or Bun. On the other hand, Bun seems to be one of these alternatives that might be a runtime we can use to serve more clients without requiring significantly more resources.
 
