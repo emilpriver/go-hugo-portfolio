@@ -48,6 +48,19 @@ The tests were performed using the following runtime versions:
 - Bun: `1.0.2`
 - Node: `v20.6.1`
 
+Each of the test was started using this settings:
+```json
+{
+  "method": "GET",
+  "tasks": 100,
+  "seconds": 400,
+  "start_at": "2023-09-17T10:16:34.675Z",
+  "url": "http://172.232.156.13:3000/json", 
+  "content_type": "application/json",
+  "body": ""
+}
+```
+
 ## Quick: What is Elton and how does it work
 
 The problem I faced was the manual entry of each client, starting the benchmark utility, reading the results on each client, and then inputting them into a Google Sheet. While this approach may have taken less time than creating Elton and conducting the test, it wouldn't have been as enjoyable. Therefore, I developed [Elton](https://github.com/emilpriver/elton), a simple benchmark utility that is still in development but has been used for this test. Elton has an HTTP API that allows me to initiate a test, check its status, and retrieve the results. Later, I can combine and write these results to a CSV file using a custom [client](https://github.com/emilpriver/go-rust-bun-node/tree/v2/client) specifically designed for this test.
