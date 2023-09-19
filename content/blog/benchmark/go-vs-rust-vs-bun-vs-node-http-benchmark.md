@@ -13,6 +13,8 @@ series:
 cover: "images/general/star-trek.jpg"
 toc: true
 ---
+*This is the first version of the HTTP benchmarking. I re-did the tests and wrote about it in detail on my blog: https://www.priver.dev/blog/benchmark/go-vs-rust-vs-bun-vs-node-http-benchmark-v2/*
+
 Recently, Bun v1.0 was [released](https://bun.sh/blog/bun-v1.0), which shows promise as a tool for serving many users without using too many resources. To evaluate its performance, a simple benchmark test was created to measure the number of HTTP calls the server can handle per second. The benchmark also compares Bun with GO, Rust, and Node, as these languages are frequently compared in other benchmarks and are used for similar purposes.
 
 The benchmark test was run both locally and on a Linode server with 2 dedicated CPU cores and 4GB of RAM, running Debian 11 on Linode. All four tests were compiled and run using the following commands:
