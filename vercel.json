@@ -11,6 +11,10 @@
     {
       "source": "/blog/github-actions/using-github-actions-with-private-repositories-in-the-same-organization-a-solution-for-golang-projects/",
       "destination": "/blog/github-actions/using-github-actions-with-private-repositories-in-the-same-organization"
+    },
+    {
+      "source": "/blog/the-commando-movement/",
+      "destination": "/blog/the-internet-cable-that-birthed-the-commando-movement"
     }
   ]
 }
