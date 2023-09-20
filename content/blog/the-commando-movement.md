@@ -3,7 +3,7 @@ title: "The internet cable that birthed the commando movement"
 date: 2023-09-20T20:39:17+02:00
 draft: false
 toc: true
-description: Read about the "Phone Call Fiasco" in Sweden's health system and the security breach that exposed private phone calls of Swedish individuals. Discover the chain of events, the lack of accountability, and the coined term "the commando movement.
+description: "The internet cable that birthed the commando movement"
 type: "blog"
 tags: ["1177"]
 series:
