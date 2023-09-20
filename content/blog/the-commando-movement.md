@@ -1,5 +1,5 @@
 ---
-title: "The Swedish Health System's 'Phone Call Fiasco': The Commando Movement"
+title: "The internet cable that birthed the commando movement"
 date: 2023-09-20T20:39:17+02:00
 draft: false
 toc: true
@@ -18,7 +18,7 @@ It was early 2019, and most Swedes were on their way to work, maybe having coffe
 
 When the TV news started to talk about this and more articles were published, I realized that this was a big mess. What happened was that the Swedish government, known as 1177, hired Medhelp to handle the phone calls. Medhelp then subcontracted the work to their partner, Medicall, which is headquartered in Hua Hin, Thailand. According to Computer Sweden, Medhelp uses Medicall during "uncomfortable times" or challenging situations.
 
-During this time, Medicall stored its recorded phone calls (which are legally recorded and used for patient security) on a NAS provided by Voice Integration Nordic AB. The NAS can be accessed at the URL http://188.92.248.19:443/medicall/. The NAS is hosted by Appalion AB, a sister company to Voice Integration Nordic AB. It's important to note that this NAS had direct internet access through an Ethernet cable, without a proper firewall in front.
+During this time, Medicall stored its recorded phone calls (which are legally recorded and used for patient security) on a NAS provided by Voice Integration Nordic AB. The NAS can be accessed at the URL http://188.92.248.19:443/medicall/. The NAS is hosted by Appalion AB, a sister company to Voice Integration Nordic AB. It's important to note that this NAS had direct internet access through an Ethernet cable, without a proper firewall in front. The CEO of Voice Integration Nordic, Tommy Ekström, commented on the network access for the NAS, stating: "someone had inserted an internet cable into the hard drive" source.
 
 Before this [article](https://computersweden.idg.se/2.2683/1.714787/inspelade-samtal-1177-vardguiden-oskyddade-internet) was published, Computer Sweden contacted Medicall's (which no longer exists) CEO, Davide Nyblom, to inquire about the public availability of these files. Davide denied that the files were publicly accessible. When Computer Sweden requested to share a file with Davide, he abruptly ended the call.
 
@@ -32,6 +32,7 @@ While reading this, you might understand why I think this is another Swedish mes
 The meme "the commando movement" originated in Sweden and has gained popularity among tech enthusiasts. It is often used to describe situations where there is a bug and its cause is not understood, or when someone wants to avoid taking responsibility for a bug. It is also used when production servers are down and the CEO of the company asks what in the flippin burgers is going on.  "well, someone made a commando movement and now everything is down.”
 
 The term "[the commando movement](https://it-ord.idg.se/ord/kommandororelse/)" or "Kommandorörelse" in Swedish, was coined by Tommy Ekström, the CEO of Voice Integration Nordic, during an interview with [Dagens Nyheter](https://www.dn.se/ekonomi/ansvarig-for-vardguiden-haveriet-manskliga-faktorn/). Ekström claimed that it would be impossible for "normal persons" to access the server, suggesting that only those capable of a special command move could do so. In reality, all one needed was the correct URL to the server.
+
 
 ## Incompetence
 
