@@ -20,7 +20,7 @@ Unfortunately, many Swedish schools and municipalities still use "Sommar2023" as
 
 To prevent people from being hacked due to weak passwords, some companies have developed password managers that store passwords securely so that users don't have to remember them. Apple has built this feature into its products, prompting users to create and store a password whenever they create a new account. Other companies, such as 1Password, offer similar solutions. To enhance security, we use two-step authentication, which requires an additional login step. However, some users still skip enabling it due to laziness.
 
-![Sign in new password](images/security/change-password.png)
+![Sign in new password]((images/security/change-password.png)
 
 To solve this issue, we need to create an easy and efficient way to handle authentication. One potential solution is the use of PassKeys.
 
@@ -33,7 +33,7 @@ The private key is designed to be stored on the device in a vault that requires 
 Using passkeys makes it easier and smoother for users to sign in, as it removes a lot of overhead. For inexperienced users, this means they can press a button to trigger device verification (for example, facial recognition), which then triggers authentication and sign-in. This flow is not new; for example, Swedish BankID is used to sign users into banks and other services. Users press a button, which sends them to an app on their device, where they authenticate using a PIN or biometric sensor, and then return to the website or app to complete the sign-in process. This process is both smooth and secure.
 
 
-![Apple Passkeys](images/security/apple-passkeys.png)
+![Apple Passkeys]((images/security/apple-passkeys.png)
 
 *Passkeys, a tech designed to replace relatively insecure passwords, let you log in with a fingerprint or face ID.
 [Apple](https://developer.apple.com/passkeys/)* 
