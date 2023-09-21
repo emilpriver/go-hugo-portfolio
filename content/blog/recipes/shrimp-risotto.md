@@ -7,7 +7,6 @@ type: "recipes"
 recipes: ["Risotto"]
 images:
   - /og-images/shrimp-risotto.jpeg
-cover: "images/recipe/shrimp-risotto.jpeg"
 toc: true
 ---
 

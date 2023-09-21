@@ -10,7 +10,6 @@ images:
   - /og-images/klarna.png
 series:
   - Interview
-cover: "images/note/my-interview-at-klarna/klarna.png"
 toc: true
 ---
 

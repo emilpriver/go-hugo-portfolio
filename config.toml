@@ -4,10 +4,20 @@ copyright = "Copyright © 2022–2022, Emil Privér; all rights reserved."
 paginate = 20
 languageCode = "en"
 DefaultContentLanguage = "en"
-enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
-theme = "priver-dev"
+theme = "priver-dev-2"
 title = "Emil Privér"
+
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+
+[minify]
+  disableXML = true
 
 [outputs]
   page = ["HTML"]
@@ -19,27 +29,37 @@ title = "Emil Privér"
     [markup.goldmark.renderer]
       unsafe = true
 
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 2
- [[menu.main]]
-    identifier = "recipe"
-    name = "Recipes"
-    url = "/recipes/"
-    weight = 3
+[languages.en]
+  languageName = "English"
+  weight = 1
 
-[taxonomies]
-tag = "tags"
-series = "series"
-recipes = "recipes"
+  [languages.en.taxonomies]
+    tag = "tags"
+    series = "series"
+    recipes = "recipes"
+
+[[languages.en.menu.main]]
+  name = "Archive"
+  url = "blog"
+  weight = 5
+
+[[languages.en.menu.main]]
+  name = "Search"
+  url = "search/"
+  weight = 10
+
+[[languages.en.menu.main]]
+  name = "Tags"
+  url = "tags/"
+  weight = 10
+
+[[languages.en.menu.main]]
+  name = "Twitter"
+  url = "https://x.com/emil_priver"
+
+[[languages.en.menu.main]]
+  name = "Github"
+  url = "https://github.com/emilpriver"
 
 [privacy]
   [privacy.vimeo]
@@ -60,10 +80,8 @@ recipes = "recipes"
     privacyEnhanced = true
 
 [services]
-
   [services.instagram]
     disableInlineCSS = true
-
   [services.twitter]
     disableInlineCSS = true
 
@@ -80,33 +98,33 @@ recipes = "recipes"
   filename = "sitemap.xml"
   priority = 0.5
 
-[social]
-  twitter= "https://twitter.com/emil_priver"
-  github= "https://github.com/emilpriver"
-  linkedin= "https://www.linkedin.com/in/emilpriver"
-
 [params]
-  dateform = "Jan 2, 2006"
-  dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-  description = "Emil Privér"
-  copyright = "Copyright © 2021-{year} Emil Privér"
-  logofile = "images/me.png"
-  faviconfile = "images/me.png"
-  highlightjs = true
-  progressively = true
-  share = true
-  share_on_googleplus = false
-  latestpostcount = 5
-  github = "emilpriver"
-  email = "emil@priver.dev"
-  twitter = "emil_priver"
-  instagram = "emil_priver"
-  linkedin = "emilpriver"
-  social_banner = "img/banner.png"
-  usesmallsummarycard = true
-  posts_navigation = true
-  small_banner_logo = false
-  paginate = 6
+  defaulttheme = true
+  ShowShareButtons = true
+  ShowReadingTime = true
+  displayFullLangName = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+
+  [params.homeInfoParams]
+    Title = "Emil Privér"
+    Content = "Hey! My name is Emil Privér, I write about stuffs I learn and build. I am a software developer who likes exploring stuffs. Sometimes I like to write and then I post it here"
+
+  [params.social]
+    twitter= "https://twitter.com/emil_priver"
+    github= "https://github.com/emilpriver"
+    linkedin= "https://www.linkedin.com/in/emilpriver"
+
+  [params.editPost]
+    URL = "https://github.com/emilpriver/go-hugo-portfolio/tree/main/content"
+    Text =  "Suggest Changes"
+    appendFilePath = true
+
+  [params.assets]
+    disableHLJS = true
 
 [security]
   [security.funcs]

@@ -10,7 +10,6 @@ images:
   - /og-images/data-warehouse.png
 series:
   - Data Warehouse
-cover: "images/data-warehouse/data-warehouse.png"
 toc: true
 ---
 

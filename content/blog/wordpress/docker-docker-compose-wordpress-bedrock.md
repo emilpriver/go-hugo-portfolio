@@ -6,7 +6,6 @@ description: "Develop a Wordpress site using Docker and Docker compose"
 images:
   - /og-images/docker.jpeg
 tags: ["docker", "wordpress"]
-cover: "images/wordpress/docker-docker-compose-wordpress-bedrock/cover.jpeg"
 toc: true
 ---
 

@@ -10,7 +10,6 @@ series:
 - Swedish Fiascos
 images:
   - /og-images/biggest-data-breaches-1.jpg
-cover: "images/1177/biggest-data-breaches-1.jpg"
 ---
 This is the story of when Sweden's health system, 1177, had a security breach where private phone calls of Swedish individuals were exposed on the World Wide Web.
 

@@ -8,7 +8,6 @@ images:
 draft: false
 tags: ["Elixir"]
 categories: ["Elixir"]
-cover: images/elixir/elixir.jpg
 keywords: ["Elixir", "Introduction to elixir"]
 series:
   - Elixir

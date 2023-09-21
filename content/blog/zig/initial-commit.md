@@ -11,7 +11,6 @@ series:
 - Initial Commit
 images:
   - /og-images/zig-og.jpg
-cover: "images/zig/zig-og.jpg"
 ---
 "Initial Commit" is a series of posts where I explore different topics that interest me. In this post, we will look at Zig.
 

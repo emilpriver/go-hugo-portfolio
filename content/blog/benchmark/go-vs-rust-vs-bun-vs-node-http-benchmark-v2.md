@@ -10,7 +10,6 @@ images:
   - /og-images/star-trek.jpg
 series:
   - Benchmark
-cover: "images/general/star-trek.jpg"
 toc: true
 ---
 

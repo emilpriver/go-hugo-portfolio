@@ -7,7 +7,6 @@ images:
   - /og-images/elixir.jpg
 draft: true
 tags: ["JSON", "XML"]
-cover: images/data-representation-schemas/cover.jpg
 keywords: ["JSON", "XML", "Data Representation Schemas"]
 toc: true
 ---

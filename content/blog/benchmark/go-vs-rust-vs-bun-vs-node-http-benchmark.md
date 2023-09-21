@@ -10,7 +10,6 @@ images:
   - /og-images/star-trek.jpg
 series:
   - Benchmark
-cover: "images/general/star-trek.jpg"
 toc: true
 ---
 *This is the first version of the HTTP benchmarking. I re-did the tests and wrote about it in detail on my blog: https://www.priver.dev/blog/benchmark/go-vs-rust-vs-bun-vs-node-http-benchmark-v2/*

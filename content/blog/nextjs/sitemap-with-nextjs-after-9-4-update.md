@@ -8,7 +8,6 @@ images:
 tags: ["next.js", "sitemap", "react"]
 categories: ["web", "nextjs"]
 keywords: ["nextjs", "sitemap"]
-cover: "images/nextjs/sitemap-with-nextjs-after-9-4-update/cover.jpeg"
 toc: true
 ---
 

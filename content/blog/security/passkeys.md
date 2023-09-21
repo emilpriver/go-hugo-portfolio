@@ -10,7 +10,6 @@ series:
 - passkeys
 images:
   - /og-images/apple-passkeys.png
-cover: "images/apple-passkeys.png"
 ---
 
 You may be skeptical of the title, thinking, "What kind of drug is this guy on and where can I get it?" But rest assured, it's not clickbait. The title describes the future of passwords that we are moving towards. We're talking about PassKeys, the potential killer of passwords, which can be found at https://www.passkeys.com/.

@@ -7,7 +7,6 @@ draft: false
 images:
   - /og-images/localstack.png
 tags: ["Localstack", "Tools", "Local development"]
-cover: images/localstack.png
 keywords: ["AWS", "Localstack", "SQS", "SNS", "emulation", "development", "testing ", "AWS CLI ", "GO", "custom endpoints"," guide for developers"]
 series:
   - tools

@@ -9,7 +9,6 @@ series:
 - Edgar Image
 images:
   - /og-images/edgar.jpg
-cover: "images/edgar-image/cover.jpg"
 toc: true
 ---
 
