@@ -27,7 +27,7 @@ The first call was a 30 minutes call where the guy who called me talked about wh
 
 The IQ test looked like this
 
-![IQ test]((images/note/my-interview-at-klarna/provtest_exempel.jpeg)
+![IQ test](/images/note/my-interview-at-klarna/provtest_exempel.jpeg)
 
 The most fun part was the technical interview as it was the most challenging one and probably because it was my first time doing this kind of interview. The tech interview was 2 different tasks, 1 task where the goal was to onboard other developers onto a team and a project, and my goal was to describe
 

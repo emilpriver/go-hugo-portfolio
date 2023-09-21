@@ -56,7 +56,7 @@ It can be difficult to know how your data should look in the end, so simply star
 
 Our source of truth is our raw events, and it will remain that way. The reason is that if we take a raw event and run it through a pipeline, the data is likely aggregated and no longer accurate. For example, a pipeline may read the raw data and remove certain identifying numbers before sending it to the data warehouse. This means that the data in the warehouse is not the truth anymore.
 
-![system architecture]((images/data-warehouse/pipeline.png)
+![system architecture](/images/data-warehouse/pipeline.png)
 
 This is how our system is built. Our source of truth is “raw events” at the top, which simply stores our events. Then, we have an SQS queue listening to a topic where events are handled by pipelines. The pipeline’s output is stored in a “cold storage,” such as S3, so that we can load this data into another data warehouse if necessary. There are different ways that “cold storage” can receive its data. One way is for each pipeline to log the output and for another service to read it and then send it to S3 or another destination.
 
