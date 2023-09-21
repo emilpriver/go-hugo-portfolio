@@ -27,7 +27,7 @@ Before this [article](https://computersweden.idg.se/2.2683/1.714787/inspelade-sa
 
 While reading this, you might understand why I think this is another Swedish mess. (There is another mess that can be another [article](https://www.svt.se/nyheter/lokalt/stockholm/han-trottnade-pa-skolplattformen-byggde-en-egen-app).)
 
-![Phone calls](images/1177/phone-call-list.jpg)
+![Phone calls](/images/1177/phone-call-list.jpg)
 *Computer Sweden, 2019-02-18, 2,7 miljoner inspelade samtal till 1177 Vårdguiden helt oskyddade på internet. https://computersweden.idg.se/2.2683/1.714787/inspelade-samtal-1177-vardguiden-oskyddade-internet. The image shows the phone calls open for everyone to access.*
 
 ## “The command movement” was born
