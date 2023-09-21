@@ -52,6 +52,11 @@ pygmentsUseClasses = true
   weight = 10
 
 [[languages.en.menu.main]]
+  name = "About"
+  url = "about/"
+  weight = 10
+
+[[languages.en.menu.main]]
   name = "Twitter"
   url = "https://x.com/emil_priver"
 
@@ -109,7 +114,7 @@ pygmentsUseClasses = true
 
   [params.homeInfoParams]
     Title = "Emil Privér"
-    Content = "Hey! My name is Emil Privér, I write about stuffs I learn and build. I am a software developer who likes exploring stuffs. Sometimes I like to write and then I post it here"
+    Content = "Hey! My name is Emil Privér, I write about stuffs I learn and build. I am a software developer who likes exploring stuffs and writing articles."
 
   [params.social]
     twitter= "https://twitter.com/emil_priver"

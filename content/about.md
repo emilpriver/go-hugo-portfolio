@@ -7,9 +7,7 @@ tac: false
 type: "post"
 ---
 
-Hi I'm Emil Privér. Software developer from Göteborg, Sweden.
-
-My works is mainly focused on backend and architecture. But also intersted in AI. 
+Hi I'm Emil Privér. Software developer from Göteborg, Sweden. during my freetime do I code hobby projects and trying different stuffs within the programming world.
 
 I love to explore the tech world, Love reading about tech and explore code, systems and stuffs in general.
 
