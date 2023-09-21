@@ -1,9 +1,9 @@
 ---
-title: "The internet cable that birthed the commando movement"
+title: "The internet cable that birthed the command movement"
 date: 2023-09-20T20:39:17+02:00
 draft: false
 toc: true
-description: "The internet cable that birthed the commando movement"
+description: "The internet cable that birthed the command movement"
 type: "blog"
 tags: ["1177"]
 series:
@@ -31,11 +31,11 @@ While reading this, you might understand why I think this is another Swedish mes
 ![Phone calls](images/1177/phone-call-list.jpg)
 *Computer Sweden, 2019-02-18, 2,7 miljoner inspelade samtal till 1177 Vårdguiden helt oskyddade på internet. https://computersweden.idg.se/2.2683/1.714787/inspelade-samtal-1177-vardguiden-oskyddade-internet. The image shows the phone calls open for everyone to access.*
 
-## “The commando movement” was born
+## “The command movement” was born
 
-The meme "the commando movement" originated in Sweden and has gained popularity among tech enthusiasts. It is often used to describe situations where there is a bug and its cause is not understood, or when someone wants to avoid taking responsibility for a bug. It is also used when production servers are down and the CEO of the company asks what in the flippin burgers is going on.  "well, someone made a commando movement and now everything is down.”
+The meme "the command movement" originated in Sweden and has gained popularity among tech enthusiasts. It is often used to describe situations where there is a bug and its cause is not understood, or when someone wants to avoid taking responsibility for a bug. It is also used when production servers are down and the CEO of the company asks what in the flippin burgers is going on.  "well, someone made a command movement and now everything is down.”
 
-The term "[the commando movement](https://it-ord.idg.se/ord/kommandororelse/)" or "Kommandorörelse" in Swedish, was coined by Tommy Ekström, the CEO of Voice Integration Nordic, during an interview with [Dagens Nyheter](https://www.dn.se/ekonomi/ansvarig-for-vardguiden-haveriet-manskliga-faktorn/). Ekström claimed that it would be impossible for "normal persons" to access the server, suggesting that only those capable of a special command move could do so. In reality, all one needed was the correct URL to the server.
+The term "[the command movement](https://it-ord.idg.se/ord/kommandororelse/)" or "Kommandorörelse" in Swedish, was coined by Tommy Ekström, the CEO of Voice Integration Nordic, during an interview with [Dagens Nyheter](https://www.dn.se/ekonomi/ansvarig-for-vardguiden-haveriet-manskliga-faktorn/). Ekström claimed that it would be impossible for "normal persons" to access the server, suggesting that only those capable of a special command move could do so. In reality, all one needed was the correct URL to the server.
 
 
 ## Incompetence
