@@ -20,9 +20,7 @@ pygmentsUseClasses = true
   disableXML = true
 
 [outputs]
-  page = ["HTML"]
-  home = ["HTML", "RSS"]
-  section = ["HTML", "RSS", "json"]# Everything
+  home = ["HTML", "RSS", "JSON"]
 
 [markup]
   [markup.goldmark]
