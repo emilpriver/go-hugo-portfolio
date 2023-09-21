@@ -4,6 +4,7 @@ description: "Emil Privér, Software Developer"
 date: "2022-05-30"
 author: "priver.dev"
 tac: false
+type: "post"
 ---
 
 Hi I'm Emil Privér. Software developer from Göteborg, Sweden.
