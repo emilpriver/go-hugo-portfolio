@@ -20,7 +20,7 @@ pygmentsUseClasses = true
   disableXML = true
 
 [outputs]
-  home = ["html", "rss"]
+  home = ["html", "rss", "json"]
 
 [markup]
   [markup.goldmark]
