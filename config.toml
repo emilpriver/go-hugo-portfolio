@@ -5,7 +5,7 @@ paginate = 5
 languageCode = "en"
 DefaultContentLanguage = "en"
 ignoreErrors = ["error-remote-getjson"]
-theme = "priver-dev-2"
+theme = "priver"
 title = "Emil Privér"
 
 enableInlineShortcodes = true
