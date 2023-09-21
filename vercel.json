@@ -15,6 +15,10 @@
     {
       "source": "/blog/the-commando-movement/",
       "destination": "/blog/the-internet-cable-that-birthed-the-commando-movement"
+    },
+    {
+      "destination": "/blog/the-internet-cable-that-birthed-the-commando-movement/",
+      "source": "/blog/the-internet-cable-that-birthed-the-command-movement"
     }
   ]
 }
