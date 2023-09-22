@@ -53,7 +53,7 @@ Unfortunately, incidents like this are not uncommon and may happen again. Sweden
 
 ## What happen after?
 
-Following the security breach, the Swedish Privacy Protection Authority took swift action and launched an extensive investigation into Voice Integration Nordic. The purpose of this investigation was to shed light on the events that unfolded and determine the root cause of the incident. As a result of their findings, significant penalties were imposed on the parties involved.
+Following the security breach, the Swedish Privacy Protection Authority took swift action and launched an extensive investigation into Voice Integration Nordic. The purpose of this investigation was to shed light on the events that unfolded and determine the root cause of the incident. As a result of their findings, significant fine penalties were imposed on the parties involved.
 
 Medhelp, the company responsible for handling the medical phone calls on behalf of the Swedish government, faced the brunt of the consequences. Initially, they were slapped with a hefty fine of 12 million Swedish kronor. However, after further deliberation, the fine was later reduced to 8.8 million Swedish kronor. This substantial financial penalty serves as a stern reminder of the gravity of the situation and the need for accountability.
 
