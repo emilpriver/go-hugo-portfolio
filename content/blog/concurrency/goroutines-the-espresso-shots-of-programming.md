@@ -205,4 +205,4 @@ Hope this article helped you and maybe taught you something. The purpose of the 
 
 Also, regarding the title, I used ChatGPT to generate it. It sounded nice, so I decided to keep it.
 
-Got any feedback? I would love to hear it. You can contact me via https://twitter.com/emil_priver or through this Reddit thread.
+Got any feedback? I would love to hear it. You can contact me via https://twitter.com/emil_priver or through this Reddit thread https://www.reddit.com/user/Privann/comments/16yoibp/goroutines_the_espresso_shots_of_programming/.
