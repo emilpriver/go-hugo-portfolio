@@ -21,7 +21,7 @@
       "destination": "/blog/the-internet-cable-that-birthed-the-command-movement"
     },
     {
-      "source": "/blog/benchmark/go-vs-rust-vs-bun-vs-node-http-benchmark/",
+      "source": "/blog/benchmark/go-vs-rust-vs-bun-vs-node-http-benchmark",
       "destination": "/blog/benchmark/go-vs-rust-vs-bun-vs-node-http-benchmark-v2",
       "permanent": true
     }
