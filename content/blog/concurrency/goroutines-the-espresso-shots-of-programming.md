@@ -53,7 +53,7 @@ The code above will initiate 9 goroutines and execute the say function 10 times.
 
 The Go runtime operates on a CPU, similar to how other computer tasks are handled. In addition to CPU cores, there is an abstraction layer that allows for thread scheduling. When a thread is scheduled, the kernel determines which core will be used. However, if the CPU has a long queue of tasks to execute before running your code, your code may not be executed immediately. This is where Go's concurrency comes into play.
 
-By creating multiple tasks that we want to execute simultaneously, Go schedules them for the kernel to run on each core later using system calls. System calls serve as an interface between an application and the kernel, facilitating task scheduling. However, there more thread model that Go utilizes.
+By creating multiple tasks that we want to execute simultaneously, Go schedules them for the kernel to run on each core later using system calls. System calls serve as an interface between an application and the kernel, facilitating task scheduling.
 
 There is 3 types of thread models that Go uses:
 
