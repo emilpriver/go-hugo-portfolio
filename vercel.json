@@ -22,7 +22,8 @@
     },
     {
       "source": "/blog/benchmark/go-vs-rust-vs-bun-vs-node-http-benchmark/",
-      "destination": "/blog/benchmark/go-vs-rust-vs-bun-vs-node-http-benchmark-v2"
+      "destination": "/blog/benchmark/go-vs-rust-vs-bun-vs-node-http-benchmark-v2",
+      "permanent": true
     }
   ]
 }

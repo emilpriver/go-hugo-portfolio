@@ -1,7 +1,7 @@
 ---
 title: "Go vs Rust vs Bun vs Node, Simple Http Benchmark"
 date: 2023-09-12T10:49:57+02:00
-draft: false
+draft: true
 description: "This post compares the performance of Bun, Rust, Go, and Node for handling HTTP requests. The author benchmarks each language using a simple benchmark test and tests returning a simple string and a JSON string. The post also discusses the author's reasons for conducting the test and provides a summary of the results."
 type: "blog"
 tags: ["Benchmark", "GO", "Rust", "Bun", "Node"]
