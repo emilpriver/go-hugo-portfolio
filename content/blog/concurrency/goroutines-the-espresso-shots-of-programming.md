@@ -2,7 +2,7 @@
 title: "Goroutines: The Espresso Shots of Programming"
 date: 2023-10-03T12:39:16+02:00
 draft: false
-description: "Unlock the Power of Goroutines in Go - Dive into the world of Goroutines, Go's concurrency magic! Explore thread models, learn how to prevent race conditions, and master synchronization with WaitGroups. Discover how Goroutines can supercharge your Go applications for efficient concurrent execution. Dive deeper into Go programming with this comprehensive guide!"
+description: "In this post, we dive deeper into Goroutines, a feature of the Go programming language that enables concurrent execution and convenient utilization of multiple threads. We discuss the simplicity and ease of understanding of Go, explore how Goroutines work, and examine the GMP model in Go. Additionally, we cover topics such as blocking, channels, and WaitGroups. Discover the power and benefits of using Goroutines in your Go applications. Don't miss out on this insightful exploration of Goroutines and their role in concurrent programming."
 type: "blog"
 tags: ["Go", "Concurrency"]
 images:
