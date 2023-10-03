@@ -199,7 +199,7 @@ Waitgroup can be considered as an equivalent to JavaScript's [Promise.All()](htt
 
 ## Summary
 
-Goroutines are a useful tool in Go applications. They allow us to handle increased traffic, execute jobs faster, and more efficiently. However, it is not necessary to use goroutines all the time. In some cases, they can introduce unnecessary complexity and overhead. Nevertheless, goroutines can be a valuable tool for executing multiple jobs. They can be particularly useful as an alternative to horizontal scaling. If you need to increase the power of your application and are considering horizontal scaling, goroutines can be a viable option. For instance, by spinning up 5 goroutines, you can execute 5 times more jobs.
+Goroutines are a useful tool in Go applications. They allow us to handle increased traffic, execute jobs faster, and more efficiently. However, it is not necessary to use goroutines all the time, as they can introduce unnecessary complexity and overhead in some cases. Nevertheless, goroutines can be valuable for executing multiple jobs, especially as an alternative to horizontal scaling. If you need to increase the power of your application and are considering horizontal scaling, goroutines can be a viable option. For example, by spinning up 5 goroutines, you can execute 5 times more jobs. The actual speedup will depend on the CPU and the type of jobs being performed, but theoretically, it is possible to speed up the jobs by 5 times.
 
 Hope this article helped you and maybe taught you something. The purpose of the article for me was to learn more about what happens when a goroutine is created and how the CPU handles goroutines.
 
