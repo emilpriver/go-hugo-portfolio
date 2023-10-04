@@ -1,0 +1,133 @@
+baseURL: "https://priver.dev/"
+author: "Emil Privér"
+copyright: "Copyright © 2022–2022, Emil Privér; all rights reserved."
+paginate: 5
+languageCode: "en"
+DefaultContentLanguage: "en"
+ignoreErrors:
+  - "error-remote-getjson"
+theme: "priver"
+title: "Emil Privér"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+minify:
+  disableXML: true
+
+outputs:
+  home:
+    - "html"
+    - "rss"
+    - "json"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: "catppuccin-frappe"
+
+en:
+  languageName: "English"
+  weight: 1
+
+  taxonomies:
+    tag: "tags"
+    series: "series"
+    recipes: "recipes"
+
+menu:
+  main:
+    - name: "Archive"
+      url: "blog"
+      weight: 5
+    - name: "Search"
+      url: "search/"
+      weight: 10
+    - name: "Tags"
+      url: "tags/"
+      weight: 10
+    - name: "About"
+      url: "about/"
+      weight: 10
+    - name: "Twitter"
+      url: "https://x.com/emil_priver"
+    - name: "Github"
+      url: "https://github.com/emilpriver"
+
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
+
+imaging:
+  anchor: "Smart"
+  bgColor: "#ffffff"
+  hint: "photo"
+  quality: 20
+  resampleFilter: "Box"
+
+sitemap:
+  changefreq: "weekly"
+  filename: "sitemap.xml"
+  priority: 0.5
+
+params:
+  defaulttheme: true
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+
+  homeInfoParams:
+    Title: "Emil Privér"
+    Content: "Hey! My name is Emil Privér, I write about stuffs I learn and build. I am a software developer who likes exploring stuffs and writing articles."
+
+  social:
+    twitter: "https://twitter.com/emil_priver"
+    github: "https://github.com/emilpriver"
+    linkedin: "https://www.linkedin.com/in/emilpriver"
+
+  editPost:
+    URL: "https://github.com/emilpriver/go-hugo-portfolio/tree/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+  assets:
+    disableHLJS: true
+
+security:
+  funcs:
+    getenv:
+      - "^VERCEL_"
+      - "^HUGO_"
+
