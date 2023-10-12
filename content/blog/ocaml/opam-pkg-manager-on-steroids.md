@@ -67,3 +67,5 @@ In my opinion, Opam is comparable to virtualenv + pip but lacks the locking capa
 
 This post was more about my thoughts on opam. I hope you enjoyed it. If you have any feedback, you can easily find me on [Twitter](https://twitter.com/emil_priver).
 
+Shout out to Ryan Winchester for generating the cover image. His Twitter can be found here: https://x.com/ryanrwinchester
+
