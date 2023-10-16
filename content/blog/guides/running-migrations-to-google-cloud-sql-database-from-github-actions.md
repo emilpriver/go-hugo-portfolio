@@ -91,7 +91,7 @@ I am refering to each step by it’s name:
 
 To set up authentication in the runner, you will need the IAM Service Account JSON. This JSON is later used to obtain a token. The token is necessary because `google-github-actions/auth@v1` applies policies to the JSON file, preventing you from mounting it onto the Docker container used for the Cloud SQL proxy. Additionally, the container is run as a daemon in the background, allowing you to connect to other steps.
 
-In this step, the token lifetime is set to 120 seconds. A lower lifetime is better for security.
+In this step, the token lifetime is set to 120 seconds. A lower lifetime is better for security as most of security is all about lowering the holes and setting a short lifetime will increase risk for a short time. Also the default time for a token for this action is 1 hour and you shouldn't need 1 hour.
 
 ### Google Cloud SQL Proxy
 
@@ -105,7 +105,7 @@ I am using DBmate for migrations, and I find that it handles everything I need p
 
 ### Run Migrations
 
-This step may vary depending on the tool you are using. The important part in this step is the URL for the database. Since we have already set up a container that connects to our database, we can use `[localhost:5432](<http://localhost:5432>)` as the host for the database. In my case, the URL to the database is `postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable`. Here, `postgres:postgres` represents the username and password for the database, and `/postgres` is the name of the PostgreSQL database inside my Cloud SQL Database. Additionally, I have added `sslmode=disable` to disable the PostgreSQL SSL connection.
+This step may vary depending on the tool you are using. The important part in this step is the URL for the database. Since we have already set up a container that connects to our database, we can use `[localhost:5432](<http://localhost:5432>)` as the host for the database. In my case, the URL to the database is `postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable`. Here, `postgres:postgres` represents the username and password for the database, and `/postgres` is the name of the PostgreSQL database inside my Cloud SQL Database. Additionally, I have added `sslmode=disable` to disable the PostgreSQL SSL connection as it don't work without creating a cert for the proxy and the proxy already encrypts the connection. 
 
 If your connection string to the database with a public host is `postgresql://postgres:password@10.0.0.0:5432/postgres?sslmode=disable`,
 then you only need to change `10.0.0.0:5432` to `localhost:5432`.
