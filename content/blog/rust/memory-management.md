@@ -10,7 +10,6 @@ series:
 - Rust
 images:
   - /og-images/rust-og.jpg
-cover: "images/rust-og.jpg"
 ---
 
 Rust is an amazing low-level language that empowers users to work directly with memory. It provides developers with both thread-safety and memory safety, which are fantastic features. This post is all about working with memory in Rust and covers interesting topics such as the stack, heap, and the `.clone()` method.
