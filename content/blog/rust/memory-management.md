@@ -24,9 +24,7 @@ Rust keeps its promise of ensuring memory safety to developers through its owner
 
 ## The Stack and the Heap
 
-When we talk about memory management in Rust, there are two terms that we often use: "Stack" and "Heap". As developers, we work closely with these concepts, and one way to describe them is that the stack is like a local space that we can access within a function, while the heap is like a global space that we can access throughout our code. There are some differences between the two. The stack has a limit on how much data we can store per memory slot, and it is only local to the function. On the other hand, the heap is accessible globally within our code and doesn't have any limit on how much data we can store. However, it is slower compared to the stack.
-
-Just wanted to mention something important - the stack actually exists on top of the heap. When we talk about the stack and heap, it's worth noting that the stack mainly stores references, while the heap is where the actual values are stored.
+When we talk about memory management in Rust, there are two terms that we often use: "Stack" and "Heap". As developers, we work closely with these concepts, and one way to describe them is that the stack is like a local space that we can access within a function, while the heap is like a global space that we can access throughout our code. There are some differences between the two. The stack has a limit on how much data we can store per memory slot, and it is only local to the function. On the other hand, the heap is accessible globally within our code and only limits is the memory limit you have on your machine. However, it is slower compared to the stack.
 
 ```rust
 fn hello() {
@@ -155,7 +153,7 @@ Thanks to now using a reference as an argument, we no longer need to have a retu
 Let’s speak a bit about the first borrow rule.
 
 ```rust
-fn main() {
+lfn main() {
     let mut array = vec!["Hello", "World"];
 
     let last = array.last().unwrap();
@@ -215,9 +213,7 @@ fn main() {
 }
 ```
 
-In the previous example, we discussed borrowing in Rust and showed code that would not compile due to missing lifetime annotations. We have now added lifetimes to our function `highest_value`, which tells Rust that the return value in this case has the same lifetime as the arguments. 
-
-Based on the logic in the `main()` function, we can safely assume that Rust won't release `variable2` because it's the highest value and is returned. However, `variable1` is free to be deallocated when the function is finished since it's no longer needed.
+In the previous example, we discussed borrowing in Rust and showed code that would not compile due to missing lifetime annotations. We have now added lifetimes to our function `highest_value`, which tells Rust that the return value in this case has the same lifetime as the arguments and is valid within the same scope.
 
 Rust provides different ways of annotating lifetimes, and one of them is `'static`, which instructs Rust to keep this data in memory until the program terminates.
 
@@ -230,5 +226,7 @@ The beauty of working with memory in Rust is that the mindset you develop can al
 I want to give a special shoutout to the awesome YouTube channel [Let’s Get Rusty](https://www.youtube.com/@letsgetrusty) and their video "[The Rust Survival Guide](https://www.youtube.com/watch?v=usJDUSrcwqI)". This video provides excellent explanations, and I have incorporated a similar approach into this article because their examples were well-presented and easy to follow.
 
 I would also like to express my sincere gratitude to Togglebit, who streams at https://www.twitch.tv/togglebit. Togglebit has been incredibly helpful in providing me with valuable feedback on this text. They have a talent for explaining concepts in a way that is accessible to new developers. Furthermore, their unwavering support and willingness to patiently address all of my inquiries have played a vital role in my Rust journey.
+
+I would also like to give a shout out to Trav for providing feedback on this post. You can find them on [Twitter](https://twitter.com/techsavvytravvy) or [Twitch](https://www.twitch.tv/techsavvytravvy).
 
 If you would like to connect, feel free to find me on Twitter: https://twitter.com/emil_priver 😄
