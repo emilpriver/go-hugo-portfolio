@@ -28,8 +28,8 @@ When we talk about memory management in Rust, there are two terms that we often 
 
 ```rust
 fn hello() {
-    let s1 = String::from("Hello World"); // The variable "s1" is initialized and stored in memory on the stack.
-} // s1 has been dropped and no longer exists.
+    let s1 = String::from("Hello World"); // The variable "s1" is initialized and stored on the heap
+} // s1 has been dropped and no longer exists due to that the scope ends.
 ```
 
 There are also some differences between the stack and the heap in how they handle data allocation in memory. The stack doesn't actually allocate memory; it simply pushes and stores the data. On the other hand, the heap performs an allocation before storing the value. When you push data to the heap, it looks for a suitable memory location to allocate and store your data, and then it gives you a reference to the memory slot where the pushed data is stored.
