@@ -11,7 +11,6 @@ series:
 images:
   - /og-images/rust-og.jpg
 ---
-
 Rust is an amazing low-level language that empowers users to work directly with memory. It provides developers with both thread-safety and memory safety, which are fantastic features. This post is all about working with memory in Rust and covers interesting topics such as the stack, heap, and the `.clone()` method.
 
 Rust keeps its promise of ensuring memory safety to developers through its ownership system. Unlike other systems languages that rely on garbage collection or require manual memory management, Rust intelligently manages memory through a system of ownership rules that the program must follow in order to compile. The best part is that this system does not have any negative impact on the performance of the code.
@@ -26,6 +25,8 @@ Rust keeps its promise of ensuring memory safety to developers through its owner
 ## The Stack and the Heap
 
 When we talk about memory management in Rust, there are two terms that we often use: "Stack" and "Heap". As developers, we work closely with these concepts, and one way to describe them is that the stack is like a local space that we can access within a function, while the heap is like a global space that we can access throughout our code. There are some differences between the two. The stack has a limit on how much data we can store per memory slot, and it is only local to the function. On the other hand, the heap is accessible globally within our code and doesn't have any limit on how much data we can store. However, it is slower compared to the stack.
+
+Just wanted to mention something important - the stack actually exists on top of the heap. When we talk about the stack and heap, it's worth noting that the stack mainly stores references, while the heap is where the actual values are stored.
 
 ```rust
 fn hello() {
@@ -50,11 +51,11 @@ fn main() {
 
 ```
 
-In the given function, we create five variables, which leads to a stack of five items (s1, s2, s3, s4, s5), all containing references to memory slots. This group of variables created within the function is also known as a "stack frame.”
+In the given function, we create five variables, which leads to a stack of five items (s1, s2, s3, s4, s5), all containing references to memory slots. This group of variables created within the function is also known as a "stack frame.” 
 
 ## .clone()
 
-It's time to discuss `.clone()`, the function that, for many, can be seen as a temporary solution to avoid dealing with memory in Rust, which is considered "the more effective and better approach". This is also a function that I relied on a lot, maybe even too much, at the beginning of my Rust journey. Especially when it's nearly 5pm on a Friday and it's time to head home from work, and you really don't want to deal with the borrow-checker any longer, a simple `.clone()` might seem like an appealing solution. However, it's important to be cautious with excessive use of `.clone()`. While it may make you and Rust Analyzer happy, it can lead to less efficient code and unnecessary memory consumption.
+It's time to discuss `.clone()`, the function that, for many, can be seen as a temporary solution to avoid dealing with memory in Rust, which is considered "the more effective and better approach". This is also a function that I relied on a lot, maybe even too much, at the beginning of my Rust journey. Especially when it's nearly 5pm on a Friday and it's time to head home from work, and you really don't want to deal with the borrow-checker any longer, a simple `.clone()` might seem like an appealing solution. However, it's important to be cautious with excessive use of `.clone()`. While it may make you and the rust compiler happy, it can lead to less efficient code and unnecessary memory consumption.
 
 When you invoke `.clone()` in Rust, it duplicates the data from the memory location you wish to clone, finds a place to allocate space, stores the cloned data in that space, and then returns a reference to the new memory location that contains the exact same data as the original. Let's imagine you have a project where you store a substantial amount of data in memory (e.g., in-memory search projects like Meilisearch), and you utilize `.clone()` on a field that stores a JSON blob. In this scenario, it's possible to encounter a memory problem where the program allocates an excessive amount of memory, causing the server to crash, when in reality, you only needed to borrow the value.
 
@@ -87,7 +88,7 @@ fn main() {
 
 ## Ownership rules
 
-While discussing the use of `.clone()` and references instead of `.clone()`, let's explore the next topic: ownership rules in Rust. These rules play a vital role in ensuring memory safety in Rust and might seem a bit challenging at first. However, as you gain experience and embrace the mindset they require, working with memory becomes more manageable.
+While discussing the use of `.clone()` vs references, let's explore the next topic: ownership rules in Rust. These rules play a vital role in ensuring memory safety in Rust and might seem a bit challenging at first. However, as you gain experience and embrace the mindset they require, working with memory becomes more manageable.
 
 You can think of the ownership rules as follows:
 
@@ -111,12 +112,11 @@ fn main() {
 
 On line 6, we create a variable `s1` that contains a reference to a memory slot with the value "Hello World". The owner of the data in this memory slot is the variable `s1`. We then pass the variable `s1` to the function `print()`, and afterwards we pass `s1` to the `println!()` macro.
 
-When you compile this code, you will encounter the same error as in the earlier example: "borrow of moved value `s1`, value borrowed after move". This error happens because when we use `s1` as the variable for the `print()` function, we transfer ownership of the data from `s1` to the `value` argument of the `print()` function and its scope. Consequently, `s1` cannot be used to access the data within that scope anymore unless we return the data from `print()` and use the returned data as the value for the last `println!()` statement. Here's the revised code:
+When you compile this code, you will encounter the same error as in the earlier example: "borrow of moved value `s1`, value borrowed after move". This error happens because when we use `s1` as the variable for the `print()` function, we transfer ownership of the data from `s1` to the argument of the `print()` function and its scope. Consequently, `s1` cannot be used to access the data within that scope anymore unless we return the data from `print()` and use the returned data as the value for the last `println!()` macro. Here's the revised code:
 
 ```rust
 fn print(value: String) -> String {
     println!("{value}");
-
     value
 }
 
@@ -166,7 +166,7 @@ fn main() {
 }
 ```
 
-In the code above, we begin by creating a variable called `array` of type `Vec<String>`, which is mutable. Next, we obtain a reference to the last item in the array. Afterward, we append 2 new values to the array and display the value of `last`. However, an error message appears stating "cannot borrow 'array' as mutable because it is also borrowed as immutable." This error occurs because when we add a new value to the array, it allocates new memory for a fresh array and deallocates the old one. Consequently, the variable `last` now points to a deallocated memory slot, causing issues when we attempt to access it. In Rust, when we modify a data slot, the old value is deallocated and a new value is allocated.
+In the code above, we begin by creating a variable called `array` of type `Vec<String>`, which is mutable. Next, we obtain a reference to the last item in the array. Afterward, we append 2 new values to the array and display the value of `last`. However, an error message appears stating "cannot borrow 'array' as mutable because it is also borrowed as immutable." This error occurs because when we add a new value to the array, it allocates new memory for a fresh array and deallocates the old one. Consequently, the variable `last` now points to a deallocated memory slot, causing issues when we attempt to access it.
 
 The second rule is that a variable or reference needs to live long enough for the entire scope. This means that if we create a variable and then use it within a function, we likely need to ensure it has a proper lifetime (more about this later).
 
@@ -190,11 +190,11 @@ fn main() {
 
 ```
 
-The reason behind this rule is to prevent Rust from deallocating memory while the `highest_value` function exists. If we try to access that memory later on in the `println!()` macro, the program will crash because it is attempting to access a deallocated memory slot.
+The reason why it’s not compiling is due to that the code violates the rules of lifetimes.
 
 ## Lifetime
 
-Let's dive into the topic of memory management, specifically lifetimes, in Rust. Lifetimes in Rust are like superheroes that prevent the premature deallocation of memory slots that are still needed within your code.
+Let's explore the fascinating world of memory management, particularly lifetimes. Lifetimes in Rust are akin to superheroes that protect against the premature deallocation of memory slots that are still required within your code. The objective of a lifetime is for Rust to guarantee that each borrow that takes place is a valid borrow, ensuring it doesn't point to deallocated memory.
 
 ```rust
 fn highest_value<'a>(variable1: &'a i64, variable2: &'a i64) -> &'a i64 {
@@ -213,20 +213,22 @@ fn main() {
 
     println!("{result}")
 }
-
 ```
 
-In the previous example where we discussed borrowing in Rust, I showed you code that would not compile due to missing lifetimes. This time, we have added lifetimes to our function `highest_value`, which tells Rust how long it needs to hold on to the memory slot. Based on the logic in the `main()` function, we can safely assume that Rust won't let go of `variable2` because it's the highest value and is returned. However, `variable1` is free to be deallocated when the function is done since it's no longer needed.
+In the previous example, we discussed borrowing in Rust and showed code that would not compile due to missing lifetime annotations. We have now added lifetimes to our function `highest_value`, which tells Rust that the return value in this case has the same lifetime as the arguments. 
 
-There are different ways of creating a lifetime in Rust, and one of them is `'static`, which instructs Rust to keep this data in memory until the program terminates.
+Based on the logic in the `main()` function, we can safely assume that Rust won't release `variable2` because it's the highest value and is returned. However, `variable1` is free to be deallocated when the function is finished since it's no longer needed.
 
-## That's a Wrap!
+Rust provides different ways of annotating lifetimes, and one of them is `'static`, which instructs Rust to keep this data in memory until the program terminates.
 
-I hope you've gained some valuable insights from this article. Working with memory in Rust can be a bit daunting at first, especially when you find yourself grappling with the rules (and rust-analyzer). However, once you've familiarized yourself with the rules and learned how to navigate them, it becomes much smoother sailing.
+## That's a `.unwrap()`!
 
-The beauty of working with memory in Rust is that the mindset you develop can also help you write more memory-efficient code in other programming languages.
+I hope you have gained valuable insights from this article. Working with memory in Rust can be intimidating at first, especially when dealing with the rules (and rust-analyzer). However, once you become familiar with the rules and learn how to navigate them, it becomes much easier.
 
-I want to give a special shoutout to the awesome YouTube channel [Let’s Get Rusty](https://www.youtube.com/@letsgetrusty) and their video "[The Rust Survival Guide](https://www.youtube.com/watch?v=usJDUSrcwqI)". This video provides excellent explanations, and I've incorporated a similar approach into this article because their examples were well-presented and easy to follow.
+The beauty of working with memory in Rust is that the mindset you develop can also help you write more memory-efficient and memory-safe code in other programming languages.
 
-If you'd like to connect, feel free to find me on Twitter: https://twitter.com/emil_priver 😄
+I want to give a special shoutout to the awesome YouTube channel [Let’s Get Rusty](https://www.youtube.com/@letsgetrusty) and their video "[The Rust Survival Guide](https://www.youtube.com/watch?v=usJDUSrcwqI)". This video provides excellent explanations, and I have incorporated a similar approach into this article because their examples were well-presented and easy to follow.
 
+I would also like to express my sincere gratitude to Togglebit, who streams at https://www.twitch.tv/togglebit. Togglebit has been incredibly helpful in providing me with valuable feedback on this text. They have a talent for explaining concepts in a way that is accessible to new developers. Furthermore, their unwavering support and willingness to patiently address all of my inquiries have played a vital role in my Rust journey.
+
+If you would like to connect, feel free to find me on Twitter: https://twitter.com/emil_priver 😄
