@@ -18,7 +18,7 @@ Rust keeps its promise of ensuring memory safety to developers through its owner
 ## Some words that are good to know
 
 - Pushing to the heap/stack: This means adding data to the memory.
-- Dropping memory: This refers to removing a memory slot that is no longer used.
+- Dropping memory: This refers to releasing memory resource that is no longer used.
 - Allocation: This process involves checking where Rust can store data in the memory by analyzing the size of the data and finding a slot that is either equal to or larger than the data.
 - Deallocation: This refers to removing data from the memory and freeing up space in the memory.
 
@@ -34,8 +34,6 @@ fn hello() {
 
 There are also some differences between the stack and the heap in how they handle data allocation in memory. The stack doesn't actually allocate memory; it simply pushes and stores the data. On the other hand, the heap performs an allocation before storing the value. When you push data to the heap, it looks for a suitable memory location to allocate and store your data, and then it gives you a reference to the memory slot where the pushed data is stored.
 
-The stack also follows the rule of "first in, last out," meaning that the first data stored on the stack is the last one to be removed. Therefore, the first defined variable within your function will also be the last value to be dropped when the function is completed.
-
 The stack operates on the principle of "first in, last out," which means that the data stored first on the stack is the last one to be removed. So, when your function is completed, the variable that was defined first within it will also be the last value to be dropped. In simple terms, a "stack" refers to all the variables you define within a function, in the order you define them.
 
 ```rust
@@ -46,7 +44,6 @@ fn main() {
     let s4 = String::from("Stack item 4");
     let s5 = String::from("Stack item 5");
 }
-
 ```
 
 In the given function, we create five variables, which leads to a stack of five items (s1, s2, s3, s4, s5), all containing references to memory slots. This group of variables created within the function is also known as a "stack frame.” 
@@ -153,7 +150,7 @@ Thanks to now using a reference as an argument, we no longer need to have a retu
 Let’s speak a bit about the first borrow rule.
 
 ```rust
-lfn main() {
+fn main() {
     let mut array = vec!["Hello", "World"];
 
     let last = array.last().unwrap();
