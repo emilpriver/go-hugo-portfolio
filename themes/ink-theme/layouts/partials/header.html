@@ -90,7 +90,6 @@
   <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
   {{ end -}}
 
-{{- /* Highlight.js */}}
 {{- $isHLJSdisabled := (site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
 {{- if not site.Params.assets.disableFingerprinting }}
