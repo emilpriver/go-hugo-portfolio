@@ -10,5 +10,3 @@ type: "post"
 Hi I'm Emil Privér. Software developer from Göteborg, Sweden. during my freetime do I code hobby projects and trying different stuffs within the programming world.
 
 I love to explore the tech world, Love reading about tech and explore code, systems and stuffs in general.
-
-Now I'm a developer at [Zimpler](https://zimpler.com) in Gothenburg, Sweden.
