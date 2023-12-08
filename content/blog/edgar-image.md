@@ -5,8 +5,6 @@ draft: false
 description: Edgar image, the self-hosted image transformation services.
 type: "blog"
 tags: ["projects", "Edgar Image"]
-series:
-- Edgar Image
 images:
   - /og-images/edgar.jpg
 toc: true

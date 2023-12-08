@@ -9,8 +9,6 @@ best: true
 toc: false
 images:
   - /og-images/google-cloud.jpg
-series:
-  - Guides
 ---
 For a hobby project, I am using Google Cloud as my hosting provider. Recently, I built a way to run migrations from GitHub actions to my Cloud SQL Database using DBmate. However, my database is running within a VPC, which makes it difficult to connect to the database as it is within a private network with a firewall that does not accept traffic from the outside world. Fortunately, I found three potential solutions to this issue.
 

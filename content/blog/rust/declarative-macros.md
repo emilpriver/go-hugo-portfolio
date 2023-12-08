@@ -6,9 +6,6 @@ toc: true
 description: "Article about developing declarative macros in Rust" 
 type: "blog"
 tags: ["rust", "macros"]
-series:
-- Rust
-- Rust Macros
 images:
   - /og-images/rust-og.jpg
 ---

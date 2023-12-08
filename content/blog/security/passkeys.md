@@ -5,9 +5,7 @@ draft: false
 toc: true
 description: "This article explores the future of passwords and the potential replacement of traditional username and password authentication with PassKeys. PassKeys use biometric sensors, a PIN, or a pattern to authenticate users, making it easier and more secure to sign in. The article discusses the benefits of PassKeys over traditional passwords, potential risks, and the future of authentication." 
 type: "blog"
-tags: ["security", "passkeys"]
-series:
-- passkeys
+tags: ["security"]
 images:
   - /og-images/apple-passkeys.png
 ---

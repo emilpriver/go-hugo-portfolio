@@ -6,7 +6,7 @@ languageCode: "en"
 DefaultContentLanguage: "en"
 ignoreErrors:
   - "error-remote-getjson"
-theme: "priver"
+theme: "ink-theme"
 title: "Emil Privér"
 
 enableInlineShortcodes: true
@@ -42,27 +42,18 @@ en:
 
   taxonomies:
     tag: "tags"
-    series: "series"
-    recipes: "recipes"
 
 menu:
   main:
     - name: "Archive"
-      url: "blog"
+      url: "/blog"
       weight: 5
-    - name: "Search"
-      url: "search/"
-      weight: 10
     - name: "Tags"
-      url: "tags/"
+      url: "/tags"
       weight: 10
     - name: "About"
-      url: "about/"
+      url: "/about"
       weight: 10
-    - name: "Twitter"
-      url: "https://x.com/emil_priver"
-    - name: "Github"
-      url: "https://github.com/emilpriver"
 
 privacy:
   vimeo:
@@ -113,9 +104,15 @@ params:
     Content: "Hey! My name is Emil Privér, I write about stuffs I learn and build. I am a software developer who likes exploring stuffs and writing articles."
 
   social:
-    twitter: "https://twitter.com/emil_priver"
-    github: "https://github.com/emilpriver"
-    linkedin: "https://www.linkedin.com/in/emilpriver"
+    - name: "Twitter"
+      icon: "twitter"
+      url: "https://twitter.com/emil_priver"
+    - name: "Github"
+      icon: "github"
+      url: "https://github.com/emilpriver"
+    - name: "Linkedin"
+      icon: "linkedin"
+      url: "https://www.linkedin.com/in/emilpriver"
 
   editPost:
     URL: "https://github.com/emilpriver/go-hugo-portfolio/tree/main/content"

@@ -8,8 +8,6 @@ tags: ["Data Warehouse"]
 best: true
 images:
   - /og-images/data-warehouse.png
-series:
-  - Data Warehouse
 toc: true
 ---
 

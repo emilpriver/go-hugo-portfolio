@@ -6,9 +6,6 @@ toc: true
 description: "Article about the programming language Zig." 
 type: "blog"
 tags: ["zig"]
-series:
-- Zig
-- Initial Commit
 images:
   - /og-images/zig-og.jpg
 ---

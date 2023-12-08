@@ -9,8 +9,6 @@ best: true
 toc: false
 images:
   - /og-images/golang.jpeg
-series:
-  - Data Warehouse
 ---
 I have been struggling with Github Actions for a couple of hours now. My problem is that Github Actions cannot read from private repositories in the same organization. Additionally, I have been unable to install Go packages because Git does not know which username and password to use. This post describes a solution to these issues.
 

@@ -7,9 +7,6 @@ type: "blog"
 tags: ["Go", "Concurrency"]
 images:
   - /og-images/golang.jpeg
-series:
-  - Concurrency
-  - GO
 toc: true
 ---
 

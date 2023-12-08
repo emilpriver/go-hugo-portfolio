@@ -6,8 +6,6 @@ type: "blog"
 tags: ["Ocaml"]
 images:
   - /og-images/ocaml.jpeg
-series:
-  - Ocaml
 toc: true
 description: "Opam: Package Manager on Steroids?"
 ---

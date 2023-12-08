@@ -6,9 +6,6 @@ toc: true
 description: "Article about build step in zig" 
 type: "blog"
 tags: ["zig"]
-series:
-- Zig
-- Initial Commit
 images:
   - /og-images/zig-og.jpg
 ---

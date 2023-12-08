@@ -7,10 +7,7 @@ images:
   - https://og.priver.dev/api/og?title=Introduction%20to%20Elixir&bgImage=https://priver.dev/og-images/elixir.jpg
 draft: false
 tags: ["Elixir"]
-categories: ["Elixir"]
 keywords: ["Elixir", "Introduction to elixir"]
-series:
-  - Elixir
 toc: true
 ---
 

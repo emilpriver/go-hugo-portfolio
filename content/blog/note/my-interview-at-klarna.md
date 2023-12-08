@@ -8,8 +8,6 @@ tags: ["Interview"]
 best: true
 images:
   - /og-images/klarna.png
-series:
-  - Interview
 toc: true
 ---
 

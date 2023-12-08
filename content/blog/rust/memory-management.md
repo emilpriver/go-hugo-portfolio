@@ -6,8 +6,6 @@ toc: true
 description: "Article about working with the memory within rust" 
 type: "blog"
 tags: ["rust", "memory management"]
-series:
-- Rust
 images:
   - /og-images/rust-og.jpg
 ---

@@ -6,8 +6,6 @@ toc: true
 description: Good rust stuffs I learned when working with rust.
 type: "blog"
 tags: ["rust", "tokio", "macros"]
-series:
-- Rust 
 images:
   - /og-images/rust-og.jpg
 ---

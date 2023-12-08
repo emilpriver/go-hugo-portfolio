@@ -8,8 +8,6 @@ images:
   - /og-images/localstack.png
 tags: ["Localstack", "Tools", "Local development"]
 keywords: ["AWS", "Localstack", "SQS", "SNS", "emulation", "development", "testing ", "AWS CLI ", "GO", "custom endpoints"," guide for developers"]
-series:
-  - tools
 toc: true
 ---
 Hey there!

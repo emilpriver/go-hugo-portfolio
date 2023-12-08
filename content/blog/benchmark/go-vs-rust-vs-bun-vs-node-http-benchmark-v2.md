@@ -8,8 +8,6 @@ tags: ["Benchmark", "GO", "Rust", "Bun", "Node"]
 best: true
 images:
   - /og-images/star-trek.jpg
-series:
-  - Benchmark
 toc: true
 ---
 
