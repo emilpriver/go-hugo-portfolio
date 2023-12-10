@@ -101,6 +101,7 @@ params:
   defaulttheme: true
   ShowShareButtons: true
   ShowReadingTime: true
+  ShowWordCount: true
   displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
