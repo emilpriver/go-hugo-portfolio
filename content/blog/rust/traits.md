@@ -190,7 +190,7 @@ Here, we specify that the argument `item` should implement the `Summary` trait.
 
 ## `dyn` traits
 
-To return different implementations of traits of a trait can we use a trait object. In my case, I want to return a different `DatabaseDriver` depending on the `db_url` given to the function. This allows us to work with different structs as long as they have implemented the `DatabaseDriver` trait.
+To return different types that all implement the same trait can we use a trait object. In my case, I want to return a different `DatabaseDriver` depending on the `db_url` given to the function. This allows us to work with different structs as long as they have implemented the `DatabaseDriver` trait.
 
 ```rust
 pub trait DatabaseDriver {
