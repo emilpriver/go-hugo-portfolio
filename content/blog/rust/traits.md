@@ -21,7 +21,9 @@ Traits are everywhere in Rust. Some common traits you may work with include `Clo
 
 ## Creating a trait
 
-I will be using the code I am currently working on for [Geni](https://github.com/emilpriver/geni/blob/main/src/database_drivers/mod.rs) as examples. For Geni, each `DatabaseDriver` (such as PostgreSQL, MySQL, LibSQL, etc.) is required to have two functions: `execute` and `get_or_create_schema_migrations`. These two functions are used within my project.
+I will be using the code I am currently working on for [Geni](https://github.com/emilpriver/geni/blob/main/src/database_drivers/mod.rs) as examples. In Geni, each `DatabaseDriver` (such as PostgreSQL, MySQL, LibSQL, etc.) is required to have two methods: `execute` and `get_or_create_schema_migrations`. These methods are used within my project.
+
+To create a trait, you write `trait X` where X is the name of your trait. After that, you can define the methods needed for the trait.
 
 ```rust
 trait DatabaseDriver {
@@ -31,7 +33,7 @@ trait DatabaseDriver {
 
 ```
 
-So, to create a new `DatabaseDriver`, did I implement the `DatabaseDriver` trait for the related structs. This will allow me to use the `execute` and `get_or_create_schema_migrations` functions later in my code. In the code below, we create a struct called "LibSQLDriver" and later provide a local implementation for the struct, adding a new function. After that, we also implement our trait `DatabaseDriver` for `LibSQLDriver`, defining the `execute` and `get_or_create_schema_migrations` functions.
+So, to create a new `DatabaseDriver`, did I implement the `DatabaseDriver` trait for the related structs. This will allow me to use the `execute` and `get_or_create_schema_migrations` methods later in my code. In the code below, we create a struct called "LibSQLDriver" and later provide a local implementation for the struct, adding a new function. After that, we also implement our trait `DatabaseDriver` for `LibSQLDriver`, defining the `execute` and `get_or_create_schema_migrations` methods.
 
 ```rust
 pub struct LibSQLDriver {
