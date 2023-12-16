@@ -15,9 +15,11 @@ It has been a while since Rust introduced traits, which are similar to interface
 
 The case we will use in this post is a real use-case, as I am currently working on a SQL migration tool. I know that there are probably millions of them, but I haven't found any that make handling libSQL migrations easy. The code can be found [here](https://github.com/emilpriver/geni). I am using traits to support multiple databases without the need to write numerous if-else statements and complex logic. My goal is to obtain the correct database driver and its corresponding `execute` function by simply providing a `database_url` to a `new` function.
 
-Traits in Rust are often compared to interfaces in other languages, but there are some differences. One difference is that Rust allows you to create defaults for traits and supports generic traits. One of the main advantages of using traits in Rust is the ability to abstract over different types with the same behavior. This is particularly useful when working with data structures or algorithms that need to operate on various types, as it allows you to write code that is agnostic to the specific types being used. Additionally, Rust enforces type-safety and can prevent common programming mistakes. For example, Rust prevents you from calling a method if it cannot be guaranteed to exist. Traits can also be added to types, which means that you can add functionality to different types within Rust and override the functionality of a type's method.
+Traits in Rust are often compared to interfaces in other languages, but there are some differences. One thing to note is that Rust allows you to create defaults for traits and also supports generic traits. One of the great advantages of using traits in Rust is that it allows you to abstract over different types with the same behavior. This can be really helpful when working with data structures or algorithms that need to operate on various types, as it lets you write code that doesn't depend on the specific types being used.
 
-Traits are everywhere in Rust. Some common traits you may work with include `Clone`, `Copy`, `Serialize`, `Deserialize`, and even the async/await functionality has a trait called `Future`.
+Moreover, Rust takes type-safety seriously and helps prevent common programming mistakes. For instance, Rust won't let you call a method if it can't guarantee that it exists. 
+
+Traits are ubiquitous in Rust. Some common traits you may work with include `Clone`, `Copy`, `Serialize`, `Deserialize`. As Rust does not have any built-in async runtime, Rust implements the `Future` trait, which is used by async runtimes.
 
 ## Creating a trait
 
@@ -25,15 +27,17 @@ I will be using the code I am currently working on for [Geni](https://github.com
 
 To create a trait, you write `trait X` where X is the name of your trait. After that, you can define the methods needed for the trait.
 
+*Disclaimer: Rust does not currently support async methods for traits in the stable toolchain. However, this is being worked on within nightly. I use the macro `#[async_trait]` to enable async capabilities.*
+
 ```rust
+#[async_trait]
 trait DatabaseDriver {
     async fn execute(self, query: &str) -> Result<()>;
     async fn get_or_create_schema_migrations(self) -> Result<Vec<String>>;
 }
-
 ```
 
-So, to create a new `DatabaseDriver`, did I implement the `DatabaseDriver` trait for the related structs. This will allow me to use the `execute` and `get_or_create_schema_migrations` methods later in my code. In the code below, we create a struct called "LibSQLDriver" and later provide a local implementation for the struct, adding a new function. After that, we also implement our trait `DatabaseDriver` for `LibSQLDriver`, defining the `execute` and `get_or_create_schema_migrations` methods.
+To add support for a new database, you need to implement the `DatabaseDriver` trait for the structs that represent each database in your code. This will allow me to use the `execute` and `get_or_create_schema_migrations` functions later in my code. In the code below, we create a struct called "LibSQLDriver" and later provide a local implementation for the struct, adding a new function. After that, we also implement our trait `DatabaseDriver` for `LibSQLDriver`, defining the `execute` and `get_or_create_schema_migrations` functions.
 
 ```rust
 pub struct LibSQLDriver {
@@ -70,9 +74,9 @@ impl DatabaseDriver for LibSQLDriver {
 
 ## Trait as return type and arguments
 
-So, creating traits is not only for adding methods to structs. They can also be used as a return type. What I mean by this is that you can instruct Rust to return a struct that has implemented the trait, without specifying which struct it is. However, Rust does not allow returning two different structs that implement the `DatabaseDriver` trait in this way. I will discuss an alternative approach later.
+So, creating traits is not only for adding methods to structs. They can also be used to define the type of object you want to return for the function (trait object). What I mean by this is that you can instruct Rust to return a struct that has implemented the trait, without specifying which struct it is. However, Rust does not allow returning two different structs that implement the `DatabaseDriver` trait in this way. I will discuss an alternative approach later.
 
-In the example below (taken from [rust docs](https://doc.rust-lang.org/book/ch10-02-traits.html)), we can see an example where we create a struct called `Tweet` and then return it to a type that expects a struct implementing the `Summary` trait.
+In the example below (taken from [rust docs](https://doc.rust-lang.org/book/ch10-02-traits.html)), we can see a demonstration of creating a struct called `Tweet` and returning a struct that implements the `Summary` trait.
 
 ```rust
 fn returns_summarizable() -> impl Summary {
@@ -116,12 +120,13 @@ fn main() {
     let my_string = "hello";
     print_serialized(my_string);
 }
-
 ```
+
+Another important point to mention is that when you use a trait as the return type and argument type, you are working with an anonymous type. This means that Rust doesn't know the specific struct you are working with, and it also imposes the requirement that you can only operate within the bounds of the trait. This means you cannot use external functions for that specific struct, among other limitations.
 
 ## Default traits
 
-If you implement a trait that is used with non-unique structs, providing a default value can be useful. Creating a default value for a trait is straightforward and is done when defining the trait. To create a default value for a trait, extend the trait's method declaration with the desired logic.
+If you want to add a trait to types/structs that are similar, it can be helpful to provide a default value. Creating a default value for a trait is easy and can be done when defining the trait. To create a default value for a trait, simply add the desired logic to the method declaration of the trait.
 
 ```rust
 trait DatabaseDriver {
@@ -179,14 +184,13 @@ Traits can also be used as normal generic arguments.
 pub fn notify<T: Summary>(item: &T) {
     println!("Breaking news! {}", item.summarize());
 }
-
 ```
 
 Here, we specify that the argument `item` should implement the `Summary` trait.
 
 ## `dyn` traits
 
-To return different implementations of traits, we can use dynamic traits. In my case, I want to return a different `DatabaseDriver` depending on the `db_url` given to the function. This allows us to work with different structs as long as they have implemented the `DatabaseDriver` trait.
+To return different implementations of traits of a trait can we use a trait object. In my case, I want to return a different `DatabaseDriver` depending on the `db_url` given to the function. This allows us to work with different structs as long as they have implemented the `DatabaseDriver` trait.
 
 ```rust
 pub trait DatabaseDriver {
@@ -228,7 +232,7 @@ pub async fn new(db_url: &str) -> Result<Box<dyn DatabaseDriver>> {
 
 ```
 
-In the given example, we change `impl` to `dyn` in order to inform Rust that we want to work with different structs as long as they implement the `DatabaseDriver` trait. This is not allowed if we set the return type to `impl Trait`. By defining the return type as `dyn Trait`, we tell Rust that the size of the returned value may differ. To work with dynamic sized data, we need to store it on the heap using constructs like `Box`, `Arc`, and others.
+In the given example, we change `impl` to `dyn` in order to inform Rust that we want to work with different structs as long as they implement the `DatabaseDriver` trait. This is not allowed if we set the return type to `impl Trait`. By defining the return type as `dyn Trait`, we tell Rust that the size of the returned value may differ. To work with dynamically sized data, we need to store it on the heap using constructs like Box, Arc, or some other smart pointer
 
 ## .unwrap()
 
