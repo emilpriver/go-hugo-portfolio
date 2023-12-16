@@ -11,7 +11,7 @@ series:
 images:
   - /og-images/rust-og.jpg
 ---
-It's been a while since Rust introduced traits, which are similar to interfaces in most other languages (although they do have some differences). I personally enjoy working with traits because they provide great flexibility within a statically typed language. However, they can be a bit confusing to grasp at first. The goal of this post is to help you gain a better understanding of traits.
+It has been a while since Rust introduced traits, which are similar to interfaces in most other languages (although they do have some differences). Personally, I really enjoy working with traits because they provide great flexibility within a statically typed language. However, they can be a bit confusing to grasp at first. The goal of this post is to help you gain a better understanding of traits.
 
 The case we will use in this post is a real use-case, as I am currently working on a SQL migration tool. I know that there are probably millions of them, but I haven't found any that make handling libSQL migrations easy. The code can be found [here](https://github.com/emilpriver/geni). I am using traits to support multiple databases without the need to write numerous if-else statements and complex logic. My goal is to obtain the correct database driver and its corresponding `execute` function by simply providing a `database_url` to a `new` function.
 
@@ -28,9 +28,10 @@ trait DatabaseDriver {
     async fn execute(self, query: &str) -> Result<()>;
     async fn get_or_create_schema_migrations(self) -> Result<Vec<String>>;
 }
+
 ```
 
-So, to create a new `DatabaseDriver`, you need to implement the `DatabaseDriver` trait for your struct. This will allow you to use the `execute` and `get_or_create_schema_migrations` functions later in your code. In the code below, we create a struct called "LibSQLDriver" and later provide a local implementation for the struct, adding a new function. After that, we also implement our trait `DatabaseDriver` for `LibSQLDriver`, defining the `execute` and `get_or_create_schema_migrations` functions.
+So, to create a new `DatabaseDriver`, did I implement the `DatabaseDriver` trait for the related structs. This will allow me to use the `execute` and `get_or_create_schema_migrations` functions later in my code. In the code below, we create a struct called "LibSQLDriver" and later provide a local implementation for the struct, adding a new function. After that, we also implement our trait `DatabaseDriver` for `LibSQLDriver`, defining the `execute` and `get_or_create_schema_migrations` functions.
 
 ```rust
 pub struct LibSQLDriver {
@@ -82,6 +83,7 @@ fn returns_summarizable() -> impl Summary {
         retweet: false,
     }
 }
+
 ```
 
 But traits can also be used as arguments:
@@ -166,6 +168,7 @@ fn main() {
     example_struct.print_info(42);
     another_example_struct.print_info(String::from("Hello, Rust!"));
 }
+
 ```
 
 Traits can also be used as normal generic arguments.
