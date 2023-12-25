@@ -216,6 +216,40 @@ However, a solution to sharing the same smart pointer between threads is by usin
 
 In the example above, we create a new `Mutex` with a value of 0 and then update the value to 10. Before updating each value, we also clone the `Arc` smart pointer to ensure that we get a pointer to the same data as all other threads that clone the smart pointer, without any ownership issues. We store each thread in a variable called `handles`, allowing us to wait for each thread to finish before printing the result, which is `Result: 10`.
 
+After publishing this article, I received some feedback suggesting that I should consider adding scoped threads as an alternative to `Arc`. Just to refresh your memory, the purpose of `Arc` is to prevent data from being removed from memory before a thread finishes executing, by counting how many references still use the data. However, with scoped threads, this is not necessary, as scoped threads ensure that the threads are joined before the data is deallocated from memory.
+
+```rust
+use std::thread;
+
+#![allow(unused)]
+fn main() {
+    let mut a = vec![1, 2, 3];
+    let mut x = 0;
+
+    thread::scope(|s| {
+        s.spawn(|| {
+            println!("hello from the first scoped thread");
+            // We can borrow `a` here.
+            dbg!(&a);
+        });
+        s.spawn(|| {
+            println!("hello from the second scoped thread");
+            // We can even mutably borrow `x` here,
+            // because no other threads are using it.
+            x += a[0] + a[2];
+        });
+        println!("hello from the main thread");
+    });
+
+    // After the scope, we can modify and access our variables again:
+    a.push(4);
+    assert_eq!(x, a.len());
+}
+
+```
+
+In this example, we create a scope with multiple threads and use the variable `a` in both of them. We also change the value of `x` in the second thread. Before we finish executing, we modify `a` again. What is happening under the hood is that `thread::scope` joins each thread before continuing to execute the main function.
+
 ## `Send` and `Sync` traits
 
 When discussing the `Mutex` type, it's also beneficial to have a brief understanding of the `Sync` and `Send` traits, as they are relevant when working with threads.
