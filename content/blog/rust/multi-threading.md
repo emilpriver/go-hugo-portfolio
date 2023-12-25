@@ -60,6 +60,72 @@ fn main() {
 
 By using `handle.join().unwrap()`, you can make sure that the program doesn't exit before the thread is finished.
 
+## Async rust
+
+Using OS threads instead of something like async Rust has a drawback. OS threads are considered to be costly, which means they use system resources even when not actively running tasks. This puts a heavier burden on the system when creating and deleting these threads. Additionally, CPU resources are needed to schedule the threads, requiring additional CPU resources for switching between system calls. Moreover, the application does not have direct control over the execution of the thread since it is managed by the operating system.
+
+OS threads are more suitable if you only require a few threads running with the ability to prioritize them. However, for most tasks involving normal async operations, using async Rust works perfectly fine and does not have any disadvantages compared to OS threads.
+
+This is where async Rust comes in handy. Async Rust differs from other languages (like almost everything else, Rust loves to be different) by only providing an interface for async within Rust, but not a runtime. The runtime is taken care of by Rust crates (such as Tokio), and most of the time, green threads work just fine for parallel execution.
+
+Async tasks (green threads) work by the runtime spinning up a couple of heavy threads (OS threads) and adding a layer on top of these threads to handle tasks. The benefit of this approach is that it's more cost-effective for the system, as the application is in charge of scheduling, creating, and terminating tasks. Additionally, the OS is unaware of the tasks created by the application; it only knows about the OS threads.
+
+Async Rust is unique compared to other languages because a `Future` (an asynchronous task) only advances when it is polled. This means that instead of blocking other tasks if the future is not ready, the application waits until the task is ready and then continues. Rust's crates handle the runtime, providing both single-threaded and multi-threaded runtimes, each with their own advantages and disadvantages.
+
+There are also some differences in how you create and write threads.
+
+```rust
+use std::thread;
+
+fn main() {
+  let thread_one = thread::spawn(|| {
+    println!("Hello from thread one!");
+  });
+
+  let thread_two = thread::spawn(|| {
+    println!("Hello from thread two!");
+  });
+
+  thread_one.join().unwrap();
+  thread_two.join().unwrap();
+}
+
+```
+
+In this example, we create two threads that print values, then we await the first one and then the second one.
+
+Creating async tasks requires you to specify the function as async, and `join()` is now changed to `await`.
+
+```rust
+use tokio;
+
+#[tokio::main]
+async fn main() {
+  let one = tokio::spawn(async {
+    println!("Hello from one!");
+  });
+
+  let two = tokio::spawn(async {
+    println!("Hello from two!");
+  });
+
+  one.await.unwrap();
+  two.await.unwrap();
+}
+```
+
+Switching between OS threads and async tasks can be a major code change. Another example of using async/await in Rust is when you retrieve data from a database using SQLX.
+
+```rust
+let row: (i64,) = sqlx::query_as("SELECT $1")
+    .bind(150_i64)
+    .fetch_one(&pool).await?;
+```
+
+In the code above, we wait for the result of `fetch_one`, which provides us with a `Future` containing the data.
+
+It's also worth noting that `Future` is similar to a Promise in JavaScript or a goroutine in Go. The concept is the same, but their implementation details differ.
+
 ## Ownership between threads
 
 When you're working with memory in Rust, the language has some rules in place to make sure that memory is safe. These rules also apply when you're working with multiple threads, so you still need to follow the ownership and borrowing rules. There are various approaches to handling ownership and borrowing when it comes to multithreading.
@@ -213,4 +279,3 @@ In the example above, we start by creating a channel and then make a copy of the
 ## `.unwrap()`
 
 Time to unwrap this post. I used the examples from the Rust Book because I found them easy to understand. I hope you learned something, and I would appreciate any feedback you may have. The easiest way to reach me is through my Twitter handle: [@emil_priver](https://twitter.com/emil_priver) 😄
-
