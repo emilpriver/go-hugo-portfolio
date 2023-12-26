@@ -7,7 +7,7 @@ type: "blog"
 tags: ["Benchmark", "GO", "Rust", "Bun", "Node"]
 best: true
 images:
-  - /og-images/star-trek.jpg
+  - /og-images/http-benchmark.png
 series:
   - Benchmark
 toc: true
