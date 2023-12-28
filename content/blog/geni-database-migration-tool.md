@@ -1,7 +1,7 @@
 ---
 title: "Geni, A database migration CLI tool"
 date: 2023-12-28T09:10:04+01:00
-draft: true
+draft: false
 toc: true
 description: "Geni, a CLI migration tool" 
 type: "blog"
