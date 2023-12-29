@@ -1,11 +1,11 @@
 ---
-title: "Rust: Multi threading" 
+title: "Rust: multithreading" 
 date: 2023-12-25T01:01:27+01:00
 draft: false
 toc: true
-description: "Article about multi threading within rust" 
+description: "Article about multithreading within rust" 
 type: "blog"
-tags: ["rust", "multi threading"]
+tags: ["rust", "multithreading"]
 series:
 - Rust
 images:
