@@ -1,5 +1,5 @@
 ---
-title: "Rust: multithreading" 
+title: "Rust: Multithreading" 
 date: 2023-12-25T01:01:27+01:00
 draft: false
 toc: true
