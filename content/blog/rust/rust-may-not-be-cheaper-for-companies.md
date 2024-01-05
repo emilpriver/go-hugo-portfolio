@@ -22,7 +22,7 @@ Another crucial point to consider is that I reside in Sweden. When comparing the
 
 The first argument to consider is that the cost for a company isn't solely limited to servers; it also includes engineer salaries, hiring processes, and the size of the language community. If we compare a JS backend service to a Rust backend service, it's important to acknowledge that the same engineer can often develop something in JS much faster than in Rust, and there are valid reasons behind this.
 
-## Development time do cost companies more
+##  High development time do cost companies more
 
 A typical salary in Sweden is 45,000 SEK per month, and we usually get paid for 160 hours of work each month. This means that the hourly rate is 281 SEK. In this example, we have a list of 10 todos. Let's assume each todo takes 40 hours, which would cost the company approximately 112,400 SEK ((10 todos * 40 hours) * 281 SEK/hour) for these 10 todos.
 
