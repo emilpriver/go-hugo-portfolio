@@ -55,5 +55,6 @@ Time to unwrap this post! The goal here is to have a friendly discussion about t
 I want to clarify that this post is not meant to make one language seem better than another. It simply represents my thoughts and reflects my experience on this topic.
 
 I am eagerly looking forward to the growth of the Rust community, hopefully reaching the size of languages like JavaScript or Go. This would greatly benefit companies by enabling them to hire more Rust developers and further embrace the Rust community. It's delightful to see more companies wanting to contribute to the growth of the community and actively seeking Rust developers.
+It is also common for companies to choose to use a language that is known to cost more in terms of resources. This is mainly because the overall cost is lower and it benefits the company.
 
 Anyway, I hope you enjoyed this post. If you'd like to discuss it further, the easiest way to reach me is through Twitter at https://twitter.com/emil_priver. I'm always happy to have a conversation! 😀
