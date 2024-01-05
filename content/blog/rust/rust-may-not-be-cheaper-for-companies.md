@@ -3,7 +3,7 @@ title: "Rust may not be cheaper for companies"
 date: 2024-01-05T18:34:32+01:00
 draft: false
 toc: true
-description: "In this blog post, the author explores the overall costs of using Rust for companies, beyond just server resources. The post discusses factors such as development time, the availability of Rust developers, the learning curve of Rust, the size of the Rust community, and the need for resources and support during the transition to Rust. The author aims to provide insights into the cost comparison between different programming languages and encourages a friendly discussion on the topic." 
+description: "I wrote a post about why rust may not be cheaper for companies" 
 type: "blog"
 tags: ["rust"]
 series:
