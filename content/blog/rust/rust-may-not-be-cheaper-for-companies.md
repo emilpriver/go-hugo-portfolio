@@ -30,7 +30,7 @@ Now, if we were to do the same todos using JavaScript, each todo might take arou
 
 I strongly believe that if we take into account the cost of the resources needed to run a JS server, it could be lower than the cost of writing it in Rust plus the resources required to run the Rust app.
 
-Something important to know is that the example I just provided is mainly meant to demonstrate that the time required to write a solution or make a change comes at a cost, and we need to be aware of it.
+Something important to know is that the example I just provided is mainly meant to demonstrate that the time required to write a solution or make a change comes at a cost, and we need to be aware of it. Additionally, the salary that I mentioned does not include social expenses, pensions, and other benefits that the company you work for also covers.
 
 ## Harder to find rust developers
 
