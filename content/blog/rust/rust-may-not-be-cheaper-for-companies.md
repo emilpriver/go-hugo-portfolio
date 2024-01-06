@@ -1,7 +1,7 @@
 ---
 title: "Rust may not be cheaper for companies"
 date: 2024-01-05T18:34:32+01:00
-draft: false
+draft: true
 toc: true
 description: "I wrote a post about why rust may not be cheaper for companies" 
 type: "blog"
