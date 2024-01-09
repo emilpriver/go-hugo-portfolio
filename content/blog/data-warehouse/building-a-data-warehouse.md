@@ -7,7 +7,7 @@ type: "blog"
 tags: ["Data Warehouse"]
 best: true
 cover:
-  image: "/og-images/data-warehouse.png"
+  image: "/images/data-warehouse.png"
 series:
   - Data Warehouse
 toc: true

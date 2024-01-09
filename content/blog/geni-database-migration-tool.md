@@ -7,7 +7,7 @@ description: "Geni, a CLI migration tool"
 type: "blog"
 tags: ["database", "announcement"]
 cover:
-  image: "/og-images/geni-social-media.png"
+  image: "/images/geni-social-media.png"
 ---
 I'm excited to introduce Geni, a user-friendly CLI migration tool for databases written in Rust. It currently supports LibSQL, Postgres, MariaDB, MySQL, and SQLite, and I have plans to add support for more databases in the future. The concept behind Geni is simple: it can seamlessly integrate with your code as a plugin for your CI, or as a sidebar in Kubernetes, without causing any disruptions or requiring you to use a specific programming language.
 

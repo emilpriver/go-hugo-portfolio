@@ -7,7 +7,7 @@ description: "This article explores the future of passwords and the potential re
 type: "blog"
 tags: ["security", "passkeys"]
 cover:
-  image: "/og-images/apple-passkeys.png"
+  image: "/images/apple-passkeys.png"
 series:
 - passkeys
 ---

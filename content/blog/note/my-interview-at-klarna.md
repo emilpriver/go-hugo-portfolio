@@ -6,7 +6,7 @@ description: "Blog posts about when I was interviewed at Klarna"
 type: "blog"
 tags: ["Interview"]
 cover:
-  image: "/og-images/klarna.jpeg"
+  image: "/images/klarna.jpeg"
 series:
   - Interview
 toc: true

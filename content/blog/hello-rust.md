@@ -9,7 +9,7 @@ tags: ["rust", "tokio", "macros"]
 series:
 - Rust 
 cover:
-  image: "/og-images/rust-og.jpg"
+  image: "/images/rust-og.jpg"
 ---
 I started to write Rust in the autumn of 2022 and have loved it ever since, even if the learning curve is kinda steep but when you start to understand how the language works it is pretty easy to work with it. This is some stuff I've learned since I started to write Rust that I think is useful information.
 

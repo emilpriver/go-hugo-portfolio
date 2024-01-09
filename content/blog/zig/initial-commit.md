@@ -10,7 +10,7 @@ series:
 - Zig
 - Initial Commit
 cover:
-  image: "/og-images/zig-og.png"
+  image: "/images/zig-og.png"
 ---
 "Initial Commit" is a series of posts where I explore different topics that interest me. In this post, we will look at Zig.
 

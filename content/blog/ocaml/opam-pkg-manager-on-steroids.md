@@ -5,7 +5,7 @@ draft: false
 type: "blog"
 tags: ["Ocaml"]
 cover:
-  image: "/og-images/ocaml.jpeg"
+  image: "/images/ocaml.jpeg"
 series:
   - Ocaml
 toc: true

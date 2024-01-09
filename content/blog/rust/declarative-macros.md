@@ -10,7 +10,7 @@ series:
 - Rust
 - Rust Macros
 cover:
-  image: "/og-images/rust-og.jpg"
+  image: "/images/rust-og.jpg"
 ---
 Let's discuss Macros. They are one of many features in Rust that help you write better software. Macros enable you to write concise, clear code and reduce repetition.
 

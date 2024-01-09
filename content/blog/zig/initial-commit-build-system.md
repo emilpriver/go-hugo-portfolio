@@ -10,7 +10,7 @@ series:
 - Zig
 - Initial Commit
 cover:
-  image: "/og-images/zig-og.png"
+  image: "/images/zig-og.png"
 ---
 
 This is step 2 in my "Initial commit" series, which focuses on the Zig programming language. In this step, I will delve deeper into the Zig build process.
