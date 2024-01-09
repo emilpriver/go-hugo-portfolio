@@ -31,7 +31,7 @@
             {{- end -}}
             {{- end -}}
 
-            {{defaultWebp := $image.Resize "2000px webp q85" }}
+            {{$defaultWebp := $image.Resize "2000x webp q85" }}
             <source
               media="(min-width: 1500px)"
               srcset="{{ $defaultWebp.Permalink }}"
