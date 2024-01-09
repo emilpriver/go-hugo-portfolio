@@ -18,18 +18,26 @@
         {{- end -}}
 
         <picture>
-                {{range $sizes}}
-                {{$size := .}}
-                {{- range $formats -}}
-                    {{$newImage := $image.Resize (printf "%sx %s q85" $size .)}}
-                    <source
-                        media="(min-width: {{$size}}x)"
-                        srcset="{{ $newImage.Permalink }}"
-                        type="image/{{.}}"
-                        loading="lazy"
-                    >
-                {{- end -}}
+            {{range $sizes}}
+            {{$size := .}}
+            {{- range $formats -}}
+                {{$newImage := $image.Resize (printf "%sx %s q85" $size .)}}
+                <source
+                    media="(max-width: {{$size}}px)"
+                    srcset="{{ $newImage.Permalink }}"
+                    type="image/{{.}}"
+                    loading="lazy"
+                >
             {{- end -}}
+            {{- end -}}
+
+            {{defaultWebp := $image.Resize "2000px webp q85" }}
+            <source
+              media="(min-width: 1500px)"
+              srcset="{{ $defaultWebp.Permalink }}"
+              type="image/webp"
+              loading="lazy"
+            >
         
             <img src="{{ $image.RelPermalink }}" 
               sizes="(max-width: 1500px) 100vw, 1500px"
