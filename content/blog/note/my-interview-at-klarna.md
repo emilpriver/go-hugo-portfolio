@@ -5,9 +5,8 @@ draft: false
 description: "Blog posts about when I was interviewed at Klarna"
 type: "blog"
 tags: ["Interview"]
-best: true
-images:
-  - /og-images/klarna.png
+cover:
+  image: "/og-images/klarna.jpeg"
 series:
   - Interview
 toc: true

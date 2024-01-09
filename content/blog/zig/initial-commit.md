@@ -9,8 +9,8 @@ tags: ["zig"]
 series:
 - Zig
 - Initial Commit
-images:
-  - /og-images/zig-og.jpg
+cover:
+  image: "/og-images/zig-og.png"
 ---
 "Initial Commit" is a series of posts where I explore different topics that interest me. In this post, we will look at Zig.
 

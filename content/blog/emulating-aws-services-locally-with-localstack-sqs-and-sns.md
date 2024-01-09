@@ -4,8 +4,8 @@ date: 2023-06-01T11:28:41+02:00
 draft: false
 summary: "Learn how to emulate AWS services like SNS, SQS, and S3 on your local machine using Localstack. This guide walks you through setting up Localstack and creating queues using AWS CLI. You'll also learn how to set up SQS and SNS client with GO, and get tips on using custom endpoints. Test your code locally against AWS services without worrying about AWS costs. Check out this guide for developers."
 draft: false
-images:
-  - /og-images/localstack.png
+cover:
+  image: "/og-images/localstack.png"
 tags: ["Localstack", "Tools", "Local development"]
 keywords: ["AWS", "Localstack", "SQS", "SNS", "emulation", "development", "testing ", "AWS CLI ", "GO", "custom endpoints"," guide for developers"]
 series:

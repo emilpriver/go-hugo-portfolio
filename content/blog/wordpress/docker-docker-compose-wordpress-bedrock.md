@@ -3,8 +3,8 @@ title: Docker(Docker-compose) + Wordpress/Bedrock.
 date: "2018-09-07T22:12:03.284Z"
 seoTitle: "Docker(Docker-compose) + Wordpress/Bedrock"
 description: "Develop a Wordpress site using Docker and Docker compose"
-images:
-  - /og-images/docker.jpeg
+cover:
+  image: "/og-images/docker.jpeg"
 tags: ["docker", "wordpress"]
 toc: true
 ---

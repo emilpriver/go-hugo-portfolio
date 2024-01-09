@@ -6,8 +6,8 @@ description: "This post compares the performance of Bun, Rust, Go, and Node for 
 type: "blog"
 tags: ["Benchmark", "GO", "Rust", "Bun", "Node"]
 best: true
-images:
-  - /og-images/http-benchmark.png
+cover:
+  image: "/og-images/http-benchmark.png"
 series:
   - Benchmark
 toc: true

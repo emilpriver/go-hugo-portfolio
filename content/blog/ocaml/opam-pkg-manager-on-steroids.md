@@ -4,8 +4,8 @@ date: 2023-10-12T20:38:24+02:00
 draft: false
 type: "blog"
 tags: ["Ocaml"]
-images:
-  - /og-images/ocaml.jpeg
+cover:
+  image: "/og-images/ocaml.jpeg"
 series:
   - Ocaml
 toc: true

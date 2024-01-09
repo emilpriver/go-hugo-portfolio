@@ -5,8 +5,8 @@ draft: false
 description: "In this post, we dive deeper into Goroutines, a feature of the Go programming language that enables concurrent execution and convenient utilization of multiple threads. We discuss the simplicity and ease of understanding of Go, explore how Goroutines work, and examine the GMP model in Go. Additionally, we cover topics such as blocking, channels, and WaitGroups. Discover the power and benefits of using Goroutines in your Go applications. Don't miss out on this insightful exploration of Goroutines and their role in concurrent programming."
 type: "blog"
 tags: ["Go", "Concurrency"]
-images:
-  - /og-images/golang.jpeg
+cover:
+  image: "/og-images/golang.jpeg"
 series:
   - Concurrency
   - GO

@@ -6,8 +6,8 @@ description: "Blog posts about working on my first data warehouse"
 type: "blog"
 tags: ["Data Warehouse"]
 best: true
-images:
-  - /og-images/data-warehouse.png
+cover:
+  image: "/og-images/data-warehouse.png"
 series:
   - Data Warehouse
 toc: true

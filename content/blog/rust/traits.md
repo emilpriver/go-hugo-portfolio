@@ -8,8 +8,8 @@ type: "blog"
 tags: ["rust", "traits"]
 series:
 - Rust
-images:
-  - /og-images/rust-og.jpg
+cover:
+  image: "/og-images/rust-og.jpg"
 ---
 It has been a while since Rust introduced traits, which are similar to interfaces in most other languages (although they do have some differences). Personally, I really enjoy working with traits because they provide great flexibility within a statically typed language. However, they can be a bit confusing to grasp at first. The goal of this post is to help you gain a better understanding of traits.
 

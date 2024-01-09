@@ -6,10 +6,10 @@ toc: true
 description: "This article explores the future of passwords and the potential replacement of traditional username and password authentication with PassKeys. PassKeys use biometric sensors, a PIN, or a pattern to authenticate users, making it easier and more secure to sign in. The article discusses the benefits of PassKeys over traditional passwords, potential risks, and the future of authentication." 
 type: "blog"
 tags: ["security", "passkeys"]
+cover:
+  image: "/og-images/apple-passkeys.png"
 series:
 - passkeys
-images:
-  - /og-images/apple-passkeys.png
 ---
 
 You may be skeptical of the title, thinking, "What kind of drug is this guy on and where can I get it?" But rest assured, it's not clickbait. The title describes the future of passwords that we are moving towards. We're talking about PassKeys, the potential killer of passwords, which can be found at https://www.passkeys.com/.

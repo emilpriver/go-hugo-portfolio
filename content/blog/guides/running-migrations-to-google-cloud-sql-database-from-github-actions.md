@@ -7,8 +7,8 @@ type: "blog"
 tags: ["Github Actions", "Guide", "SQL Migrations"]
 best: true
 toc: false
-images:
-  - /og-images/google-cloud.jpg
+cover:
+  image: "/og-images/google-cloud.jpg"
 series:
   - Guides
 ---
