@@ -8,7 +8,7 @@ tags: ["Github Actions", "Go"]
 best: true
 toc: false
 cover:
-  image: "/og-images/golang.jpeg"
+  image: "/og-images/golang.png"
 series:
   - Data Warehouse
 ---

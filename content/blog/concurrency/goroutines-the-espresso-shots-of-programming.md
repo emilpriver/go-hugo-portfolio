@@ -6,7 +6,7 @@ description: "In this post, we dive deeper into Goroutines, a feature of the Go 
 type: "blog"
 tags: ["Go", "Concurrency"]
 cover:
-  image: "/og-images/golang.jpeg"
+  image: "/og-images/golang.png"
 series:
   - Concurrency
   - GO
