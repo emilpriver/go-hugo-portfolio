@@ -5,7 +5,7 @@ draft: false
 type: "blog"
 tags: ["Ocaml"]
 cover:
-  image: "/images/ocaml.jpeg"
+  image: "images/ocaml.jpeg"
 series:
   - Ocaml
 toc: true
@@ -39,7 +39,7 @@ Ok, let's talk about opam, the package manager for OCaml. When I started working
 
 Regarding the first point, the lack of a lock file means that there isn't a file you can store with the project. This means that each developer working on a project needs to run `opam install x` for the packages defined in the `dune-project` file. Consequently, each developer might end up running different versions of the same package. At least, that's how I think it would be. However, there are some solutions to this problem, and one of them is using [nix with ocaml](https://www.tweag.io/blog/2023-02-16-opam-nix/). 
 
-![Twitter](/images/ocaml/twitter.png)
+![Twitter](images/ocaml/twitter.png)
 
 
 Regarding this issue, I spoke to [Yawar Amin](https://twitter.com/yawaramin), who mentioned that opam has a "loose" view on the package manager, which means that it's okay not to store a lock on the packages as each package should be backwards compatible. However, I'm not sure if I like this approach. The reason is that there is a smaller guarantee that the package you are working with will work the same way on different versions. With a lock file, you have a greater guarantee that the code will work the same as the deployed version in the cloud and so on.

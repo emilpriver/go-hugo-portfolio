@@ -4,7 +4,7 @@ title: "Elixir: Introduction"
 seoTitle: "Introduction to Elixir"
 summary: "Introduction to Elixir, What is it, How does it work, What does it ship"
 cover:
-  image: "/images/elixir.png"
+  image: "images/elixir.png"
 draft: false
 tags: ["Elixir"]
 categories: ["Elixir"]

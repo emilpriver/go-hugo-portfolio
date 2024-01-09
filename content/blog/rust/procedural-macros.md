@@ -10,7 +10,7 @@ series:
 - Rust
 - Rust Macros
 cover:
-  image: "/images/rust-og.jpg"
+  image: "images/rust-og.jpg"
 ---
 Hello and welcome to the second part of our series on writing Rust macros! In this article, we'll be focusing on procedural macros, which can help extend your functions. If you missed the first part of this series, don't worry - you can find it [here](https://www.priver.dev/blog/rust/macros-in-rust/). If you're not yet familiar with macros in Rust, I highly recommend checking out the first [article](https://www.priver.dev/blog/rust/declarative-macros) where I explain them in an easy-to-understand way. I hope you enjoy this read!
 

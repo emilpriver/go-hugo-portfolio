@@ -7,7 +7,7 @@ type: "blog"
 tags: ["Benchmark", "GO", "Rust", "Bun", "Node"]
 best: true
 cover:
-  image: "/images/http-benchmark.png"
+  image: "images/http-benchmark.png"
 series:
   - Benchmark
 toc: true

@@ -10,7 +10,7 @@ series:
 - Zig
 - Initial Commit
 cover:
-  image: "/images/zig-og.png"
+  image: "images/zig-og.png"
 ---
 
 This is step 2 in my "Initial commit" series, which focuses on the Zig programming language. In this step, I will delve deeper into the Zig build process.
@@ -197,7 +197,7 @@ This is my `build.zig` file. If you look at line 21, you'll see that `exe.addPac
 
 This is my folder structure. As you can see from the example above, the main file for the `zhp` package exists at `zig-packages/zhp/src/zhp.zig`.
 
-![Tree structure](/images/zig/tree-structure.png)
+![Tree structure](images/zig/tree-structure.png)
 
 This allows me to later require the package in my code and use it like this:
 

@@ -4,7 +4,7 @@ date: "2020-05-11T22:12:03.284Z"
 seoTitle: "Sitemap with Nextjs after 9.4 update"
 summary: "Generate a sitemap.xml after Nextjs 9.4 update. Works with getServerSidedProps, getStaticProps update"
 cover:
-  image: "/images/nextjs.jpeg"
+  image: "images/nextjs.jpeg"
 tags: ["next.js", "sitemap", "react"]
 categories: ["web", "nextjs"]
 keywords: ["nextjs", "sitemap"]

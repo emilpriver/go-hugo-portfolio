@@ -8,7 +8,7 @@ tags: ["projects", "Edgar Image"]
 series:
 - Edgar Image
 cover: 
-  image: "/images/edgar.jpg"
+  image: "images/edgar.jpg"
 toc: true
 ---
 

@@ -9,7 +9,7 @@ tags: ["rust", "multithreading"]
 series:
 - Rust
 cover:
-  image: "/images/rust-og.jpg"
+  image: "images/rust-og.jpg"
 ---
 Time to dive into multi-threading in Rust, a topic that many developers work with and something that sets Rust apart by enforcing rules to ensure memory safety in your code. A common use case for multi-threaded Rust is building web servers, where each thread can handle different requests.
 

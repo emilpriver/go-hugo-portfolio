@@ -10,10 +10,14 @@
             rel="noopener noreferrer">{{ end -}}
         {{- $resizedImages := slice -}}
         {{- $sizes := (slice "360x" "480x" "720x" "1080x" "1500x") -}}
+        {{- $formats := (slice "avif" "webp") -}}
         
-        {{- range $sizes -}}
-            {{- $resized := $image.Resize . -}}
-            {{- $resizedImages = $resizedImages | append (dict "src" $resized.RelPermalink "width" $resized.Width) -}}
+        {{- range $formats -}}
+            {{$format := .}}
+            {{- range $sizes -}}
+                {{- $resized := $image.Resize (printf "%s %s q80" . $format) -}}
+                {{- $resizedImages = $resizedImages | append (dict "src" $resized.RelPermalink "width" $resized.Width) -}}
+            {{- end -}}
         {{- end -}}
         
         <img src="{{ $image.RelPermalink }}" 

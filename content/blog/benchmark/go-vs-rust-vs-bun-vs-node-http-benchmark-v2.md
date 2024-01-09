@@ -7,7 +7,7 @@ type: "blog"
 tags: ["Benchmark", "GO", "Rust", "Bun", "Node"]
 best: true
 cover:
-  image: "/images/http-benchmark.png"
+  image: "images/http-benchmark.png"
 series:
   - Benchmark
 toc: true
@@ -79,7 +79,7 @@ Elton's source code can be found here: https://github.com/emilpriver/elton. If y
 
 This result can also be found on [this link to my Google Sheet](https://docs.google.com/spreadsheets/d/1LmQFoFOp_ECgz5BWNMZQBdxHEkJaNbEeT0_0jdNwiO4/edit?usp=sharing).
 
-![Bun vs Node Vs Go Vs Rust HTTP Benchmark](/images/benchmark/node-vs-bun-vs-rust-vs-go.png)
+![Bun vs Node Vs Go Vs Rust HTTP Benchmark](images/benchmark/node-vs-bun-vs-rust-vs-go.png)
 
 Here, we clearly see that Rust is performing really well compared to the others. Go and Bun are not far from each other, while Node is significantly behind.
 

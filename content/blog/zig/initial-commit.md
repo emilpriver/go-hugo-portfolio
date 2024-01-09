@@ -10,7 +10,7 @@ series:
 - Zig
 - Initial Commit
 cover:
-  image: "/images/zig-og.png"
+  image: "images/zig-og.png"
 ---
 "Initial Commit" is a series of posts where I explore different topics that interest me. In this post, we will look at Zig.
 
@@ -87,7 +87,7 @@ Finally, we register a run command with the description "Run the app", which we 
 
 After registering the "run" command, we can verify whether we are running "zig build XXX", where XXX is not a registered word and would cause an error. This command can also be run directly by executing `zig build run`.
 
-![Terminal](/images/zig/terminal.png)
+![Terminal](images/zig/terminal.png)
 
 This means that we can register different commands that suit each application. While this functionality may not be uncommon, it's nice to have the ability to customize the build depending on logic in the code and handle it through code.
 

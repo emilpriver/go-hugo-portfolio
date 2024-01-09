@@ -4,7 +4,7 @@ date: "2018-09-07T22:12:03.284Z"
 seoTitle: "Docker(Docker-compose) + Wordpress/Bedrock"
 description: "Develop a Wordpress site using Docker and Docker compose"
 cover:
-  image: "/images/docker.jpeg"
+  image: "images/docker.jpeg"
 tags: ["docker", "wordpress"]
 toc: true
 ---
@@ -24,7 +24,7 @@ Bedrock is also providing security by isolate web root to limit access to non-we
 ## Docker:
 
 Docker is an set coupled SaaS(Software-as-a-service) and PaaS(Platform-as-a-service) products that are using Operating-System-Level Virtualization. This systems or projects that are hosted as a package inside docker are called containers. Multiple Containers are able to to run on the same machine and share the OS kernel that the operativ system provide. Container compared to and Virtual Machine use less space and can handle more applications and require fewer VMs and Operating systems.
-![Docker](/images/wordpress/docker-docker-compose-wordpress-bedrock/docker.png)
+![Docker](images/wordpress/docker-docker-compose-wordpress-bedrock/docker.png)
 
 ## Composer:
 Composer is a Dependency Manager(Not a Package Manager). Composer makes it possible, in this scenario, to be able to install plugins through command line. More information about composer can you read here
@@ -42,15 +42,15 @@ From a folder you like run the
 This command will create a Bedrock folder with necessary files and folders.
 Files and folder inside the Bedrock folder:
 
-![Folder](/images/wordpress/docker-docker-compose-wordpress-bedrock/folder.png)
+![Folder](images/wordpress/docker-docker-compose-wordpress-bedrock/folder.png)
 
 Information about the folders
 Config:
-![Enviorment](/images/wordpress/docker-docker-compose-wordpress-bedrock/config.png)
+![Enviorment](images/wordpress/docker-docker-compose-wordpress-bedrock/config.png)
 
 Web:
 
-![Structure](/images/wordpress/docker-docker-compose-wordpress-bedrock/docker.png)
+![Structure](images/wordpress/docker-docker-compose-wordpress-bedrock/docker.png)
 
 Working with environments
 As Bedrock supports use of env, is it really simple to use different .env files. If you add an environments folder with different .env are you able to load different .env files depending of which docker-compose file you will choose(Use of different docker-compose file will come later in this post).
