@@ -44,6 +44,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - run: sudo apt-get install libaom-dev
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production

@@ -9,21 +9,33 @@
         {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
         {{- $resizedImages := slice -}}
-        {{- $sizes := (slice "360x" "480x" "720x" "1080x" "1500x") -}}
+        {{- $sizes := (slice "360" "480" "720" "1080" "1500") -}}
         {{- $formats := (slice "avif" "webp") -}}
         
-        {{- range $formats -}}
-            {{$format := .}}
-            {{- range $sizes -}}
-                {{- $resized := $image.Resize (printf "%s %s q80" . $format) -}}
-                {{- $resizedImages = $resizedImages | append (dict "src" $resized.RelPermalink "width" $resized.Width) -}}
-            {{- end -}}
+        {{- range $sizes -}}
+            {{- $resized := $image.Resize (printf "%sx" .) -}}
+            {{- $resizedImages = $resizedImages | append (dict "src" $resized.RelPermalink "width" $resized.Width) -}}
         {{- end -}}
+
+        <picture>
+                {{range $sizes}}
+                {{$size := .}}
+                {{- range $formats -}}
+                    {{$newImage := $image.Resize (printf "%sx %s q85" $size .)}}
+                    <source
+                        media="(min-width: {{$size}}x)"
+                        srcset="{{ $newImage.RelPermalink }}"
+                        type="image/{{.}}"
+                        loading="lazy"
+                    >
+                {{- end -}}
+            {{- end -}}
         
-        <img src="{{ $image.RelPermalink }}" 
-                sizes="(max-width: 1500px) 100vw, 1500px"
-                srcset="{{ range $resizedImages }}{{ .src }} {{ .width }}w, {{ end }}"
-                alt="{{ $image.Title }}">
+            <img src="{{ $image.RelPermalink }}" 
+              sizes="(max-width: 1500px) 100vw, 1500px"
+              srcset="{{ range $resizedImages }}{{ .src }} {{ .width }}w, {{ end }}"
+              alt="{{ $image.Title }}">
+          </picture>
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
         {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
