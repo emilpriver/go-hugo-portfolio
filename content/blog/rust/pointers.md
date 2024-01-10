@@ -23,11 +23,11 @@ A real-world use case would be if you, as the reader, are a variable and you kno
 let a = "hello rust";
 ```
 
-In the code example above, we create a variable named `a` which holds the integer value `1337` and is stored at a memory location (e.g., `0xd3e100`). Rust stores this memory on the stack, and you can imagine it looks something like this:
+In the code example above, we create a variable named `a` which holds the string slice value `hello rust` and is stored at a memory location (e.g., `0xd3e100`). Rust stores this memory on the stack, and you can imagine it looks something like this:
 
 | location | value |
 | --- | --- |
-| 0xd3e100 | 1337 |
+| 0xd3e100 | hello rust |
 
 We can also create a pointer that stores the memory location of another pointer.
 
@@ -38,7 +38,7 @@ let b = &a;
 
 | location | value |
 | --- | --- |
-| 0xd3e100 | 1337 |
+| 0xd3e100 | hello rust |
 | 0xd3e101 | 0xd3e100 |
 
 However, the type of `b` would not inherit from `a`; it would still be `str`. The type would change from `str` to `&str` because we are now storing a reference to a memory location rather than the memory location itself. To access the value of variable `a` from variable `b`, we would need to dereference it. Dereferencing means accessing the value of a reference rather than the reference. In Rust, it is possible to create a chain of references, which could have a type of `&&&`. This would mean that if you need to access the value of a type with `&&&`, you would also need to dereference it with `***` before the variable.
