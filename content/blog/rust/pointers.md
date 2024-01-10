@@ -23,7 +23,7 @@ A real-world use case would be if you, as the reader, are a variable and you kno
 let a = "hello rust";
 ```
 
-In the code example above, we create a variable named `a` which holds the string slice value `hello rust` and is stored at a memory location (e.g., `0xd3e100`). Rust stores this memory on the stack, and you can imagine it looks something like this:
+In the code example above, we create a variable named `a` which holds the integer value `hello rust` and is stored at a memory location (e.g., `0xd3e100`). Rust stores this memory on the stack, and you can imagine it looks something like this:
 
 | location | value |
 | --- | --- |
@@ -96,7 +96,7 @@ fn main() {
     let x_ptr: *const i32 = &x;
 
     // Creating a raw mutable pointer
-    let mut y = 20;
+    let mut y = 20; 
     let y_ptr: *mut i32 = &mut y;
 
     // Accessing values via raw pointers
@@ -182,7 +182,7 @@ fn main() {
 
 However, the problem with `Rc` is that it is designed for single-threaded use only. If you use `Rc` in a multi-threaded application, it can potentially lead to issues. To address this, there is a smarter solution called `Arc`.
 
-`Arc` stands for atomic reference counting and functions similarly to `Rc`. The difference is that `Arc` also locks the value before updating and keeps track of the order in which each owner wants to lock the `Arc`. This means that if we have threads a, b, c, and d, and each requires a lock on the `Arc` simultaneously, each owner thread will be placed in a queue and must wait until it is their turn to access the data.
+`Arc` stands for atomic reference counted and functions similarly to `Rc`, but it is thread-safe because of the addition of atomic counting.
 
 ```rust
 use std::sync::Arc;
@@ -287,5 +287,3 @@ fn main() {
 # .unwrap()
 
 Thank you for reading this article. I hope you found it informative, or perhaps it served as a refresher for some. If you have any input or feedback, please don't hesitate to reach out to me on [Twitter](https://twitter.com/emil_priver). If you think there are any changes that could be made, please feel free to contact me or click the "suggest change" button below the title.
-
-There is a thread for comments [here](https://twitter.com/emil_priver/status/1745129442333049026)
