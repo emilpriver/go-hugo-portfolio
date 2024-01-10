@@ -287,3 +287,5 @@ fn main() {
 # .unwrap()
 
 Thank you for reading this article. I hope you found it informative, or perhaps it served as a refresher for some. If you have any input or feedback, please don't hesitate to reach out to me on [Twitter](https://twitter.com/emil_priver). If you think there are any changes that could be made, please feel free to contact me or click the "suggest change" button below the title.
+
+There is a thread for comments [here](https://twitter.com/emil_priver/status/1745129442333049026)
