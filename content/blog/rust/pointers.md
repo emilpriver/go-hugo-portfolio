@@ -23,7 +23,7 @@ A real-world use case would be if you, as the reader, are a variable and you kno
 let a = "hello rust";
 ```
 
-In the code example above, we create a variable named `a` which holds the integer value `hello rust` and is stored at a memory location (e.g., `0xd3e100`). Rust stores this memory on the stack, and you can imagine it looks something like this:
+In the code example above, we create a variable named `a` which holds the integer value `hello rust` and is stored at a memory location (e.g., `0xd3e100`). Rust stores this pointer on the stack, and you can imagine it looks something like this:
 
 | location | value |
 | --- | --- |
