@@ -3,7 +3,7 @@ title: "Rust: Pointers"
 date: 2024-01-10T17:57:34+01:00
 draft: false
 toc: true
-description: "In this article, we explore Rust pointers, starting with an overview of pointers and then focusing on smart pointers. We discuss the concept of pointers in Rust, their usage, and how they differ from direct data access. We also cover different types of pointers, including raw pointers, and highlight their unsafe nature. Additionally, we delve into smart pointers, such as Box, Rc, Arc, and RefCell, explaining their features and use cases. The article aims to provide a comprehensive understanding of Rust pointers and their role in memory management." 
+description: "In this article, we explore Rust pointers, starting with an overview of pointers and then focusing on smart pointers. We discuss the concept of pointers in Rust, their usage, and how they differ from direct data access. We also cover different types of pointers, including raw pointers, and highlight their unsafe nature. Additionally, we delve into smart pointers, such as Box, Rc, Arc, Ref and RefMut, explaining their features and use cases." 
 type: "blog"
 tags: ["rust", "pointers"]
 series:
@@ -15,7 +15,7 @@ Let's dive into Rust pointers, a concept that all developers work with in Rust. 
 
 If you're not familiar with the terms "stack" and "heap," we recommend checking out [this article](https://priver.dev/blog/rust/memory-management/#the-stack-and-the-heap) before continuing with this post.
 
-So, what exactly is a pointer in Rust? When you create a new variable, Rust stores the value you assign to the variable either on the heap or the stack. Rust then returns a reference to the location where this data is stored. When you use this variable, you don't directly access the data. Instead, you use a reference that tells Rust where the data exists.
+So, what exactly is a pointer in Rust? When you create a new variable, Rust stores the value you assign to the variable either on the the stack and return a reference when you ask for it. 
 
 A real-world use case would be if you, as the reader, are a variable and you know where the milk in the supermarket is. In this scenario, you are acting as a pointer because you are pointing to where the milk exists. The same logic applies to pointers in Rust: the variable holds the knowledge of where the data in the memory exists.
 
@@ -23,13 +23,13 @@ A real-world use case would be if you, as the reader, are a variable and you kno
 let a = "hello rust";
 ```
 
-In the code example above, we create a variable named `a` which holds the integer value `hello rust` and is stored at a memory location (e.g., `0xd3e100`). Rust stores this pointer on the stack, and you can imagine it looks something like this:
+In the code example above, we create a variable named `a` which holds the integer value `hello rust` and is stored at a memory location (e.g., `0xd3e100`). Rust stores this reference on the stack and the data on the heap, and you can imagine it looks something like this:
 
 | location | value |
 | --- | --- |
 | 0xd3e100 | hello rust |
 
-We can also create a pointer that stores the memory location of another pointer.
+We can also create a pointer that stores the memory location of another reference.
 
 ```rust
 let a = "hello rust";
@@ -41,7 +41,7 @@ let b = &a;
 | 0xd3e100 | hello rust |
 | 0xd3e101 | 0xd3e100 |
 
-However, the type of `b` would not inherit from `a`; it would still be `str`. The type would change from `str` to `&str` because we are now storing a reference to a memory location rather than the memory location itself. To access the value of variable `a` from variable `b`, we would need to dereference it. Dereferencing means accessing the value of a reference rather than the reference. In Rust, it is possible to create a chain of references, which could have a type of `&&&`. This would mean that if you need to access the value of a type with `&&&`, you would also need to dereference it with `***` before the variable.
+However, the type of `b` would not inherit from `a`; it would keep the "ground type" of `str`, but change the type to a reference with type `str`, such as `&'static str`.  To access the value of variable `a` from variable `b`, we would need to dereference it. Dereferencing means accessing the value of a reference rather than the reference. In Rust, it is possible to create a chain of references, which could have a type of `&&&`. This would mean that if you need to access the value of a type with `&&&`, you would also need to dereference it with `***` before the variable.
 
 One useful tip about pointers is to consider using them when you want to store something on the heap. Pointers offer the flexibility to store data on the heap, especially when you are unsure about the data's size or if the size may change over time. A great example of this scenario is when you box a value and work with `dyn` traits, as explained in more detail [here](https://priver.dev/blog/rust/traits/#dyn-traits). In the code example provided on that page, you can utilize the following code to box a client:
 
@@ -54,8 +54,6 @@ This creates something like this:
 | location | value |
 | --- | --- |
 | a | 0xd3e100 |
-
-By employing this approach, developers can easily store a struct directly on the heap without the need to determine its size in advance. Instead, they can simply store a reference to the heap location on the stack, which can be accessed later as required.
 
 ## References
 
@@ -221,40 +219,15 @@ fn main() {
 
 Something to keep in mind when working with `Arc` and `Rc` is that you should only use `Arc` if you really need it, as it can be more expensive for your application.
 
-### RefCell
+### Ref and RefMut
 
-RefCell is a really handy functionality that returns a smart pointer when used. It can be compared to `Box`, but there is a significant difference between them. The main difference is that `Box` performs checks during compile time, while `RefCell` performs checks during runtime. This means that instead of getting a compile error, your code will panic. But don't worry, there is a good use-case for using `RefCell`! It comes in handy when you need to bypass checks at compile time. I even suspect that `RefCell` utilizes some `unsafe{}` functionality under the hood. Therefore, if you are not 100% sure about what you are doing, it's better to avoid using `RefCell`.
+Let’s talk about `Ref` and `RefMut`, 2 stuffs you can use togheter with `RefCell` . `RefCell`it’s self is not a smart pouinter but when you use the methods `borrow` and `borrow_mut`do you get smart pointers.
 
-```rust
-use std::cell::RefCell;
+`RefCell` can be compared to `Box`, but there is a significant difference between them. The main distinction is that `Box` performs checks during compile time, while `RefCell` performs checks during runtime. This means that instead of receiving a compile error, your code will panic. `RefCell` is useful when you need to bypass the compile-time rules enforced by `Box`. I even suspect that `RefCell` utilizes some `unsafe{}` functionality under the hood. Therefore, if you are not completely certain about what you are doing, it is better to avoid using `RefCell`.
 
-fn main() {
-    // Create a RefCell containing an immutable value
-    let cell = RefCell::new(5);
+When you use the `borrow` method provided by `RefCell`, you get a `Ref`, which is a smart pointer that keeps track of how many owners are using the reference. This prevents the data from being dropped prematurely.
 
-    // Borrow the value immutably
-    let value = cell.borrow();
-    println!("The value is: {}", value);
-    drop(value); // Explicitly end the immutable borrow
-
-    // Borrow the value mutably
-    let mut mutable_value = cell.borrow_mut();
-    *mutable_value += 1;
-    println!("The mutated value is: {}", mutable_value);
-    drop(mutable_value); // Explicitly end the mutable borrow
-
-    // Borrow the value again immutably to see the updated value
-    let new_value = cell.borrow();
-    println!("The new value is: {}", new_value);
-}
-
-```
-
-[Rust playground link](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=90eda31489f3177008459109104dffeb)
-
-While discussing the `RefCell` feature, let's also explore `RefMut` and `Ref`. These buddies work hand in hand with `RefCell` and provide smart pointers. When you invoke the `borrow()` method on a `RefCell`, you receive a `Ref` pointer that enables you to borrow the value. Once the `Ref` is no longer in use, the reference count for the `RefCell` decreases. If the count reaches 0, the `RefCell` will be dropped.
-
-Additionally, `RefCell` offers a function called `borrow_mut` which allows us to borrow the value and make changes to it. Please note that it only permits one mutable reference. So, if you attempt to obtain more than one `RefMut`, the code will panic. If you were to use `Box` instead, this code would fail to compile.
+When you use the `borrow_mut` method, you get a `RefMut`, which allows you to change the value within the `RefCell`. However, you are only allowed to create one `RefMut`, and if you try to create more than one, the code will panic.
 
 ```rust
 use std::cell::{Ref, RefCell, RefMut};
