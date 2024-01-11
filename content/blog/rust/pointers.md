@@ -13,9 +13,9 @@ cover:
 ---
 Let's dive into Rust pointers, a concept that all developers work with in Rust. In this post, we'll give you an overview of pointers and then focus on smart pointers. Pointers in Rust can be a bit confusing for new developers, but don't worry! Our goal with this post is to help you gain a better understanding of them.
 
-If you're not familiar with the terms "stack" and "heap," we recommend checking out [this article](https://priver.dev/blog/rust/memory-management/#the-stack-and-the-heap) before continuing with this post.
+If you're not familiar with the terms "stack" and "heap," do I recommend checking out [this article](https://priver.dev/blog/rust/memory-management/#the-stack-and-the-heap) before continuing with this post.
 
-So, what exactly is a pointer in Rust? When you create a new variable, Rust stores the value you assign to the variable either on the the stack and return a reference when you ask for it. 
+So, what exactly is a pointer in Rust? When you create a new variable, Rust stores the data in memory. If you need a reference, it returns a reference to the memory location. In this context, a pointer in Rust is a reference that points to where the data exists.
 
 A real-world use case would be if you, as the reader, are a variable and you know where the milk in the supermarket is. In this scenario, you are acting as a pointer because you are pointing to where the milk exists. The same logic applies to pointers in Rust: the variable holds the knowledge of where the data in the memory exists.
 
@@ -43,7 +43,7 @@ let b = &a;
 
 However, the type of `b` would not inherit from `a`; it would keep the "ground type" of `str`, but change the type to a reference with type `str`, such as `&'static str`.  To access the value of variable `a` from variable `b`, we would need to dereference it. Dereferencing means accessing the value of a reference rather than the reference. In Rust, it is possible to create a chain of references, which could have a type of `&&&`. This would mean that if you need to access the value of a type with `&&&`, you would also need to dereference it with `***` before the variable.
 
-One useful tip about pointers is to consider using them when you want to store something on the heap. Pointers offer the flexibility to store data on the heap, especially when you are unsure about the data's size or if the size may change over time. A great example of this scenario is when you box a value and work with `dyn` traits, as explained in more detail [here](https://priver.dev/blog/rust/traits/#dyn-traits). In the code example provided on that page, you can utilize the following code to box a client:
+Pointers provide the flexibility to store data on the heap, particularly when you are uncertain about the data's size or if the size might change over time while the memory location still exists. A great example of this scenario is when you box a value and work with `dyn` traits, as explained in more detail [here](https://priver.dev/blog/rust/traits/#dyn-traits). In the code example provided on that page, you can use the following code to box a client:
 
 ```rust
 let a = Box::new(client)
