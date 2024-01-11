@@ -221,17 +221,16 @@ Something to keep in mind when working with `Arc` and `Rc` is that you should on
 
 ### Ref and RefMut
 
-Let’s talk about `Ref` and `RefMut`, 2 stuffs you can use togheter with `RefCell` . `RefCell`it’s self is not a smart pouinter but when you use the methods `borrow` and `borrow_mut`do you get smart pointers.
+Let's talk about `Ref` and `RefMut`, two things you can use together with `RefCell`. `RefCell` itself is not a smart pointer, but when you use the methods `borrow` and `borrow_mut`, you obtain smart pointers.
 
 `RefCell` can be compared to `Box`, but there is a significant difference between them. The main distinction is that `Box` performs checks during compile time, while `RefCell` performs checks during runtime. This means that instead of receiving a compile error, your code will panic. `RefCell` is useful when you need to bypass the compile-time rules enforced by `Box`. I even suspect that `RefCell` utilizes some `unsafe{}` functionality under the hood. Therefore, if you are not completely certain about what you are doing, it is better to avoid using `RefCell`.
 
 When you use the `borrow` method provided by `RefCell`, you get a `Ref`, which is a smart pointer that keeps track of how many owners are using the reference. This prevents the data from being dropped prematurely.
 
-When you use the `borrow_mut` method, you get a `RefMut`, which allows you to change the value within the `RefCell`. However, you are only allowed to create one `RefMut`, and if you try to create more than one, the code will panic.
-
-```rust
+When you use the `borrow_mut` method, you get a `RefMut`, which allows you to change the value within the `RefCell`. However, you are only allowed to create one `RefMut`, and if you try to create more than one, the code will panic.```rust
 use std::cell::{Ref, RefCell, RefMut};
 
+```rust
 fn main() {
     let cell = RefCell::new(String::from("Hello"));
 
