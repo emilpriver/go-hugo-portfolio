@@ -7,6 +7,10 @@ tac: false
 type: "post"
 ---
 
-Hi I'm Emil Privér. Software developer from Göteborg, Sweden. during my freetime do I code hobby projects and trying different stuffs within the programming world.
+Hi, I'm Emil Privér, a software engineer from Göteborg, Sweden. I work at [CarbonCloud](https://carboncloud.com/), where I contribute to building a platform that assists companies in tracking their carbon dioxide emissions.
 
-I love to explore the tech world, Love reading about tech and explore code, systems and stuffs in general.
+In my free time, I primarily develop services using Rust, Go, and OCaml. I also enjoy writing articles and exploring the realm of programming. I have a strong interest in creating services, publishing them, and conducting experiments. I particularly enjoy exploring innovative approaches to building and testing various systems.
+
+Apart from programming, I also enjoy spending time with my dog, partner, friends, and family. I have a passion for cooking, particularly Asian and Italian cuisine.
+
+![Danza and me](/images/danza-and-me.jpg)
