@@ -13,7 +13,7 @@
         {{- $formats := (slice "webp") -}}
        
         {{- range $sizes -}}
-            {{- $resized := $image.Resize (printf "%sx" .) -}}
+            {{- $resized := $image.Resize (printf "%sx q80" .) -}}
             {{- $resizedImages = $resizedImages | append (dict "src" $resized.RelPermalink "width" $resized.Width) -}}
         {{- end -}}
 
