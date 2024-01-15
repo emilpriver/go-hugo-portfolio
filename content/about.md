@@ -13,4 +13,6 @@ In my free time, I primarily develop services using Rust, Go, and OCaml. I also 
 
 Apart from programming, I also enjoy spending time with my dog, partner, friends, and family. I have a passion for cooking, particularly Asian and Italian cuisine.
 
+My CV exists [here](/cv)
+
 ![Danza and me](/images/danza-and-me.jpg)
