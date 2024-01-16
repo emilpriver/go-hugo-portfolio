@@ -25,6 +25,12 @@ outputs:
     - "html"
     - "rss"
     - "json"
+  taxonomy:
+    - "html"
+    - "rss"
+  term:
+    - "html"
+    - "rss"
 
 markup:
   goldmark:
