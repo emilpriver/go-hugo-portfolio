@@ -67,7 +67,7 @@ let y = x + 10 in
 
 ## Pure functions (isolated functions)
 
-I refer to purge functions as "isolated" functions. By isolated, I mean that nothing outside of the function should be able to alter its output. If you use the same arguments for a function, it should always return the same output. The concept of a pure function is that its output should remain unchanged if the arguments provided to the function are the same. In other words, nothing external to the function should have the ability to modify the output.
+I refer to pure functions as "isolated" functions. By isolated, I mean that nothing outside of the function should be able to alter its output. If you use the same arguments for a function, it should always return the same output. The concept of a pure function is that its output should remain unchanged if the arguments provided to the function are the same. In other words, nothing external to the function should have the ability to modify the output.
 
 An example of a non-pure function is the one below, written in JavaScript:
 
