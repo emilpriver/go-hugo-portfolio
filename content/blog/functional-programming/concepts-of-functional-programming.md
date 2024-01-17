@@ -221,12 +221,16 @@ Currying and partial application is also 2 terms that I’ve heard might be some
 (* Define a function that takes two arguments *)
 let add x y = x + y in
 
-(* Currying: Transform 'add' into a function that takes one argument and returns another function *)
+(* Currying: Created a curried function that returns a new function which executes the add function *)
 let add_curried x = (fun y -> add x y) in
 
 (* Usage *)
-let add_to_5 = add_curried 5 in (* This is now a function that adds 5 to its argument *)
-let result = add_to_5 7 in      (* result is 12 *)
+let add_to_5 = add_curried 5 in 
+
+(* This is now a function that adds 5 to its argument *)
+let result = add_to_5 7 in 
+
+(* result is 12 *)
 print_int result;
 ```
 
