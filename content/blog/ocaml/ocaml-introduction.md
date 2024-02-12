@@ -69,7 +69,7 @@ However, sometimes I still define the return type of a function as it can make i
 
 Let's start by creating a function and a variable and using them.
 
-To create a variable in Haskell, you can use the following syntax:
+To create a variable in Ocaml, you can use the following syntax:
 
 ```ocaml
 let variable = "Hello :D" in
