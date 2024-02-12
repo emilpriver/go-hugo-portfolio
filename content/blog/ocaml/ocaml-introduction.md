@@ -49,7 +49,8 @@ let () =
 
 In this example, the compiler knows that `print_endline` requires a string type, which is inferred to `print_message`. This means that `print_message` needs a string and will not compile if provided with a different type.
 
-In another functional language such as Haskell, you need to define the type explicitly:
+In some languages you might need to define the types before you use them which could make your code look like the Haskell
+code below:
 
 ```haskell
 printMessage :: String -> IO ()
