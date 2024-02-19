@@ -1,7 +1,7 @@
 ---
 title: "Introducing DBCaml, Database toolkit for OCaml"
-date: 2024-02-20T10:01:38+01:00
-draft: true
+date: 2024-02-20T00:01:38+01:00
+draft: false
 type: "blog"
 tags: ["Ocaml", "DBCaml"]
 cover:
