@@ -1,6 +1,6 @@
 ---
 title: "Building a Connnection Pool for DBCaml on top of riot"
-date: 2024-02-19T11:45:23+01:00
+date: 2024-02-19T12:00:23+01:00
 draft: false
 type: "blog"
 tags: ["Ocaml"]
