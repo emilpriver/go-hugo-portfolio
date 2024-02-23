@@ -7,7 +7,7 @@ description: "This post talks about warp terminal and the fact that we need to s
 type: "blog"
 tags: ["rant"]
 cover:
-  image: ""
+  image: "images/rant/rant.webp"
 ---
 While reviewing my feeds recently, I discovered that [warp.dev](http://warp.dev/) had launched Warp for Linux. Intrigued, I downloaded and installed the .deb file, launching the application shortly thereafter. I was surprised to find that even basic terminal usage required sign-in, leading me to uninstall the application.
 
