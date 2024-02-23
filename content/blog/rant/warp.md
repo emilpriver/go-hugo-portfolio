@@ -1,5 +1,5 @@
 ---
-title: "Sign in to view this article"
+title: "Sign-in to execute a terminal commando"
 date: 2024-02-23T22:16:05+01:00
 draft: false
 toc: true
