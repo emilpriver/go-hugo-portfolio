@@ -1,5 +1,5 @@
 ---
-title: "Dont Use Ai and Code"
+title: "Don't Use Ai and Code"
 date: 2024-02-27T16:41:53+01:00
 draft: false
 toc: true
