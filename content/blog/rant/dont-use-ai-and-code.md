@@ -77,8 +77,15 @@ type t =
       username: string;
       password: string;
       schema: string;
+      database: string;
     }
       -> t
+
+let remove_leading_slash initial_string =
+  if String.length initial_string > 0 && String.get initial_string 0 = '/' then
+    String.sub initial_string 1 (String.length initial_string - 1)
+  else
+    initial_string
 
 let of_string connection_info =
   let parsed_url = Uri.of_string connection_info in
@@ -86,10 +93,11 @@ let of_string connection_info =
   let* port = Uri.port parsed_url in
   let* username = Uri.user parsed_url in
   let* password = Uri.password parsed_url in
+  let database = Uri.path parsed_url |> remove_leading_slash in
 
   Some
     (ConnectionInformation
-       { host; port; username; password; schema = "postgresql" })
+       { host; port; username; password; schema = "postgresql"; database })
 ```
 
 I am using OCaml's `Uri`, which follows a protocol for URIs, to parse the URI. This is a much better solution.
