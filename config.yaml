@@ -115,6 +115,7 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
+  ShowFullTextinRSS: true
   ShowRssButtonInSectionTermList: true
   ShowToc: true
   description: "Hey! My name is Emil Privér, I write about stuffs I learn and build. I am a software developer who likes exploring stuffs and writing articles."
@@ -136,6 +137,10 @@ params:
   assets:
     disableHLJS: true
   
+  socialIcons:
+    - name: "rss"
+      url: "https://priver.dev/index.xml"
+
   cover:
     hidden: false # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
