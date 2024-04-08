@@ -1,7 +1,7 @@
 ---
 title: "My Love/Hate Letter to Copilot"
 date: 2024-04-07T20:31:09+02:00
-draft: false
+draft: true
 type: "blog"
 tags: ["copilot"]
 cover:
