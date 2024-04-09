@@ -7,10 +7,6 @@
     margin-top: 40px;
 }
 
-.archive-year:not(:last-of-type) {
-    border-bottom: 2px solid var(--border);
-}
-
 .archive-month {
     display: flex;
     align-items: flex-start;
@@ -20,10 +16,6 @@
 .archive-month-header {
     margin: 25px 0;
     width: 200px;
-}
-
-.archive-month:not(:last-of-type) {
-    border-bottom: 1px solid var(--border);
 }
 
 .archive-entry {
