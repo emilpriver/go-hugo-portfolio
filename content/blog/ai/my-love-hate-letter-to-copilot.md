@@ -66,3 +66,6 @@ AI is effective at generating boilerplate but often falls short in providing qua
 I've critiqued Copilot for a while, but it's worth mentioning that it's not necessarily bad to use it, provided you choose the appropriate time. I still use Copilot, but only when I'm working on simpler tasks that it can easily handle, like generating boilerplate code. However, I only enable it occasionally. I've noticed that it's crucial not to rely heavily on such tools, as doing so can lead to negative habits, like waiting for a suggestion and hitting enter repeatedly to find a solution.
 
 AI can pose a significant challenge for new developers. It's tempting to let AI dictate the path to a solution, rather than using it as one of many potential paths. This often leads to developers accepting the code returned by AI without truly understanding it. However, understanding the code is essential for new developers.
+
+The easiest way to contact me is through Twitter: https://twitter.com/emil_priver
+
