@@ -1,9 +1,23 @@
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Geist'), local('Geist'),
+       url('/Geist/statics-woff/Geist-Medium.woff2') format('woff2'),
+       url('/Geist/statics-woff/Geist-Medium.woff') format('woff'), 
+}
+
+body {
+    font-family: Geist;
+}
+
 .main {
     position: relative;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
     padding: var(--gap);
+    font-family: 'Geist';
 }
 
 .page-header h1 {
