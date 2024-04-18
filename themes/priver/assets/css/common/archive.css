@@ -8,14 +8,10 @@
 }
 
 .archive-month {
-    display: flex;
-    align-items: flex-start;
-    padding: 10px 0;
 }
-
 .archive-month-header {
     margin: 25px 0;
-    width: 200px;
+    width: 100%;
 }
 
 .archive-entry {
