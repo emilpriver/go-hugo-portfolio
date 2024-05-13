@@ -9,7 +9,7 @@ cover:
 series:
   - Ocaml
 toc: true
-description: "Introduction for OCaml, a blog post for developers that want to dig into OCaml"
+description: "Article about replacing opam with nix for a easier life"
 ---
 I've been writing OCaml since November 2023 and I enjoy the language; it's fun to write and has some features I really appreciate. However, you may have noticed I only mentioned the "language" in the first sentence. That's because I have issues with Opam, the package manager for OCaml. It has been a pain in my development workflow and I want to eliminate it.
 
