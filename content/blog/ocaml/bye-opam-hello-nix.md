@@ -224,5 +224,7 @@ Will I use Nix for all my OCaml projects? Not likely, as using Nix can sometimes
 
 While not all packages are available on Nix, there's a concerted effort to increase the number of libraries installable with Nix Flakes. For example, there's now a `flake.nix` in the [Riot GitHub repo](https://github.com/riot-ml/riot) that we can use to add Riot to our stack.
 
+The only downside i've found so far is that it sometimes take some time to setup a new dev environment when running `nix develop`.
+
 I hope this article was inspiring. If you wish to contact or follow me, you can do so on Twitter: https://twitter.com/emil_priver
 
