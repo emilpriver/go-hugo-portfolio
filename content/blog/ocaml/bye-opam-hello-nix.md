@@ -131,12 +131,12 @@ However, not all packages exists on nix yet but it’s possible to install the p
         };
       }
     );
-}```
+}
+```
 
 Since `dune` supports the installation and building of multiple packages, we utilize it here to build the package as seen in `ocamlPackages.buildDunePackage`.
 
 > Dune is the build system for OCaml. It uses ocamlc under the hood to run and compile your project. The homepage can be found at: https://dune.build/
-> 
 
 There's a difference between using `ocamlPackages` and installing a package from the source. In the latter, a `sha256` hash of the downloaded file is required. Fortunately, you can easily obtain this hash.
 
