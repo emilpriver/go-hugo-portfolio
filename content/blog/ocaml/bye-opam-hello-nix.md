@@ -110,30 +110,28 @@ However, not all packages exists on nix yet but it’s possible to install the p
           ocamlPackages = super.ocaml-ng.ocamlPackages_5_1;
         });
         ocamlPackages = pkgs.ocamlPackages;
-        code_mirror = ocamlPackages.buildDunePackage rec {
-          pname = "code-mirror";
-          version = "";
-          src = builtins.fetchurl {
-            url = "https://github.com/emilpriver/jsoo-code-mirror/archive/refs/tags/v0.0.1.tar.gz";
-            sha256 = "sha256:0rby6kd9973icp72fj8i07awibamwsi3afy71dhrbq771dgz16cq";
-          };
-          propagatedBuildInputs = with pkgs; [
-	          # Add the packages needed
-            ocamlPackages.brr
-            ocamlPackages.js_of_ocaml
-          ];
-        };
         packages = [
-          ocamlPackages.brr
-          code_mirror
+          ocamlPackages.brr # I inform nix that I need the brr library
+          ocamlPackages.utop
         ];
       in
       {
-       ## Same code
+        formatter = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+        defaultPackage = pkgs.stdenv.mkDerivation {
+          name = "ocamlbyexample";
+          src = ./.;
+        };
+
+        devShell = pkgs.mkShell {
+          nativeBuildInputs = with pkgs.ocamlPackages; [ cppo findlib ];
+          buildInputs = with pkgs; [
+            packages
+            caddy # Local http server
+          ];
+        };
       }
     );
-}
-```
+}```
 
 Since `dune` supports the installation and building of multiple packages, we utilize it here to build the package as seen in `ocamlPackages.buildDunePackage`.
 
