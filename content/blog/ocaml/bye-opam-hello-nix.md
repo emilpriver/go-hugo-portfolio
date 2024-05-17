@@ -109,8 +109,22 @@ However, not all packages exists on nix yet but it’s possible to install the p
         pkgs = nixpkgs.legacyPackages."${system}".extend (self: super: {
           ocamlPackages = super.ocaml-ng.ocamlPackages_5_1;
         });
+        code_mirror = ocamlPackages.buildDunePackage rec {
+          pname = "code-mirror";
+          version = "";
+          src = builtins.fetchurl {
+            url = "https://github.com/emilpriver/jsoo-code-mirror/archive/refs/tags/v0.0.1.tar.gz";
+            sha256 = "sha256:0rby6kd9973icp72fj8i07awibamwsi3afy71dhrbq771dgz16cq";
+          };
+          propagatedBuildInputs = with pkgs; [
+	          # Add the packages needed
+            ocamlPackages.brr
+            ocamlPackages.js_of_ocaml
+          ];
+        };
         ocamlPackages = pkgs.ocamlPackages;
         packages = [
+          code_mirror
           ocamlPackages.brr # I inform nix that I need the brr library
           ocamlPackages.utop
         ];
