@@ -109,6 +109,8 @@ However, not all packages exists on nix yet but it’s possible to install the p
         pkgs = nixpkgs.legacyPackages."${system}".extend (self: super: {
           ocamlPackages = super.ocaml-ng.ocamlPackages_5_1;
         });
+        # Create a new buildDunePackage package and use github as source.
+        # This works both with pkgs.fetchFromGitHub and builtins.fetchurl
         code_mirror = ocamlPackages.buildDunePackage rec {
           pname = "code-mirror";
           version = "";
