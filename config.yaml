@@ -72,6 +72,8 @@ menu:
       url: "https://x.com/emil_priver"
     - name: "Github"
       url: "https://github.com/emilpriver"
+    - name: "Mastodon"
+      url: https://fosstodon.org/@emilpriver
 
 privacy:
   vimeo:
