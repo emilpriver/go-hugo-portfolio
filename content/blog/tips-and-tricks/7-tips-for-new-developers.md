@@ -1,5 +1,5 @@
 ---
-title: "7 Tips for New Developers"
+title: "6 Tips for New Developers"
 date: 2024-06-18T13:40:47+02:00
 draft: false
 toc: true
@@ -71,7 +71,7 @@ For instance, instead of just saying, “It’s simpler to build a queue system 
 
 If we keep everything local to our service, we can enforce different types locally.” This detailed answer provides more insights, based on experience, so next time you need to decide between using a queue system like SQS or using the database with each job being a row in a table, you have a better understanding of what solution might work best.
 
-Ask for feedback if you fail recruitment processes
+## Ask for feedback if you fail recruitment processes
 The last topic I want to discuss is something I haven’t experienced much myself, as I haven’t gone through many recruitment processes, but it’s something I’ve heard is very beneficial if you are looking for a job.
 
 Recruitment processes can be really challenging. You might face questions you don’t have answers to, deal with a lot of nervousness and stress, and experience imposter syndrome. If you fail a process but reach out and ask for feedback, you can gain valuable information about what you need to learn or improve. For instance, if you receive feedback that they are looking for someone who knows Go or Rust, learning these languages might help you if you apply again or for a similar job, as other companies might be looking for the same skills. The best way to understand what companies are looking for in a developer is by asking them directly as they understand their business the best.
