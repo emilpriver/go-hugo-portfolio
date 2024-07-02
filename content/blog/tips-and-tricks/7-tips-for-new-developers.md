@@ -1,7 +1,7 @@
 ---
 title: "6 Tips for New Developers"
 date: 2024-06-18T13:40:47+02:00
-draft: false
+draft: true
 toc: true
 description: "This article gives some of my tricks for new developers" 
 type: "blog"
