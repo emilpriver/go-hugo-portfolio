@@ -24,3 +24,4 @@ In short what this design looks like atm is:
  
 
 
+## link: https://excalidraw.com/#json=ZJhzlLiezRxsjAa1xUW4X,VnT0docPYuUiB9MrsHcUiQ
