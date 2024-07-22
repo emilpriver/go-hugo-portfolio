@@ -12,3 +12,7 @@ toc: true
 description: ""
 ---
 
+- Hindley–Milner type system
+- type inference
+- pattern matching
+
