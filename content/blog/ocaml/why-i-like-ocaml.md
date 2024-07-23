@@ -169,6 +169,21 @@ let () =
 We can now assign a value to the variant and use it in pattern matching to print different values. As you can see, I am not forced to add a value to every variant. For instance, I do not need a type on `HavePets` so I simply don't add it. 
 I often use variants, such as in [DBCaml](https://priver.dev/blog/dbcaml/dbcaml-project/)  where I use variants to retrieve responses from a database. For example, I return `NoRows` if I did not receive any rows back, but no error.
 
+OCaml also comes with Exhaustiveness Checking, meaning that if we don't check each case in a pattern matching, we will get an error. For instance, if we forget to add `HavePets` to the pattern matching, OCaml will throw an error at compile time.
+
+```bash
+File "bin/main.ml", lines 9-12, characters 2-105:
+ 9 | ..match person with
+10 |    | Name name -> Printf.printf "Name: %s\n" name
+11 |    | Age age -> Printf.printf "Age: %d\n" age
+12 |    | FavoriteProgrammingLanguage language -> Printf.printf "Favorite Programming Language: %s\n" language
+Error (warning 8 [partial-match]): this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+HavePets
+```
+
 ## Bindings
+
+The next topic is bindings 
 
 ## It's functional on easy mode
