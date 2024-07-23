@@ -114,8 +114,7 @@ let hello name =
   | value -> Printf.printf "Hello stranger %s" value
 ```
 
-In the code above, I am obligated to include the last match case as we would not have handled every case unless, for instance, what should the compiler do if the `name` is Adam.
-Now the example above is a really simple one, We can also match on a int and do different stuff depending on the number value.
+In the code above, I am required to include the last match case because we have not handled every case. For example, what should the compiler do if the `name` is Adam? The example above is very simple. We can also match on an integer and perform different actions based on the number value. For instance, we can determine if someone is allowed to enter the party using pattern matching. 
 
 ```OCaml
 let allowed_to_join age =
@@ -127,6 +126,47 @@ let allowed_to_join age =
 
 let () = allowed_to_join 2
 ```
+[OCaml playground](https://ocaml.org/play#code=bGV0IGFsbG93ZWRfdG9fam9pbiBhZ2UgPQogIG1hdGNoIGFnZSB3aXRoCiAgfCAwIC0%2BIHByaW50X2VuZGxpbmUgIkNhbiB5b3UgZXZlbiB3YWxrIGxvbCIKICB8IHZhbHVlIHdoZW4gdmFsdWUgPiAxOCAtPgogICAgcHJpbnRfZW5kbGluZSAiV2VsY29tZSBpbiBteSBmcmllbmQsIHRoZSBiZWVyIGlzIG9uIFNhYmluZSIKICB8IF8gLT4gcHJpbnRfZW5kbGluZSAiWW91ciBub3QgYWxsb3dlZCwgZ28gaG9tZSBhbmQgcGxheSBtaW5lY3JhZnQiCgpsZXQgKCkgPSBhbGxvd2VkX3RvX2pvaW4gMg%3D%3D)
+
+But the reason I mention variants in this section is that variants and pattern matching go quite nicely hand in hand. A variant is like an enumeration with more features, and I will show you what I mean. We can use them as a basic enumeration, which could look like this:
+
+```OCaml
+type person =
+ | Name
+ | Age 
+ | FavoriteProgrammingLanguage
+```
+
+This now means that we can do different things depending on this type:
+```OCaml
+match person with
+ | Name -> print_endline "John"
+ | Age -> print_endline "30"
+ | FavoriteProgrammingLanguage -> print_endline "OCaml"
+```
+
+But I did mention that variants are similar to enumeration with additional features, allowing for the assignment of a type to the variant.
+
+```OCaml
+type person =
+ | Name of string
+ | Age of int
+ | FavoriteProgrammingLanguage of string
+ | HavePets
+```
+Now that we have added types to our variants and included `HavePets`, we are able to adjust our pattern matching as follows:
+```OCaml
+let () =
+  let person = Name "Emil" in
+  match person with
+   | Name name -> Printf.printf "Name: %s\n" name
+   | Age age -> Printf.printf "Age: %d\n" age
+   | FavoriteProgrammingLanguage language -> Printf.printf "Favorite Programming Language: %s\n" language
+   | HavePets -> Printf.printf "Has pets\n"
+```
+[OCaml Playground](https://ocaml.org/play#code=CnR5cGUgcGVyc29uID0KIHwgTmFtZSBvZiBzdHJpbmcKIHwgQWdlIG9mIGludAogfCBGYXZvcml0ZVByb2dyYW1taW5nTGFuZ3VhZ2Ugb2Ygc3RyaW5nCiB8IEhhdmVQZXRzCgpsZXQgKCkgPQogIGxldCBwZXJzb24gPSBOYW1lICJFbWlsIiBpbgogIG1hdGNoIHBlcnNvbiB3aXRoCiAgIHwgTmFtZSBuYW1lIC0%2BIFByaW50Zi5wcmludGYgIk5hbWU6ICVzXG4iIG5hbWUKICAgfCBBZ2UgYWdlIC0%2BIFByaW50Zi5wcmludGYgIkFnZTogJWRcbiIgYWdlCiAgIHwgRmF2b3JpdGVQcm9ncmFtbWluZ0xhbmd1YWdlIGxhbmd1YWdlIC0%2BIFByaW50Zi5wcmludGYgIkZhdm9yaXRlIFByb2dyYW1taW5nIExhbmd1YWdlOiAlc1xuIiBsYW5ndWFnZQogICB8IEhhdmVQZXRzIC0%2BIFByaW50Zi5wcmludGYgIkhhcyBwZXRzXG4iCg%3D%3D) 
+
+We can now assign a value to the variant and use it in pattern matching to print different values. As you can see, I am not forced to add a value to every variant. For instance, I do not need a type on `HavePets` so I simply don't add it.
 
 ## Bindings
 
