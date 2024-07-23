@@ -166,7 +166,8 @@ let () =
 ```
 [OCaml Playground](https://ocaml.org/play#code=CnR5cGUgcGVyc29uID0KIHwgTmFtZSBvZiBzdHJpbmcKIHwgQWdlIG9mIGludAogfCBGYXZvcml0ZVByb2dyYW1taW5nTGFuZ3VhZ2Ugb2Ygc3RyaW5nCiB8IEhhdmVQZXRzCgpsZXQgKCkgPQogIGxldCBwZXJzb24gPSBOYW1lICJFbWlsIiBpbgogIG1hdGNoIHBlcnNvbiB3aXRoCiAgIHwgTmFtZSBuYW1lIC0%2BIFByaW50Zi5wcmludGYgIk5hbWU6ICVzXG4iIG5hbWUKICAgfCBBZ2UgYWdlIC0%2BIFByaW50Zi5wcmludGYgIkFnZTogJWRcbiIgYWdlCiAgIHwgRmF2b3JpdGVQcm9ncmFtbWluZ0xhbmd1YWdlIGxhbmd1YWdlIC0%2BIFByaW50Zi5wcmludGYgIkZhdm9yaXRlIFByb2dyYW1taW5nIExhbmd1YWdlOiAlc1xuIiBsYW5ndWFnZQogICB8IEhhdmVQZXRzIC0%2BIFByaW50Zi5wcmludGYgIkhhcyBwZXRzXG4iCg%3D%3D) 
 
-We can now assign a value to the variant and use it in pattern matching to print different values. As you can see, I am not forced to add a value to every variant. For instance, I do not need a type on `HavePets` so I simply don't add it.
+We can now assign a value to the variant and use it in pattern matching to print different values. As you can see, I am not forced to add a value to every variant. For instance, I do not need a type on `HavePets` so I simply don't add it. 
+I often use variants, such as in [DBCaml](https://priver.dev/blog/dbcaml/dbcaml-project/)  where I use variants to retrieve responses from a database. For example, I return `NoRows` if I did not receive any rows back, but no error.
 
 ## Bindings
 
