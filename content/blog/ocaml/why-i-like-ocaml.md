@@ -182,8 +182,32 @@ Here is an example of a case that is not matched:
 HavePets
 ```
 
-## Bindings
+## Binding operators
 
-The next topic is bindings 
+The next topic is operators and specific binding operators. OCaml has more types of operators, but binding operators are something I use in every project.
+A binding could be described as something that extends how `let` works in OCaml by adding extra logic before storing the value in memory with `let`.
+I'll show you:
+
+```ocaml
+let hello = "Emil" in 
+```
+
+This code simply takes the value "Emil" and stores it in memory, then assigns the memory reference to the variable hello. However, we can extend this functionality with a binding operator. For instance, if we don't want to use a lot of match statements on the return value of a function, we can bind `let` so it checks the value and if the value is an error, it bubbles up the error.
+
+```ocaml
+let ( let* ) r f = match r with Ok v -> f v | Error _ as e -> e
+
+let check_result =
+  let* hello = Ok "Emil" in
+  let* second_name = Ok "Priver" in
+  Ok (hello ^ second_name)
+
+let () =
+  match check_result with
+  | Ok name -> print_endline name
+  | Error _ -> print_endline "no name"
+```
+
+This allows me to reduce the amount of code I write while maintaining the same functionality. Operator bindings are not something new; for instance, Rust also has them when you append `?
 
 ## It's functional on easy mode
