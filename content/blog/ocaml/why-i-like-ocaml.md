@@ -208,6 +208,6 @@ let () =
   | Error _ -> print_endline "no name"
 ```
 
-This allows me to reduce the amount of code I write while maintaining the same functionality. Operator bindings are not something new; for instance, Rust also has them when you append `?
+This allows me to reduce the amount of code I write while maintaining the same functionality.
 
 ## It's functional on easy mode
