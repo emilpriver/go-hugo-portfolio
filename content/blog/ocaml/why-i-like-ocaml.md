@@ -1,7 +1,7 @@
 ---
 title: "Why I Like Ocaml"
 date: 2024-07-21T12:10:55+02:00
-draft: true
+draft: false
 type: "blog"
 tags: ["Ocaml"]
 cover:
@@ -9,16 +9,9 @@ cover:
 series:
   - Ocaml
 toc: true
-description: ""
+description: "I like OCaml and this is why"
 ---
-
-- Hindley–Milner type system
-- type inference
-- pattern matching
-
-
------
-According to my Linkedin profile, I have been writing code for a company for almost 6 years. During this time, I have worked on PHP and Wordpress projects, built e-commerce websites using NextJS and JavaScript, written small backends in Python with Django/Flask/Fastapi, and developed fintech systems in GO, among other things. I have come to realize that I value a good type system and prefer writing code in a more functional way rather than using object-oriented programming. For example, in GO, I prefer passing in arguments rather than creating a `struct` method. This is why I will be discussing OCaml in this article.
+According to my [Linkedin](https://www.linkedin.com/in/emilpriver/) profile, I have been writing code for a company for almost 6 years. During this time, I have worked on PHP and Wordpress projects, built e-commerce websites using NextJS and JavaScript, written small backends in Python with Django/Flask/Fastapi, and developed fintech systems in GO, among other things. I have come to realize that I value a good type system and prefer writing code in a more functional way rather than using object-oriented programming. For example, in GO, I prefer passing in arguments rather than creating a `struct` method. This is why I will be discussing OCaml in this article.
 
 If you are not familiar with the language OCaml or need a brief overview of it, I recommend reading my post [OCaml introduction](https://priver.dev/blog/ocaml/ocaml-introduction/) before continuing with this post. It will help you better understand the topic I am discussing.
 
@@ -211,3 +204,35 @@ let () =
 This allows me to reduce the amount of code I write while maintaining the same functionality.
 
 ## It's functional on easy mode
+
+I really like the concept of functional programming, such as immutability and avoiding side-effects as much as possible. However, I believe that a purely functional programming language could force us to write code in a way that becomes too complex. This is where I think OCaml does a good job. OCaml is clearly designed to be a functional language, but it allows for updating existing values rather than always returning new values.
+
+> Immutability means that you cannot change an already existing value and must create a new value instead. I have written about the [Concepts of Functional Programming](https://priver.dev/blog/functional-programming/concepts-of-functional-programming/) and recommend reading it if you want to learn more.
+
+One example where functional programming might make the code more complex is when creating a reader to read some bytes. If we strictly follow the rule of immutability, we would need to return new bytes instead of updating existing ones. This could lead to inefficiencies in terms of memory usage.
+
+Just to give an example of how to mutate an existing value in OCaml, I have created an example. In the code below, I am updating the age by 1 as it is the user's birthday:
+
+```ocaml
+type user = { mutable age : int; name : string }
+
+let make_user name age = { age; name }
+let increase_age user = user.age <- user.age + 1
+
+let () =
+  let user = make_user "Emil" 25 in
+  Printf.printf "It's %s's birthday today! Congratz!!!!" user.name;
+  print_newline ();
+  print_int user.age;
+  print_newline ();
+  increase_age user;
+  print_int user.age;
+  print_newline ()
+```
+
+What I mean by "it's functional on easy mode" is simply that the language is designed to be a functional language, but you are not forced to strictly adhere to functional programming rules. 
+
+## The end
+It is clear to me that a good type system can greatly improve the developer experience. I particularly appreciate OCaml's type system, as well as its `option` and `result` types, which I use frequently. In languages like Haskell, you can extend the type system significantly, to the point where you can write an entire application using only types. However, I believe that this can lead to overly complex code. This is another aspect of OCaml that I appreciate - it has a strong type system, but there are limitations on how far you can extend it.  
+
+I hope you enjoyed this article. If you are interested in joining a community of people who also enjoy functional programming, I recommend joining this [Discord server.](https://discord.gg/M5PBxbnta3)
