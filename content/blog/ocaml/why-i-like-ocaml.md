@@ -204,6 +204,8 @@ let () =
 
 This allows me to reduce the amount of code I write while maintaining the same functionality.
 
+In the code above, one of the variables is an `Error`, which means that the binding will return the error instead of returning the first name and last name.
+
 ## It's functional on easy mode
 
 I really like the concept of functional programming, such as immutability and avoiding side-effects as much as possible. However, I believe that a purely functional programming language could force us to write code in a way that becomes too complex. This is where I think OCaml does a good job. OCaml is clearly designed to be a functional language, but it allows for updating existing values rather than always returning new values.
