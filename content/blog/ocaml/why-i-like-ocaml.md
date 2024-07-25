@@ -24,7 +24,7 @@ Let's look at some code to demonstrate what I mean. In GO, you would be required
 ```go
 package main
 
-func Hello(name string) {
+func FirstName(name string) {
   fmt.Println(name)
 }
 ```
@@ -32,18 +32,18 @@ func Hello(name string) {
 However, in OCaml, you don't need to specify the type:
 
 ```OCaml
-let hello name = 
+let first_name name = 
   print_endline name
 ```
 Since `print_endline` expects to receive a string, the signature for `hello` will be:
 ```OCaml
-val hello : string -> unit
+val first_name : string -> unit
 ```
 
 But it's not just for arguments, it's also used when returning a value.
 
 ```OCaml
-let hello name = 
+let first_name name = 
   match name with 
   | Some value -> "We had a value" 
   | None -> 1
@@ -53,7 +53,7 @@ This function will not compile because we are trying to return a string as the f
 I also want to provide a larger example of the Hindley-Milner type system:
 
 ```OCaml
-module Hello = struct
+module Car = struct
   type car = {
     car: string;
     age: int;
@@ -67,15 +67,15 @@ module Hello = struct
 end
 
 let () =
-  let car = Hello.make "Volvo" 12 in
-  Hello.print_car_name car;
-  Hello.print_car_age car
+  let car = Car.make "Volvo" 12 in
+  Car.print_car_name car;
+  Car.print_car_age car
 ```
 
 The signature for this piece of code will be:
 
 ```OCaml
-module Hello :
+module Car :
   sig
     type car = { car : string; age : int; }
     val make : string -> int -> car
@@ -86,11 +86,11 @@ module Hello :
 
 In this example, we create a new module where we expose 3 functions: make, print_car_age, and print_car_name. We also define a type called `car`. One thing to note in the code is that the type is only defined once, as OCaml infers the type within the functions since `car` is a type within this scope.
 
-[OCaml playground for this code](https://ocaml.org/play#code=bW9kdWxlIEhlbGxvID0gc3RydWN0CiAgdHlwZSBjYXIgPSB7CiAgICBjYXI6IHN0cmluZzsKICAgIGFnZTogaW50OwogIH0KCiAgbGV0IG1ha2UgY2FyX25hbWUgYWdlID0geyBjYXIgPSBjYXJfbmFtZTsgYWdlIH0KCiAgbGV0IHByaW50X2Nhcl9uYW1lIGNhciA9IHByaW50X2VuZGxpbmUgY2FyLmNhcgoKICBsZXQgcHJpbnRfY2FyX2FnZSBjYXIgPSBwcmludF9pbnQgY2FyLmFnZQplbmQKCmxldCAoKSA9CiAgbGV0IGNhciA9IEhlbGxvLm1ha2UgIlZvbHZvIiAxMiBpbgogIEhlbGxvLnByaW50X2Nhcl9uYW1lIGNhcjsKICBIZWxsby5wcmludF9jYXJfYWdlIGNhcg%3D%3D)
+[OCaml playground for this code](https://ocaml.org/play#code=bW9kdWxlIENhciA9IHN0cnVjdAogIHR5cGUgY2FyID0gewogICAgY2FyOiBzdHJpbmc7CiAgICBhZ2U6IGludDsKICB9CgogIGxldCBtYWtlIGNhcl9uYW1lIGFnZSA9IHsgY2FyID0gY2FyX25hbWU7IGFnZSB9CgogIGxldCBwcmludF9jYXJfbmFtZSBjYXIgPSBwcmludF9lbmRsaW5lIGNhci5jYXIKCiAgbGV0IHByaW50X2Nhcl9hZ2UgY2FyID0gcHJpbnRfaW50IGNhci5hZ2UKZW5kCgpsZXQgKCkgPQogIGxldCBjYXIgPSBDYXIubWFrZSAiVm9sdm8iIDEyIGluCiAgQ2FyLnByaW50X2Nhcl9uYW1lIGNhcjsKICBDYXIucHJpbnRfY2FyX2FnZSBjYXI%3D)
 Something important to note before concluding this section is that you can define both the argument types and return types for your function.
 
 ```OCaml
-let hello (name: string) : int = 
+let first_name (name: string) : int = 
   print_endline name;
   1
 ```
@@ -100,7 +100,7 @@ The next topic is pattern matching. I really enjoy pattern matching in programmi
 For example, in the code below:
 
 ```OCaml
-let hello name = 
+let first_name name = 
   match name with 
   | "Emil" -> print_endline "Hello Emil"
   | "Sabine the OCaml queen" -> print_endline "Raise your swords soldiers, the queen has arrived"
@@ -182,7 +182,7 @@ A binding could be described as something that extends how `let` works in OCaml 
 I'll show you:
 
 ```ocaml
-let hello = "Emil" in 
+let first_name = "Emil" in 
 ```
 
 This code simply takes the value "Emil" and stores it in memory, then assigns the memory reference to the variable hello. However, we can extend this functionality with a binding operator. For instance, if we don't want to use a lot of match statements on the return value of a function, we can bind `let` so it checks the value and if the value is an error, it bubbles up the error.
@@ -193,6 +193,7 @@ let ( let* ) r f = match r with Ok v -> f v | Error _ as e -> e
 let check_result =
   let* hello = Ok "Emil" in
   let* second_name = Ok "Priver" in
+  let* non_existing = Error "no name" in
   Ok (hello ^ second_name)
 
 let () =
