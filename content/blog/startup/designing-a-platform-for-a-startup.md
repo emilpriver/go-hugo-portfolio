@@ -1,7 +1,7 @@
 ---
 title: "Designing a Platform for a Startup"
 date: 2024-07-06T01:37:06+02:00
-draft: false
+draft: true
 description: "This post discusses how I designed a system architecture for a startup."
 type: "blog"
 tags: ["startup", "system architecture"]
