@@ -9,10 +9,6 @@ The way we build our applications has also changed significantly. Today's develo
 
 Many developers seem to have forgotten that today's hardware has evolved significantly since 2018. The best way to handle a large number of users is by using horizontally scaled systems, Kubernetes, and serverless technology. In reality, many of these systems could run smoothly on a Google Pixel or a Raspberry PI.
 
-## The covid effect
+## The COVID effect.
 
 mass adoption
-
-## We're to afraid of that our systems will go down
-
-## To complex systems
