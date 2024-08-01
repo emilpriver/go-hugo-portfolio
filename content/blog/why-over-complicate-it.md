@@ -11,4 +11,4 @@ Many developers seem to have forgotten that today's hardware has evolved signifi
 
 ## The COVID effect.
 
-mass adoption
+During COVID, we saw a significant adoption of technology. The world was flooded with new job opportunities, new companies were being created, and many developers were worried that our technology wouldn't be able to handle the expected increase in internet usage as more people were staying at home.
