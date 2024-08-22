@@ -20,4 +20,9 @@ Some of the goals we wanted to achieve are:
 2. Implement a small change with a straightforward solution.
 3. Ensure that it does not become more difficult to work locally on our machines.
 
-And this is where Argo Workflows came in handy. Argo would simple allow us to use the same repository and codebase but change the entrypoint to the Docker container
+And this is where Argo Workflows came in handy. Argo would simply allow us to use the same repository and codebase but change the entrypoint to the Docker container in order to create Functions-as-a-Service-like functionality.
+
+## How we use it
+
+Argo Workflows is great for processing large files which will take a long time to executes. This is for instance what Netflix do.
+
