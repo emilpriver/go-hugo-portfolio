@@ -30,5 +30,27 @@ Our use case for Algo Workflows involves parsing files and categorizing the prod
 
 Before migrating to Algo Workflows, we created a basic job queue using Postgres. In this configuration, a worker would request jobs from Postgres, execute them if any were available, and then report back to the Postgres database on the outcome. To simplify the process, we reused some of the logic from the old job queue, but instead of a worker asking a Postgres database for a job, we now use the job UUID as an argument for the Algo Template.
 
+```go
+var jobProcessingworkflow = wfv1.Workflow{
+  ObjectMeta: metav1.ObjectMeta{
+    GenerateName: "job-processing-",
+  },
+  Spec: wfv1.WorkflowSpec{
+    Entrypoint: "luigi-parallilization-worker",
+    Templates: []wfv1.Template{
+      {
+        Name: "luigi-parallilization-worker",
+        Container: &corev1.Container{
+          Image: fmt.Sprintf("ghcr.io/carboncloud/luigi:%s", config.ContainerImageBuildSHA),
+          Args:  []string{jobID.String()},
+        },
+      },
+    },
+  },
+}
+```
+
+In the code above, we create an Algo Workflow template that includes a name, container to run, and arguments for the container.
+
 ## Local development
 
