@@ -24,5 +24,11 @@ And this is where Argo Workflows came in handy. Argo would simply allow us to us
 
 ## How we use it
 
-Argo Workflows is great for processing large files which will take a long time to executes. This is for instance what Netflix do.
+Argo Workflows is excellent for processing large files that require a significant amount of time to execute, similar to the approach taken by Netflix. Netflix's Metaflow utilizes Argo Workflows for running machine learning jobs, which is also our intended use. Additionally, some utilize Argo Workflows for running continuous integration and continuous deployment jobs.
+
+Our use case for Algo Workflows involves parsing files and categorizing the products we read. Categorizing products is a machine learning task that we perform on every product, and this task can take a few seconds to complete. This means that it can temporarily block other imports from running, which is not ideal. Therefore, we needed to find a more efficient way to run this task in parallel.
+
+Before migrating to Algo Workflows, we created a basic job queue using Postgres. In this configuration, a worker would request jobs from Postgres, execute them if any were available, and then report back to the Postgres database on the outcome. To simplify the process, we reused some of the logic from the old job queue, but instead of a worker asking a Postgres database for a job, we now use the job UUID as an argument for the Algo Template.
+
+## Local development
 
