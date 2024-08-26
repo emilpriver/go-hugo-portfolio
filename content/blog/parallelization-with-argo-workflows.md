@@ -22,8 +22,7 @@ Some of the goals we wanted to achieve are:
 
 And this is where Argo Workflows came in handy. Argo would simply allow us to use the same repository and codebase but change the entrypoint to the Docker container in order to create Functions-as-a-Service-like functionality.
 
-
-//TODO: Skriv också om att vi vill motarbeta att importer dör medans vi pushar ny kod
+.nother issue is that we frequently push updates to this application, which means we also replace the container we are running. The problem with our application is that processing a large file takes a significant amount of time, often longer than the time limit set by Kubernetes before it sends a `SIGKILL` signal to kill our pod. This is something we need to prevent. We must be able to make changes without the job we have running on files being terminated due to an update.
 
 ## How we use it
 
@@ -34,7 +33,7 @@ Our use case for Algo Workflows involves parsing files and categorizing the prod
 Before migrating to Algo Workflows, we created a basic job queue using Postgres. In this configuration, a worker would request jobs from Postgres, execute them if any were available, and then report back to the Postgres database on the outcome. To simplify the process, we reused some of the logic from the old job queue, but instead of a worker asking a Postgres database for a job, we now use the job UUID as an argument for the Algo Template.
 
 ```go
-var jobProcessingworkflow = wfv1.Workflow{
+var jobProcessingWorkflow = wfv1.Workflow{
   ObjectMeta: metav1.ObjectMeta{
     GenerateName: "job-processing-",
   },
@@ -45,15 +44,22 @@ var jobProcessingworkflow = wfv1.Workflow{
         Name: "luigi-parallilization-worker",
         Container: &corev1.Container{
           Image: fmt.Sprintf("ghcr.io/carboncloud/luigi:%s", config.ContainerImageBuildSHA),
-          Args:  []string{jobID.String()},
+          Args:  []string{"workflow", jobID.String()},
         },
       },
     },
   },
 }
+
+// submit the workflow
+createdWf, err := wfClient.Create(ctx, &jobProcessingWorkflow, metav1.CreateOptions{})
+if err != nil {
+  return err
+}
+log.Ctx(ctx).Info().Msgf("Workflow %s submitted\n", createdWf.Name)
 ```
 
-In the code above, we create an Algo Workflow template that includes a name, container to run, and arguments for the container.
+In the code above, we create an Algo Workflow template that includes a name, container to run, and arguments for the container. What Algo later on do is spinning up the container with the argument, let it execute until it's done and then kills the container. 
 
 ## Local development
 
