@@ -22,6 +22,9 @@ Some of the goals we wanted to achieve are:
 
 And this is where Argo Workflows came in handy. Argo would simply allow us to use the same repository and codebase but change the entrypoint to the Docker container in order to create Functions-as-a-Service-like functionality.
 
+
+//TODO: Skriv också om att vi vill motarbeta att importer dör medans vi pushar ny kod
+
 ## How we use it
 
 Argo Workflows is excellent for processing large files that require a significant amount of time to execute, similar to the approach taken by Netflix. Netflix's Metaflow utilizes Argo Workflows for running machine learning jobs, which is also our intended use. Additionally, some utilize Argo Workflows for running continuous integration and continuous deployment jobs.
