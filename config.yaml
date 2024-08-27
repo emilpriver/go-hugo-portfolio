@@ -129,6 +129,7 @@ params:
     twitter: "https://twitter.com/emil_priver"
     github: "https://github.com/emilpriver"
     linkedin: "https://www.linkedin.com/in/emilpriver"
+    threads: "https://www.threads.net/@emil_priver"
 
   editPost:
     URL: "https://github.com/emilpriver/go-hugo-portfolio/tree/main/content"
