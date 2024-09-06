@@ -79,7 +79,7 @@ development=# create table test_v7(id uuid);
 CREATE TABLE
 development=# INSERT INTO test_v4(id) SELECT gen_random_uuid() FROM generate_series(1, 1000000) as g (id);
 INSERT 0 1000000
-development=# INSERT INTO test_v7(id) SELECT uuid_generate_v^C FROM generate_series(1, 1000000) as g (id);
+development=# INSERT INTO test_v7(id) SELECT uuid_generate_v7() FROM generate_series(1, 1000000) as g (id);
 INSERT 0 1000000
 development=# \timing on
 Timing is on.
