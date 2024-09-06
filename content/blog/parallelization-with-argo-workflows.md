@@ -22,7 +22,7 @@ Some of the goals we wanted to achieve are:
 
 And this is where Argo Workflows came in handy. Argo would simply allow us to use the same repository and codebase but change the entrypoint to the Docker container in order to create Functions-as-a-Service-like functionality.
 
-.nother issue is that we frequently push updates to this application, which means we also replace the container we are running. The problem with our application is that processing a large file takes a significant amount of time, often longer than the time limit set by Kubernetes before it sends a `SIGKILL` signal to kill our pod. This is something we need to prevent. We must be able to make changes without the job we have running on files being terminated due to an update.
+Another issue is that we frequently push updates to this application, which means we also replace the container we are running. The problem with our application is that processing a large file takes a significant amount of time, often longer than the time limit set by Kubernetes before it sends a `SIGKILL` signal to kill our pod. This is something we need to prevent. We must be able to make changes without the job we have running on files being terminated due to an update.
 
 ## How we use it
 

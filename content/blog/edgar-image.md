@@ -1,7 +1,7 @@
 ---
 title: "Edgar Image - self-hosted image transformation system"
 date: 2022-08-21T22:12:48+02:00
-draft: false
+draft: true
 description: Edgar image, the self-hosted image transformation services.
 type: "blog"
 tags: ["projects", "Edgar Image"]
