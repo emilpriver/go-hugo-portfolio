@@ -1,6 +1,6 @@
 ---
 title: "Implementing V7 UUID in Postgres"
-date: 2024-09-05T18:17:07+02:00
+date: 2024-09-06T08:00:07+02:00
 draft: false
 description: "How to implement v7 UUID in postgres with using SQL"
 type: "blog"
