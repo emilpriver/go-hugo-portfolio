@@ -129,7 +129,7 @@ params:
     twitter: "https://twitter.com/emil_priver"
     github: "https://github.com/emilpriver"
     linkedin: "https://www.linkedin.com/in/emilpriver"
-    blueskey: "https://bsky.app/profile/priver.dev"
+    bluesky: "https://bsky.app/profile/priver.dev"
     threads: "https://www.threads.net/@emil_priver"
 
   editPost:
