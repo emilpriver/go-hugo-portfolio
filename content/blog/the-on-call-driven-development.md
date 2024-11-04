@@ -1,6 +1,6 @@
 ---
 title: "The On-Call Driven Development"
-date: 2024-11-04T11:38:21+01:00
+date: 2024-11-03T21:38:21+01:00
 draft: true
 ---
 I've been thinking about this topic for a while now. On-call duty is something we rely on, but also dislike. Many businesses believe it's necessary for reliability in case something goes wrong. My issue isn't with having someone available to respond to alerts, which is always beneficial. My concern is with how on-call duty affects us engineers.
@@ -16,9 +16,11 @@ I think this happens for a couple of reasons, but I believe the two biggest fact
 
 Most devs have deadlines, and stuff needs to be done in time, otherwise customers might churn. And no one wants that. It's bad for our businesses. But what I think happens many times is that the dev is put in a position where we need to be on-call because they have a too-short deadline to build a proper solution. For example, not just a solution that does the thing we need it to do, but also a solution with tests to make sure it actually works. Bad managers don't understand how important these tests are, so they are upset when the dev says, "Hey, I need to write some more tests for this," and then no more tests are written because the devs don't get the time to do it.
 
-But the bigger problem here is the stress that is created. We're humans, and when we're put under stress, we miss stuff - details that can be quite important. For instance, what does the container do when it gets a `SIGTERM` or `SIGKILL` notification from Kubernetes? Just aborting and killing the pod could create issues because the message wasn't finished yet, or the pod is killed. Do we handle a `panic` in the code? This is some of the stuff we can miss, which can create a need for an on-call team when the real problem is that the dev was put in a position when they we're unable to test it.
+But the bigger problem here is the stress that is created. We're humans, and when we're put under stress, we miss stuff - details that can be quite important. For instance, what does the container do when it gets a `SIGTERM` or `SIGKILL` notification from Kubernetes? Just aborting and killing the pod could create issues because the message wasn't finished yet, or the pod is killed. Do we handle a `panic` in the code? This is some of the stuff we can miss, which can create a need for an on-call team when the real problem is that the dev was put in a position when they we're unable to test it. 
 
-This is also why I dislike sprints, SAFe and these stuff we normally work with in our day-to-day life mainly as it can put us in a position where we stress-build something.
+When we take all this shortcuts when we develop the app so we can meat the goals of the tasks do we not really create a good solution, I even think it creates a more harmfull situation where the code could have been prevented from creating harm.
+
+This is also why I dislike sprints, SAFe and these stuff we normally work with in our day-to-day life mainly as it can put us in a position where we stress-build something and this never comes out good.
 
 ## The Lazy Dev
 
