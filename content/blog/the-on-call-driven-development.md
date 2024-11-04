@@ -18,7 +18,7 @@ Most devs have deadlines, and stuff needs to be done in time, otherwise customer
 
 But the bigger problem here is the stress that is created. We're humans, and when we're put under stress, we miss stuff - details that can be quite important. For instance, what does the container do when it gets a `SIGTERM` or `SIGKILL` notification from Kubernetes? Just aborting and killing the pod could create issues because the message wasn't finished yet, or the pod is killed. Do we handle a `panic` in the code? This is some of the stuff we can miss, which can create a need for an on-call team when the real problem is that the dev was put in a position when they we're unable to test it.
 
-This is also why I dislike "hard deadlines", sprints, SAFe and all of this stupid things bad managers have created.
+This is also why I dislike sprints, SAFe and these stuff we normally work with in our day-to-day life mainly as it can put us in a position where we stress-build something.
 
 ## The Lazy Dev
 
