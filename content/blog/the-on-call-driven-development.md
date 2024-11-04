@@ -12,13 +12,7 @@ My problem with on-call duty isn't the concept itself, but rather how we enginee
 
 I think this happens for a couple of reasons, but I believe the two biggest factors are bad management and laziness.
 
-## The management
-
-
-## The Lazy Dev
-Developers may sometimes be lazy and take shortcuts that they shouldn't, but in the long run, it can make a project seem too overwhelming. However, developers have a responsibility to ensure that the work they create functions properly. They should be able to complete their work for the day and still feel confident in the code they have written, allowing them to sleep well at night.
-
-When we have on-call support, it can be easy to rely on it too much, leading to the release of software that has not been thoroughly tested. What I am referring to is the possibility that we may not write tests that ensure we can recover from errors effectively or that 1 edge-case we might know about but we don't handle. As we know we have someone covering our backs.
+We developers are known for sometimes taking shortcuts, especially when we are put in that position by management, such as when we work with sprints, SAFe, and all of the evilness that corporates create to manage their engineers. When we have someone on call to support us, it is quite easy to deploy a new release on a Friday afternoon and then call it a day. However, this is not how we should operate. If we removed this safety net, we would probably not release on a Friday and instead wait until the next week to release it properly.
 
 ## The end
 My biggest problem is really not that on-call exists or that we use it, and I totally understand why we use it. My issues is how we use it
