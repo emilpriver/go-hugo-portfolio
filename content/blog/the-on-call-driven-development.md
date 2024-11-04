@@ -12,18 +12,13 @@ My problem with on-call duty isn't the concept itself, but rather how we enginee
 
 I think this happens for a couple of reasons, but I believe the two biggest factors are bad management and laziness.
 
-## Bad management
+## The management
 
-Most devs have deadlines, and stuff needs to be done in time, otherwise customers might churn. And no one wants that. It's bad for our businesses. But what I think happens many times is that the dev is put in a position where we need to be on-call because they have a too-short deadline to build a proper solution. For example, not just a solution that does the thing we need it to do, but also a solution with tests to make sure it actually works. Bad managers don't understand how important these tests are, so they are upset when the dev says, "Hey, I need to write some more tests for this," and then no more tests are written because the devs don't get the time to do it.
-
-But the bigger problem here is the stress that is created. We're humans, and when we're put under stress, we miss stuff - details that can be quite important. For instance, what does the container do when it gets a `SIGTERM` or `SIGKILL` notification from Kubernetes? Just aborting and killing the pod could create issues because the message wasn't finished yet, or the pod is killed. Do we handle a `panic` in the code? This is some of the stuff we can miss, which can create a need for an on-call team when the real problem is that the dev was put in a position when they we're unable to test it. 
-
-When we take all this shortcuts when we develop the app so we can meat the goals of the tasks do we not really create a good solution, I even think it creates a more harmfull situation where the code could have been prevented from creating harm.
-
-This is also why I dislike sprints, SAFe and these stuff we normally work with in our day-to-day life mainly as it can put us in a position where we stress-build something and this never comes out good.
 
 ## The Lazy Dev
+Developers may sometimes be lazy and take shortcuts that they shouldn't, but in the long run, it can make a project seem too overwhelming. However, developers have a responsibility to ensure that the work they create functions properly. They should be able to complete their work for the day and still feel confident in the code they have written, allowing them to sleep well at night.
 
+When we have on-call support, it can be easy to rely on it too much, leading to the release of software that has not been thoroughly tested. What I am referring to is the possibility that we may not write tests that ensure we can recover from errors effectively or that 1 edge-case we might know about but we don't handle. As we know we have someone covering our backs.
 
 ## The end
 My biggest problem is really not that on-call exists or that we use it, and I totally understand why we use it. My issues is how we use it
