@@ -1,7 +1,13 @@
 ---
 title: "The On-Call Driven Development"
-date: 2024-11-03T21:38:21+01:00
-draft: true
+date: 2024-11-05T01:00:21+01:00
+draft: false
+description: "Building reliable systems without relying on on-call duty as a safety net."
+type: "blog"
+tags: ["on-call"]
+toc: false
+cover:
+  image: "images/postgres.jpg"
 ---
 I've been thinking about this topic for a while now. On-call duty is something we rely on, but also dislike. Many businesses believe it's necessary for reliability in case something goes wrong. My issue isn't with having someone available to respond to alerts, which is always beneficial. My concern is with how on-call duty affects us engineers.
 
