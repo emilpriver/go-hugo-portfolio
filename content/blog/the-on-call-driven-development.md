@@ -18,6 +18,8 @@ My problem with on-call duty isn't the concept itself, but rather how we enginee
 
 I think that when we have on-call as a safety net, we might develop worse systems because less is taken care of, possibly because we know that someone has our back. I think that we should write software so that when it's time to go to bed, we can feel confident that it will continue to run. This includes testing solutions in different ways, such as stress tests and integration tests, and questioning the system, rather than just rushing to get it out there.
 
+![This is fine meme](images/this-is-fine.webp)
+
 There are many reasons why rushing out a change happens, such as bad management creating hard deadlines that put developers under stress, or a bad overall structure of the company. Many companies use sprints, SAFe, or other methodologies that can be misused by bad managers to control developers, where the deadlines are short.
 
 At the job I spoke about earlier, we had some really good fundamentals about how to operate and how to think. We had on-call, but on-call wasn't seen as a safety net that we could rely on. Instead, management enforced a culture where it was better to take one more week to work on something rather than shipping it quickly. This allowed us to take the time to think things through thoroughly and test them out before releasing. As a result of this way of working, we had an extremely well-working solution, and new developers to the company were surprised that we never did any fire-fighting.
