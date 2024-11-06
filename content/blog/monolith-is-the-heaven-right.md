@@ -68,8 +68,7 @@ So, the problem we now solved is that two of us (we're four friends developing t
 
 ## The end
 
-All system requirements are different, and all of this was just my thoughts on this subject. I've been working on big monoliths, over-engineered microservices, a mix of both, and running entire services in cloud functions. If I were to write about cloud functions and why they are often misused, I would probably hold the world record for the longest article.
-
+All system requirements are different, and all of this was just my thoughts on this subject. I've been working on big monoliths, over-engineered microservices, a mix of both, and running entire services in cloud functions.
 Anyway, have a good one.
 
 I talk about this type of thing every now and then on X and Bluesky. Follow me! :D
