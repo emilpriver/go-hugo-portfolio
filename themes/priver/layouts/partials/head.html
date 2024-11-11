@@ -168,3 +168,8 @@
 {{- template "partials/templates/twitter_cards.html" . }}
 {{- template "partials/templates/schema_json.html" . }}
 {{- end -}}
+
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+<script defer data-domain="priver.se" src="https://stats.priver.dev/js/script.outbound-links.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+{{- end -}}
