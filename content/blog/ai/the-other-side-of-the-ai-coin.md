@@ -26,4 +26,6 @@ This means that if you're only into programming for the money or don't want to l
 
 But there is another thing which I mentioned before: we developers now also need to learn how to communicate and work in teams. A few years ago, it was totally possible to only write code and not care about anything else, but now we need to learn how to communicate with our team. This is important as the best solutions often come from a team and not a single developer, due to the fact that you get different opinions and ways of looking at the problem and what mostly differs between a good solution and a bad solution is the details.
 
+The last thing which I think is great is that the requirements on the interviews have now increased. Earlier, the requirements were that you should solve the leetcode type of problems; today it's also about reasoning. And it's the reasoning part which developers with a passion often solve better. An LLM can today solve a leetcode problem.
+
 If you're a new developer and want to get into programming and thinking about quitting, don't. To be honest, I now think that software engineering has become way better than before, because you have a bigger advantage if you're a new developer and simply really enjoy programming, even a bigger advantage than some devs who have been on the market for a few years.
