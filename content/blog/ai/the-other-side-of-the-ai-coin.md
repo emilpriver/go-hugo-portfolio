@@ -1,9 +1,9 @@
 ---
 title: "The Other Side of the AI Coin"
 date: 2024-12-31T12:33:06+01:00
-draft: true
+draft: false
 type: "blog"
-tags: ["copilot"]
+tags: ["ai"]
 cover:
   image: "images/this-is-fine.webp"
 toc: true
