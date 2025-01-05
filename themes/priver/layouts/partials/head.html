@@ -172,4 +172,9 @@
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 <script defer data-domain="priver.dev" src="https://lakitu.priver.dev/js/script.outbound-links.tagged-events.js"></script>
 <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<script 
+ defer 
+ data-site-id="priver.dev" 
+ src="https://assets.onedollarstats.com/tracker.js"> 
+</script>
 {{- end -}}
