@@ -89,7 +89,7 @@ development=# SELECT * FROM test_v7 ORDER BY id DESC;
 Time: 270.869 ms
 development=#
 ```
-With this test, we can see that v7 is 13.44 times faster (42.042 ms).
+With this test, we can see that v7 is 13.44% faster (42.042 ms).
 
 I also performed a quick `EXPLAIN ANALYZE` on v7 and obtained the following results:
 ```sql
