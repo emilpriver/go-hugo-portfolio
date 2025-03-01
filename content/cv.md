@@ -23,11 +23,13 @@ I am a self-taught software engineer from Göteborg, Sweden, with a profound int
   - Studied to be a system engineer but found the school's teaching methods not aligned with my learning style. I often took the assignment and built it "my way," meaning I did research and then built the solution.
 
 ## Experience
-- **Software Engineer, March 2024 - Ongoing**
+- **Founding Engineer, March 2025 - *Ongoing*
+  - **TBA**
+- **Software Engineer, March 2024 - March 2025
   - **CarbonCloud, Göteborg**
   - Building a platform to help companies become more climate-neutral. Working with a lot of data and automating calculations from the data team.
   - Providing an API for merchants to send data to.
-  - This is a ongoing employment and I add more during my employment 
+  - Data pipelines
 - **Software Engineer, August 2022 - March 2024**
   - **Zimpler, Göteborg**
   - Built integrations between Zimpler and banks. Helped Zimpler become more data-driven by building a data pipeline that reads data from the entire system and filters out unnecessary data, storing the rest in a data warehouse. Developed a new scalable payout system for Zimpler, capable of handling 4-5000 transactions per second without system slowdowns.
