@@ -23,9 +23,9 @@ I am a self-taught software engineer from Göteborg, Sweden, with a profound int
   - Studied to be a system engineer but found the school's teaching methods not aligned with my learning style. I often took the assignment and built it "my way," meaning I did research and then built the solution.
 
 ## Experience
-- **Founding Engineer, March 2025 - *Ongoing*
+- **Founding Engineer, March 2025** - *Ongoing*
   - **TBA**
-- **Software Engineer, March 2024 - March 2025
+- **Software Engineer, March 2024 - March 2025**
   - **CarbonCloud, Göteborg**
   - Building a platform to help companies become more climate-neutral. Working with a lot of data and automating calculations from the data team.
   - Providing an API for merchants to send data to.
