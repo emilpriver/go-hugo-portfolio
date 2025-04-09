@@ -1,6 +1,6 @@
 ---
 title: "You Have Imposter Syndrome? Good for You!"
-date: 2025-04-08T17:22:20+02:00
+date: 2025-04-09T08:00:20+02:00
 draft: false
 type: "blog"
 tags: ["Imposter Syndrome"]
