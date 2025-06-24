@@ -1,7 +1,7 @@
 ---
 title: "We Should All Code Like Steve Jobs"
 date: 2025-06-23T23:25:15+02:00
-draft: true
+draft: false
 description: "A critique of complex coding methodologies, advocating for Steve Jobs-inspired simplicity in software development to create understandable and maintainable code."
 type: "blog"
 tags: ["Steve Jobs"]
