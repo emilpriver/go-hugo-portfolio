@@ -2,7 +2,7 @@
 title: "We Should All Code Like Steve Jobs"
 date: 2025-06-23T23:25:15+02:00
 draft: true
-description: "Change me...."
+description: "A critique of complex coding methodologies, advocating for Steve Jobs-inspired simplicity in software development to create understandable and maintainable code."
 type: "blog"
 tags: ["Steve Jobs"]
 toc: false
@@ -27,7 +27,7 @@ What I believe is most important about software code, and how we should measure 
 3. We don't slow down as we add new features.
 4. I don't become bald when I jump into the project.
 
-If some of this 4 points is not fullfilled could it mean that you might need to refactor something to make it easier, maybe you need to create a better function or variable name. Maybe it means that you forgot to take a break in the middle of writing the solution to think of something else and then come back to the solution to have a differnet view on it.
+If any of these four points aren't being met, it's a strong indicator that the codebase might be veering away from the simplicity I advocate. It could mean that some refactoring is in order—perhaps to choose clearer function or variable names. Or, it might simply mean it's time to step away, clear your head, and return to the problem with a fresh perspective, ensuring the solution remains straightforward and understandable.
 
 ## Solving the higher problem first
 When I worked at [CarbonCloud](https://carboncloud.com/), I learned a valuable lesson on this exact topic from an old co-worker I asked for feedback. It isn't a difficult concept, but it's one that significantly improves the product: solve the *actual* problem before writing any code. Sometimes this is super obvious, and sometimes you need to talk to your teammates before you write any code.
@@ -44,6 +44,6 @@ However, if speed *were* a critical requirement, then using the existing databas
 
 ## The End
 
-I decided to write this article after i've been working in enough of codebases where developers opinion on what "clean code" has influenced the project to much and with this article you probably and hopefully understand that I really think any of the "clean code" ideas is mostly something we should never had introduced.
+I decided to write this article after I've worked in enough codebases where developers' opinions on what "clean code" truly means have influenced projects far too much. Hopefully, this article helps you understand my firm belief: many so-called "clean code" ideas are concepts we might have been better off without.
 
-I really love simple and easy code and the projects i've maintained which have been in used for the longest time is this type of projects.  The projects who follow some kind of "clean code" philosophy have often been re-written due tho that developers opinions have mattered more to the developers then shipping a solution just because they want to keep the "clean code" which makes it harder because they need to refactor which implements bugs and devilish.
+I genuinely love simple and easy-to-understand code. The projects I've maintained that have remained in use for the longest time are precisely these types of projects. Conversely, projects that rigidly adhere to some "clean code" philosophy have often required complete rewrites. This frequently happens because developers' personal preferences for these abstract principles take precedence over the primary goal of shipping a working solution. Their pursuit of an idealized "clean code" state can complicate development, leading to extensive refactoring that, in turn, introduces bugs and devilish complexity.
