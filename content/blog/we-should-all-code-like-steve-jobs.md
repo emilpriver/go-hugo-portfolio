@@ -30,4 +30,14 @@ What I think is most important about software code, and how we should measure it
 ## Solving the higher problem first
 When I worked at [CarbonCloud](https://carboncloud.com/), I learned this exact topic by asking an old co-worker for feedback. It isn't a hard topic to learn, but it's something that makes the product way better: solving the higher problem before writing any code. Sometimes this is super obvious, and sometimes you need to talk to your teammates before you write any code.
 
-A good example on this topic is: if your goal is to add AI to your product because some shareholder is asking for it, you should define what AI for your product is and how it should be used, instead of jumping into the code to build the "super smart solution."
+Sometimes we jump into the code and ships something we think solves the problem and not something which did solve the problem due to that we don't understand the requirements.
+
+A good example on this topic is when you need to add a new queue because you have some messages you want to handle async, 1 way is to add an a new sysem to the stack, e.g AWS SQS or Kafka while another one is to add a new table to the existing database, create a worker which pulls jobs every second. 1 is more complicated and 1 is simpler. 1 requires could require more people to maintain and the other don't require more people.
+
+Solving the higher problem would you might see that:
+1. The job don't need to be processed the same second, in mather of fact is it ok if it process it 10 seconds later.
+2. It's only 1 service which need the information of the jobs
+
+However, if speed would be a requirement could this mean using the existing database could make us build it in a stupid way because we don't meet the requirements.
+
+## The End
