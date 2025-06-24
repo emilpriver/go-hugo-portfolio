@@ -17,4 +17,17 @@ The code should be simple, not smart.
 
 Of course, this doesn't mean that the code should be written in a way where the trade-offs in rewriting the code from being smart to simple makes the code stupid; that's just stupidity.
 
-When I've worked in big DDD projects where we are adding new features, the amount of work to get new features out in production has increased due to the fact that we have added limits to the code that prevent us from doing stuff in a certain way, which leads to refactoring rather than solving the problem. Most of this is because we want a domain to fit all other domains' needs, but it's hard because the other domains need the domain differently, which, for many teams, leads to complexity and unnecessary usage of the system. And Clean Code, DDD, and so on most of the time create abstraction on top of abstraction calling other abstractions which calls abstraction when we instead could have duplicated the code and called it a day.
+When I've worked in big DDD projects where we are adding new features, the amount of work to get new features out in production has increased due to the fact that we have added limits to the code that prevent us from doing stuff in a certain way, which leads to refactoring rather than solving the problem. Most of this is because we want a domain to fit all other domains' needs, but it's hard because the other domains need the domain differently, which, for many teams, leads to complexity and unnecessary usage of the system. And Clean Code, DDD, and so on most of the time create abstraction on top of abstraction calling other abstractions which calls abstraction when we instead could have duplicated the code and called it a day. 
+
+Now, DDD is only 1 of the philosophies I dislike working with mainly as I could go on for ever about this topic :D
+
+What I think is the most important with software code is when and how we should measure it is:
+1. A new developer can easily ship to prod
+2. As a reviewer in a PR, can you look at piece of code and understand it immediatly
+3. We're not slowing down when we're increasing new features
+4. I don't become bald when I jump into the project
+
+## Solving the higher problem first
+When I worked at [CarbonCloud](https://carboncloud.com/) did I learn this exact topic by asking an old co-worker on feedback, which isn't a hard topic to learn but something which makes the product way better which is to solve the higher problem before we write any code. Sometimes this is super obviouse and sometimes you need to talk to your teammates before you write any code.
+
+An good example on this topic is if your goal is to add AI to your product because some shareholder is asking for it should you define what AI for your product is, how it should be used instead of jumping into the code building the "super smart solution"
