@@ -80,9 +80,9 @@ jobs:
       run: |-
         dbmate --wait -d ./migrations --url "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable" migrate
 
-    - name: Print logs on onfailure
+    - name: Print filtered logs on failure
       if: ${{ failure() }}
-      run: docker logs gce-cloudsql-proxy
+      run: docker logs gce-cloudsql-proxy | grep -v -E '(password|secret|credential|token|auth|key)' | sed -r 's/(mongodb|postgresql|mysql):\/\/[^:]+:[^@]+@/\1:\/\/[REDACTED]:[REDACTED]@/g'
 ```
 
 I am refering to each step by it’s name:
@@ -110,9 +110,17 @@ This step may vary depending on the tool you are using. The important part in th
 If your connection string to the database with a public host is `postgresql://postgres:password@10.0.0.0:5432/postgres?sslmode=disable`,
 then you only need to change `10.0.0.0:5432` to `localhost:5432`.
 
-### Print Logs on OnFailure
+### Print Filtered Logs on Failure
 
-The final test is optional and only used if we need to see logs from the docker container if something fails. `if: ${{ failure() }}` tells GH action to run this step only if it fails. This can also be used for cleanups.
+The final step is optional and is used to see logs from the docker container if something fails, while ensuring sensitive information is not exposed. `if: ${{ failure() }}` tells GitHub Actions to run this step only if previous steps fail. This approach can also be used for cleanups.
+
+The command filters out any log lines containing sensitive keywords (password, secret, credential, token, auth, key) and redacts usernames and passwords from connection strings. This is crucial for security, as unfiltered logs might contain sensitive information that would be visible in the GitHub Actions run history.
+
+For advanced security needs, consider:
+1. Using GitHub's secret masking capabilities
+2. Redirecting logs to a secure location with proper access controls
+3. Using a dedicated log processing service that can automatically redact sensitive information
+
 The reference to status checks can be found here: https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions
 
 ## Improvements
