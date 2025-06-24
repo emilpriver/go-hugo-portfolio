@@ -6,6 +6,8 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
 }
 
 .nav a {
@@ -23,8 +25,9 @@
 }
 
 .logo a {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .logo a img, .logo a svg {
@@ -58,16 +61,22 @@ body:not(.dark) #sun {
 }
 
 #menu li + li {
-    margin-inline-start: var(--gap);
+    margin-inline-start: 20px;
 }
 
 #menu a {
-    font-size: 16px;
+    font-size: 15px;
+    color: var(--secondary);
+    transition: color 0.2s ease;
+}
+
+#menu a:hover {
+    color: var(--primary);
 }
 
 #menu .active {
     font-weight: 500;
-    border-bottom: 2px solid currentColor;
+    color: var(--primary);
 }
 
 .lang-switch li,

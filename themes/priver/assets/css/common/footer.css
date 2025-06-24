@@ -7,27 +7,36 @@
 .footer {
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
-    padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
+    padding: 40px var(--gap) 20px;
     text-align: center;
     line-height: 24px;
+    border-top: 1px solid var(--tertiary);
+    margin-top: 40px;
+    font-size: 14px;
 }
 
-.footer span {
-    margin-inline-start: 1px;
-    margin-inline-end: 1px;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
 }
 
-.footer span:last-child {
-    white-space: nowrap;
+.copyright {
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
 }
 
 .footer a {
-    color: inherit;
-    border-bottom: 1px solid var(--secondary);
+    color: var(--secondary);
 }
 
 .footer a:hover {
-    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
 }
 
 .top-link {

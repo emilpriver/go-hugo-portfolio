@@ -9,6 +9,10 @@ html {
     overflow-y: scroll;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 a,
@@ -24,10 +28,11 @@ h6 {
 }
 
 body {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.7;
     word-break: break-word;
     background: var(--theme);
+    color: var(--primary);
 }
 
 article,
@@ -50,7 +55,8 @@ h3,
 h4,
 h5,
 h6 {
-    line-height: 1.2;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
 }
 
 h1,
@@ -70,6 +76,12 @@ ul {
 
 a {
     text-decoration: none;
+    color: var(--primary);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--secondary);
 }
 
 body,
