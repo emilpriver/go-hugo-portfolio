@@ -19,13 +19,15 @@ Of course, this doesn't mean sacrificing essential functionality or creating nai
 
 In my experience with large DDD projects, adding new features often becomes a struggle. The effort to get them into production increases because the existing structure, with its self-imposed limits, forces extensive refactoring instead of allowing us to directly solve the problem at hand. This complexity often arises from trying to make one domain serve the diverse needs of all other domains. Since each domain has different requirements, this approach frequently leads to convoluted systems and unnecessary overhead for many teams. Methodologies like Clean Code and DDD often result in layers of abstraction calling other abstractions, when sometimes, duplicating a bit of code and moving on would be far more practical.
 
-DDD is just one of the philosophies I find problematic to work with; I could go on about this topic forever :D
+Domain-Driven Development is just one of the philosophies I find problematic to work with; I could go on about this topic forever :D
 
 What I believe is most important about software code, and how we should measure its quality, includes:
 1. A new developer can easily ship to production.
 2. As a reviewer of a Pull Request, you can look at a piece of code and understand it immediately.
 3. We don't slow down as we add new features.
 4. I don't become bald when I jump into the project.
+
+If some of this 4 points is not fullfilled could it mean that you might need to refactor something to make it easier, maybe you need to create a better function or variable name. Maybe it means that you forgot to take a break in the middle of writing the solution to think of something else and then come back to the solution to have a differnet view on it.
 
 ## Solving the higher problem first
 When I worked at [CarbonCloud](https://carboncloud.com/), I learned a valuable lesson on this exact topic from an old co-worker I asked for feedback. It isn't a difficult concept, but it's one that significantly improves the product: solve the *actual* problem before writing any code. Sometimes this is super obvious, and sometimes you need to talk to your teammates before you write any code.
@@ -41,3 +43,7 @@ By focusing on the higher-level problem, you might realize that:
 However, if speed *were* a critical requirement, then using the existing database might indeed lead to a suboptimal or 'stupid' solution because it wouldn't meet those specific needs.
 
 ## The End
+
+I decided to write this article after i've been working in enough of codebases where developers opinion on what "clean code" has influenced the project to much and with this article you probably and hopefully understand that I really think any of the "clean code" ideas is mostly something we should never had introduced.
+
+I really love simple and easy code and the projects i've maintained which have been in used for the longest time is this type of projects.  The projects who follow some kind of "clean code" philosophy have often been re-written due tho that developers opinions have mattered more to the developers then shipping a solution just because they want to keep the "clean code" which makes it harder because they need to refactor which implements bugs and devilish.
