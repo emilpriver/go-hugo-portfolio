@@ -11,18 +11,177 @@ body {
     font-family: Geist;
 }
 
+/* Header layout */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-right {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-right li {
+    margin-left: var(--gap); /* Use existing gap variable */
+}
+
+/* End Header layout */
+
+body {
+    font-family: 'Geist', sans-serif; /* Ensure sans-serif fallback */
+    line-height: 1.7; /* Improved readability */
+    font-size: 17px; /* Slightly larger base font size */
+    color: var(--content); /* Ensure body text color is set */
+}
+
 .main {
     position: relative;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
-    max-width: calc(var(--main-width) + var(--gap) * 2);
+    max-width: var(--main-width); /* Use the variable directly */
     margin: auto;
     padding: var(--gap);
-    font-family: 'Geist';
+    /* font-family is now on body */
 }
 
 .page-header h1 {
-    font-size: 40px;
+    font-size: 2.5rem; /* Relative units for headings */
+    margin-bottom: var(--content-gap);
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary); /* Ensure headings use primary text color */
+    font-weight: 600; /* Slightly bolder headings, Geist has good weights */
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: calc(var(--content-gap) * 2);
+    margin-bottom: var(--content-gap);
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: calc(var(--content-gap) * 1.5);
+    margin-bottom: calc(var(--content-gap) * 0.75);
+}
+
+blockquote {
+    border-left: 3px solid var(--tertiary);
+    padding-left: var(--content-gap);
+    margin-left: 0;
+    font-style: italic;
+    color: var(--secondary);
+}
+
+ul, ol {
+    padding-left: var(--content-gap);
+}
+
+li {
+    margin-bottom: calc(var(--content-gap) / 3);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Post Meta Styling */
+.post-meta, .entry-footer {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.post-single .post-meta { /* More specific for single post page */
+    margin-bottom: var(--content-gap);
+}
+
+.post-tags {
+    list-style: none;
+    padding: 0;
+    margin: var(--content-gap) 0;
+}
+
+.post-tags li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.85rem;
+}
+
+.post-tags li a {
+    color: var(--secondary);
+    border: 1px solid var(--tertiary);
+    border-radius: var(--radius);
+    padding: 3px 8px;
+    text-decoration: none;
+}
+
+.post-tags li a:hover {
+    color: var(--link-color);
+    border-color: var(--link-color);
+}
+
+/* Post List Styling */
+.post-entry {
+    margin-bottom: calc(var(--content-gap) * 2.5);
+    padding-bottom: calc(var(--content-gap) * 1.5);
+    border-bottom: 1px solid var(--border);
+}
+
+.post-entry:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.entry-header h2 {
+    font-size: 1.5rem; /* Was 1.8rem, making it slightly smaller for lists */
+    margin-bottom: calc(var(--content-gap) / 3);
+    font-weight: 600;
+}
+
+.entry-header h2 a {
+    color: var(--primary); /* Titles should be primary text color */
+    text-decoration: none;
+}
+
+.entry-header h2 a:hover {
+    text-decoration: underline;
+    color: var(--link-color);
+}
+
+.entry-content p {
+    margin-top: calc(var(--content-gap) / 2);
+    color: var(--content);
+    font-size: 0.95rem;
+}
+
+.entry-link { /* This is the invisible link overlay PaperMod uses */
+    display: none; /* We don't need this if titles are clear links */
+}
+
+/* Adjustments for header nav links to match body links */
+.nav ul#menu a, .nav ul#menu a span {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.nav ul#menu a:hover, .nav ul#menu a:hover span,
+.nav ul#menu a span.active {
+    text-decoration: underline;
+    color: var(--link-color); /* Ensure active keeps same color or define active color if needed */
+}
+
 
 .pagination {
     display: flex;
@@ -54,7 +213,8 @@ body {
     width: 26px;
 }
 
-code {
+code, pre {
+    font-family: "GeistMono", monospace; /* Ensure GeistMono is used */
     direction: ltr;
 }
 

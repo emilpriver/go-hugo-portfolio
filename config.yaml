@@ -121,6 +121,8 @@ params:
   ShowToc: true
   description: "Hey! My name is Emil Privér, I write about stuffs I learn and build. I am a software developer who likes exploring stuffs and writing articles."
 
+  defaultTheme: "dark" # Set default theme to dark
+
   homeInfoParams:
     Title: "Emil Privér"
     Content: "Hey! My name is Emil Privér, I write about stuffs I learn and build. I am a software developer who likes exploring stuffs and writing articles."
