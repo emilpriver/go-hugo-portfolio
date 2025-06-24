@@ -1,26 +1,26 @@
 :root {
     --gap: 24px;
     --content-gap: 20px;
-    --nav-width: 900px; /* This might need to be wider or 100% for the new header */
-    --main-width: 700px; /* Adjusted for narrower content column */
+    --nav-width: 900px;
+    --main-width: 700px;
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 8px;
 
-    /* Dark theme variables as default */
-    --theme: rgb(29, 30, 32); /* Background of the page */
-    --entry: rgb(46, 46, 51); /* Background of content entries/cards */
-    --primary: rgb(218, 218, 219); /* Primary text color */
-    --secondary: rgb(155, 156, 157); /* Secondary text color (subtitles, meta) */
-    --tertiary: rgb(65, 66, 68); /* Borders, lines, less important elements */
-    --content: rgb(196, 196, 197); /* Main content text color */
-    --hljs-bg: rgb(46, 46, 51); /* Background for highlighted code blocks */
-    --code-bg: rgb(55, 56, 62); /* Background for inline code */
-    --border: rgb(65, 66, 68); /* Using --tertiary for a subtle border, was rgb(51, 51, 51) */
-    --link-color: rgb(230, 230, 230); /* Brighter white for links */
+    /* Light theme variables */
+    --theme: rgb(255, 255, 255);       /* Page background: white */
+    --entry: rgb(255, 255, 255);       /* Entry background: white */
+    --primary: rgb(30, 30, 30);        /* Primary text: near black */
+    --secondary: rgb(108, 108, 108);   /* Secondary text: dark gray */
+    --tertiary: rgb(214, 214, 214);     /* Borders, lines: light gray */
+    --content: rgb(51, 51, 51);        /* Main content text: dark gray */
+    --hljs-bg: rgb(245, 245, 245);     /* Highlighted code background: very light gray */
+    --code-bg: rgb(240, 240, 240);     /* Inline code background: light gray */
+    --border: rgb(230, 230, 230);      /* Border color: very light gray */
+    --link-color: rgb(0, 102, 204);    /* Link color: standard blue */
 }
 
-/* .list was previously themed for light/dark. Now it's just dark. */
+/* .list styling - ensure it uses light theme variables */
 .list {
-    background: var(--theme); /* Or var(--entry) depending on desired look */
+    background: var(--entry); /* Use entry background for lists */
 }
