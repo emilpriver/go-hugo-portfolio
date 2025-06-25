@@ -100,6 +100,14 @@ textarea {
     outline: 0;
 }
 
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
 button,
 input[type=button],
 input[type=submit] {
