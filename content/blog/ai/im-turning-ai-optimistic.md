@@ -14,6 +14,11 @@ For the last year, I have been working on optimizing my setup and the way I writ
 2. Just using web-powered stuff such as Gemini or Claude's website and then copying code.
 3. CLIs that work with an AI such as Aider or Opencode.
 
+The only thing I've realised worked for me is by using CLI and the reason to this is that i've realised that it's really important that I, before I write any code, understand and break down the problem and not let the AI try to break down the problem for me which I realised happend when I tried an IDE with AI because the AI already suggests code before I've even started to think.
+
+Another thing I really like is when you want to build something that you have never built before so you started on the project with 0 experience and don't know how to start, in this scenarios are AI really good because you can get an direction of where to start even if the direction is really bad. However, it's also important to not let the AI do the job for you because you will loose on knowledge.
+
+Even if I mentioned that AI have saved me a day of work from time to time is it also important to mention that AI make me loose a day of work from time to time.
 
 ## My current setup
 
