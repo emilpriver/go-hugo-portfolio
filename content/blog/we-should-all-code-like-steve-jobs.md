@@ -9,7 +9,7 @@ toc: false
 cover:
   image: "images/steve-jobs.jpeg"
 ---
-I really don't like Test-Driven Development (TDD), Domain-Driven Development (DDD), the Clean Code philosophy, or most of the methodologies that tell us how we should write code. This is mostly because they never seem to work in codebases designed to last for years. And, even though the title includes the name of Apple's creator, I'm not really a fan of Apple. As a matter of fact, I'm the only one in my big family who moved away from Apple entirely and now uses Linux and Android. This is mostly because it brings more peace to my everyday work, but also because I genuinely don't understand the appeal of an iPhone when Apple's latest big innovation was adding 0.8 opacity to all UI elements.
+I really don't like Test-Driven Development (TDD), Domain-Driven Design (DDD), the Clean Code philosophy, or most of the methodologies that tell us how we should write code. This is mostly because they never seem to work in codebases designed to last for years. And, even though the title includes the name of Apple's creator, I'm not really a fan of Apple. As a matter of fact, I'm the only one in my big family who moved away from Apple entirely and now uses Linux and Android. This is mostly because it brings more peace to my everyday work, but also because I genuinely don't understand the appeal of an iPhone when Apple's latest big innovation was adding 0.8 opacity to all UI elements.
 
 Anyway, the reason I titled this article "We Should All Code Like Steve Jobs" isn't because of any code he wrote; it's about his preference for simplicity and ease of understanding. When the iPod was released, you could look at it and, with minimal mental effort, figure out how to play a song. For me, it's the same with writing code: you should be able to look at a piece of code and quickly grasp what it's doing.
 
@@ -17,11 +17,11 @@ The code should be simple, not smart.
 
 Of course, this doesn't mean sacrificing essential functionality or creating naive solutions in the name of simplicity. The goal isn't to make code 'stupid' by oversimplifying; that would indeed be counterproductive stupidity.
 
-In my experience with large Domain-Driven Development projects, or any project that rigidly follows a set of "rules," adding new features often becomes a struggle. The effort to get them into production increases because the existing structure, with its self-imposed limits, forces extensive refactoring instead of allowing us to directly solve the problem at hand. This complexity often arises from trying to make one domain serve the diverse needs of all other domains. Since each domain has different requirements, this approach frequently leads to convoluted systems and unnecessary overhead. Methodologies like Clean Code and DDD often result in layers of abstraction calling other abstractions, when sometimes, duplicating a bit of code and moving on would be far more practical.
+In my experience with large Domain-Driven Design projects, or any project that rigidly follows a set of "rules," adding new features often becomes a struggle. The effort to get them into production increases because the existing structure, with its self-imposed limits, forces extensive refactoring instead of allowing us to directly solve the problem at hand. This complexity often arises from trying to make one domain serve the diverse needs of all other domains. Since each domain has different requirements, this approach frequently leads to convoluted systems and unnecessary overhead. Methodologies like Clean Code and DDD often result in layers of abstraction calling other abstractions, when sometimes, duplicating a bit of code and moving on would be far more practical.
 
 A common reason I see for developers wanting to restart a project is that they've locked themselves into so many rules that the project becomes overly complex. Instead of fixing this inherent complexity, they opt for a restart. Ironically, this often leads to a similarly architected project, especially if the same developers are involved—it's often said that the same developer rebuilding a project is likely to make many of the same choices, leading to a similar outcome.
 
-Domain-Driven Development is just one of the philosophies I find problematic to work with; I could go on about this topic forever 😊
+Domain-Driven Design is just one of the philosophies I find problematic to work with; I could go on about this topic forever 😊
 
 What I believe is most important about software code, and how we should measure its quality, includes:
 1. A new developer can easily ship to production.
@@ -59,6 +59,6 @@ I decided to write this article after I've worked in enough codebases where deve
 
 I genuinely love simple, easy-to-understand code that isn't bogged down by a bunch of rules. The projects I've maintained that have remained in use for the longest time are precisely these types of projects. Conversely, projects that rigidly adhere to some "clean code" philosophy have often required complete rewrites. This frequently happens because developers' personal preferences for these abstract principles take precedence over the primary goal of shipping a working solution. Their pursuit of an idealized "clean code" state can complicate development, leading to extensive refactoring that, in turn, introduces bugs and devilish complexity.
 
-To be clear, I don't want to dunk on developers who like Clean Code, Domain-Driven Development, or any similar methodologies. I do appreciate developers who stand by their convictions and keep pushing for them. I just firmly believe these methodologies often work better in theory than in practice.
+To be clear, I don't want to dunk on developers who like Clean Code, Domain-Driven Design, or any similar methodologies. I do appreciate developers who stand by their convictions and keep pushing for them. I just firmly believe these methodologies often work better in theory than in practice.
 
 Anyway, if you liked this article and want to follow me on X, you can find me at https://x.com/emil_priver
