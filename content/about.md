@@ -7,7 +7,7 @@ tac: false
 type: "post"
 ---
 
-Hi, I'm Emil Privér, a software engineer from Göteborg, Sweden. I work at [CarbonCloud](https://carboncloud.com/), where I contribute to building a platform that assists companies in tracking their carbon dioxide emissions.
+Hi, I'm Emil Privér, a software engineer from Göteborg, Sweden. I am currently building TBA
 
 In my free time, I primarily develop services using Rust, Go, and OCaml. I also enjoy writing articles and exploring the realm of programming. I have a strong interest in creating services, publishing them, and conducting experiments. I particularly enjoy exploring innovative approaches to building and testing various systems.
 
