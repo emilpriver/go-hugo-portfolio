@@ -1,13 +1,13 @@
 ---
 title: "About AI"
-date: 2025-08-03T10:15:13+02:00
-draft: true
+date: 2025-08-05T12:00:13+02:00
+draft: false
 type: "blog"
 tags: ["ai"]
 cover:
   image: "images/gradient.png"
 toc: true
-description: "About AI"
+description: "My thoughts about AI and software engineering"
 ---
 
 For the last 1.5 years, I have forced myself to work with and learn AI, mostly because the future of software engineering will inevitably have more AI within it. I've focused on optimizing my workflow to understand when AI is a genuinely useful tool versus when it's a hindrance. Now, 1.5 years later, I feel confident enough to say I've learned enough about AI to have some opinions, which is why I'm writing this post.
@@ -34,6 +34,15 @@ But the thing that AI has provided me the most value in my day-to-day work is th
 
 Another really nice thing is when we have a design and we ask the AI to take a Figma design into some React code—it can generate the boilerplate and some of the design. It doesn't one-shot it, but it brings some kind of start which saves us some time. The reason why AI works well with frontend is that the hard part about frontend is not writing the code from a design; it's optimizing it for 7 billion people with different minds and thoughts, different devices, internet connections, and different disabilities.
 
+I use research mode from time to time when I have some bug that is super hard to find. For instance, I switched from `sql/db` to `pgx` in Go a while ago. When I pushed to production, we got an error where the connection pool manager gave an error because the transaction ID already exists, so I rolled back. I did some quick DuckDuckGoing to find the issue but didn't find it. So I asked Gemini to do research on the error, and a comment in some GitHub issue suggested changing the default query exec mode to cache describe from cache statement:
+
+```diff
+- dbConfig.ConnConfig.DefaultQueryExecMode = pgx.QueryExecModeCacheStatement
++ dbConfig.ConnConfig.DefaultQueryExecMode = pgx.QueryExecModeCacheDescribe
+```
+
+By making this change, I solved the problem. I probably would have spent another 20 minutes debugging or searching for the solution, and research mode could point me in the correct direction, which helped me solve it faster. But it's a gamble—sometimes what the AI suggests is the wrong direction and you lose some time.
+
 ## Vibe Coding
 
 Vibe coding, for those who don't know what it is, is when you prompt your way to write software. You instruct an AI to build something and only look at the result rather than using AI as a pair-programmer to build the software, where you check the code you add. There is a major problem with this, as AI is, for a fact, terrible at writing code and introduces security problems. It also doesn't understand the concept of optimizing code—it just generates a result.
@@ -42,11 +51,11 @@ For instance, I asked Claude in a project to fetch all books and then fetch the 
 
 Vibe coding will pass. I don't think it will stay for much longer, mostly because we require developers to actually understand what we're working with, and vibe coding doesn't teach you—plus vibe coding creates too much slop. Instead, it will be more important to learn how to work with context and instructions to the AI.
 
-But there is one aspect of it which I think is great and dangerous. When you're a new developer, it's really easy to struggle with programming because it takes a lot of time to get feedback on what you're working with. This is why Python or JavaScript are great languages to start with (even if JavaScript is a horrible language) because it's easy to get feedback on what you're building. This is also why it's great to start with frontend when you're new, because the hardest part of building frontends is not the design, and you can get feedback in the UI on all changes you make, which makes you feel more entitled and happy to continue programming. If you don't get the feedback, it's easy to enter a situation where you feel that you're not getting anywhere and you give up.
+But there is one aspect of it which I think is great and dangerous. When you're a new developer, it's really easy to struggle with programming because it sometimes takes time to get feedback on what you're working with. This is why Python or JavaScript are great languages to start with (even if JavaScript is a horrible language) because it's easy to get feedback on what you're building. This is also why it's great to start with frontend when you're new, because the hardest part of building frontends is not the design, and you can get feedback in the UI on all changes you make, which makes you feel more entitled and happy to continue programming. If you don't get the feedback, it's easy to enter a situation where you feel that you're not getting anywhere and you give up.
 
 But with an AI, we can get a lot of help on the way to building a bit more advanced stuff. When you're a new developer, it's not really the most important thing to learn everything—it's to keep going forward and building more stuff as you will learn more after a while. The only problem with vibe coding and learning is that it takes you more time to learn new stuff when you don't do it yourself.
 
-There are some services that claim non-technical people can build SaaS companies using their services, which of course is a lie. For the non-technical people I've talked to regarding this matter, a tool like Replit can be good when what they sell is not a SaaS offering—for example, they are a barber and need a website. When we try to vibe code a SaaS company using a prompt web interface, these "non-technical" founders often throw their money into a lake because what they want to build doesn't work and has tons of bugs and wrongly built solutions.
+There are some services that claim non-technical people can build SaaS companies using their services, which of course is a lie. For the non-technical people I've talked to regarding this matter, a tool like Replit can be good when what they sell is not a SaaS offering—for example, they are a barber and need a website. When we try to vibe code a SaaS company using a prompt web interface, these "non-technical" founders often throw their money into a lake because what they want to build doesn't work and has tons of bugs and wrongly built solutions, because you need to understand software in order to write software.
 
 There is a saying in programming: the last 10% of the solution is 90% of the work. The last 10% is the details, such as how should we handle this amount of messages—should they be an HTTP handler or should we create a message queue? How should my system and the other system communicate? What is a product and what is an ingredient? This is the type of stuff that non-technical people don't understand and what the AI doesn't understand as well—the AI just generates code.
 
@@ -78,8 +87,14 @@ It's also a really weird way of measuring efficiency on how much code we accept,
 
 So with all these tools built for developers, I realized that the people who gain the most from all these tools are not the developers—it's all the people around who don't write code. It's easier for customers to show what they really want, we can enter sales meetings with a PoC which makes the selling part easier, and product owners can generate a PoC to show the developers how they think and get quicker feedback.
 
+Another good thing is when we can summarize text from different sources into one concise piece of text, which could help us prevent the need for reading multiple Slack channels, emails, and calendar entries. This saves us really nice time as well.
+
+As a manager, AI is really nice to get a summary of how everything is going at the company and what tasks everyone is working on and the status of the tasks, instead of having refinement meetings to get status updates on tasks. There are probably multiple things we do on our daily basis that AI can help us do to prevent needless meetings and organizing, removing the need for many managers.
+
 The most gain we get so far is all the easy tasks we repeat on our daily basis.
 
 ## The End
 
 I think we will have a bright future with AI and that AI can help us in so many ways—for example, removing stress from our day-to-day tasks that might not even be related to jobs, such as repetitive tasks we do with our family. If an AI can replace these repeated tasks, I could spend more time with my fiancé, family, friends, and dog, which is awesome, and I am looking forward to that.
+
+It is also sad how companies use AI as an excuse to fire people to "optimize" while the real problem is the company structure, the ways of working, and the type of people working at the company.
