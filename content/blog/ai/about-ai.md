@@ -105,6 +105,8 @@ This fragility extends beyond NVIDIA to the entire AI service ecosystem. Most co
 
 The irony is that the biggest income will come from the infrastructure to run LLMs and AI, not the actual LLMs themselves.
 
+The reason I added this is that the AI market is built on hyperscalers and has created a bubble more dangerous than the dot-com era.
+
 ## The End
 
 I think we will have a bright future with AI and that AI can help us in so many ways—for example, removing stress from our day-to-day tasks that might not even be related to jobs, such as repetitive tasks we do with our family. If an AI can replace these repeated tasks, I could spend more time with my fiancé, family, friends, and dog, which is awesome, and I am looking forward to that.
