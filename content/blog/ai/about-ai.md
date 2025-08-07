@@ -93,6 +93,18 @@ As a manager, AI is really nice to get a summary of how everything is going at t
 
 The most gain we get so far is all the easy tasks we repeat on our daily basis.
 
+## Economy
+
+This is a new part of this article added 7 August 2025.
+
+About 40% of NVIDIA's revenue comes from 5 companies [(Microsoft, Amazon, Meta, Google, and Tesla)](https://finance.yahoo.com/news/big-techs-spending-drove-nvidias-rise-154027146.html?ref=wheresyoured.at), which means that if one of these companies—for example, Amazon—decides to cut its AI spending in half, NVIDIA would lose 50% of its revenue from Amazon. This would adjust the stock price, which would later affect the other big tech companies. Most of these AI companies are not even profitable. NVIDIA is 7.74% of the index value of the S&P 500 according to https://slickcharts.com/sp500. The biggest tech companies represent about 35% of the US stock market, and NVIDIA is 19% of them. The difference between NVIDIA and other companies selling hardware is that other companies have a bigger offering. If one customer of NVIDIA says they are not interested in buying more GPUs, there's a big chance that more companies will do this (like a domino effect), and NVIDIA would have little to fall back on. The chance of this happening is quite high, as most of these big tech companies are not profitable and they are all pressured to show returns on their AI investments. Imagine the cost this would have for the individual investor and our saving accounts.
+
+One problem with NVIDIA is that they need to sell more GPUs every quarter in order to keep up with the revenue.
+
+This fragility extends beyond NVIDIA to the entire AI service ecosystem. Most companies that sell services on top of LLMs price them at costs that aren't sustainable long-term. Cursor is a good example—their rapid growth came from a business plan that didn't generate profit, which means they needed to heavily restrict model usage and add rate limits to avoid losing money on customer usage.
+
+The irony is that the biggest income will come from the infrastructure to run LLMs and AI, not the actual LLMs themselves.
+
 ## The End
 
 I think we will have a bright future with AI and that AI can help us in so many ways—for example, removing stress from our day-to-day tasks that might not even be related to jobs, such as repetitive tasks we do with our family. If an AI can replace these repeated tasks, I could spend more time with my fiancé, family, friends, and dog, which is awesome, and I am looking forward to that.
