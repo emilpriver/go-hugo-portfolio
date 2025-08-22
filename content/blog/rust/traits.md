@@ -218,7 +218,7 @@ pub async fn new(db_url: &str) -> Result<Box<dyn DatabaseDriver>> {
         return Ok(Box::new(client));
     }
 
-    if db_url.starts_with("postgressql") {
+    if db_url.starts_with("postgresql") {
         let client = match postgres::PostgresDriver::new(db_url).await {
             Ok(c) => c,
             Err(err) => bail!("{:?}", err),
