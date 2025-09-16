@@ -8,7 +8,7 @@ toc: false
 cover:
   image: "images/programmer-nature.png"
 ---
-I think something important in life is to find the thing we love to do, and it shouldn't be a person. I'm speaking about that one thing we can't live without - such as reading books, painting, building stuff, cars, whatever. For me, this is software engineering.
+I think something important in life is to find the thing we love to do, a passion. I'm speaking about that one thing we can't live without - such as reading books, painting, building stuff, cars, whatever. For me, this is software engineering.
 
 I love software engineering and I have tremendous passion for it - I literally see myself being a software engineer until I die. I love everything about it: meetups, reading tech articles, debates, having problems that frustrate you until you solve them. I love learning new frameworks, languages, techniques, and ways to build systems. I enjoy going to meetups where you meet individuals who also love programming and debate topics even when I think they're completely crazy and wrong. I love flashing my computer to Ubuntu, then trying Arch, Nix and PopOS, only to go back to Arch again. My fiancée bought me a shirt that says "In data we trust" - one of several tech-themed shirts I own. My Sunday mornings with coffee and my dog on my lap are pure gold. As you can probably tell, system development is my greatest passion, and even though I've been told that my job isn't who I am, I still want to claim there are exceptions.
 
@@ -25,4 +25,4 @@ Already during my transformation, but especially after, I noticed clear differen
 Now, six years later, I still have some fat on my stomach. When I lost 40 kilos, I started going to the gym more and did a dirty bulk where I gained weight with both fat and muscle, which doesn't bother me at all because I've achieved one of my goals - a much healthier life that has given me much more energy for my passion. My favorite food is still sausage stroganoff and hamburgers. I'm more than happy to drink a Stigberget beer on Fridays with some chips. But the biggest difference now compared to then is that today I have much more physical activity - I walk more with my dog, play basketball, and go to the gym. There are days when I'm not so keen on working out or walking, especially when it's raining outside, but the most important thing is to be consistent. Motivation comes and goes, but being consistent doesn't come and go unless we choose to break it.
 Sometimes the best thing we can do to solve a problem is to take a 20-minute walk or go to the gym.
 
-Software engineering and physical activity is closely tied togheter and both super important and it's important that we take care of both parts
+Software engineering and physical activity is closely tied together and both super important and it's important that we take care of both parts
