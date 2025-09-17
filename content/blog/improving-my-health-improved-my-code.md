@@ -8,7 +8,7 @@ toc: false
 cover:
   image: "images/programmer-nature.png"
 ---
-I think something important in life is to find the thing we love to do, a passion. I'm speaking about that one thing we can't live without - such as reading books, painting, building stuff, cars, whatever. For me, this is software engineering.
+I think something important in life is to find the thing we love to do—a passion that doesn't depend on other people. It should be this one thing we can do for ourselves that drives us forward in life. I'm speaking about that one thing we can't live without—such as reading books, painting, building stuff, cars, whatever. For me, this is software engineering.
 
 I love software engineering and I have tremendous passion for it - I literally see myself being a software engineer until I die. I love everything about it: meetups, reading tech articles, debates, having problems that frustrate you until you solve them. I love learning new frameworks, languages, techniques, and ways to build systems. I enjoy going to meetups where you meet individuals who also love programming and debate topics even when I think they're completely crazy and wrong. I love flashing my computer to Ubuntu, then trying Arch, Nix and PopOS, only to go back to Arch again. My fiancée bought me a shirt that says "In data we trust" - one of several tech-themed shirts I own. My Sunday mornings with coffee and my dog on my lap are pure gold. As you can probably tell, system development is my greatest passion, and even though I've been told that my job isn't who I am, I still want to claim there are exceptions.
 
