@@ -22,6 +22,8 @@ Often when I talk about system development with people who don't program themsel
 
 Already during my transformation, but especially after, I noticed clear differences where I had significantly more energy when programming. My solutions became much better, more thoughtful, less stressed, and more elegant. My energy for learning more, exploring, and testing new software has increased tremendously. There's much more love in the solutions that get built.
 
+But I didn't just improve in the code I wrote. I also started to improve at my work—I was more involved in conversations both with clients and within the company. I performed better at the companies I worked for and got rewarded with a higher salary. All because I improved my health.
+
 Now, six years later, I still have some fat on my stomach. When I lost 40 kilos, I started going to the gym more and did a dirty bulk where I gained weight with both fat and muscle, which doesn't bother me at all because I've achieved one of my goals - a much healthier life that has given me much more energy for my passion. My favorite food is still sausage stroganoff and hamburgers. I'm more than happy to drink a Stigberget beer on Fridays with some chips. But the biggest difference now compared to then is that today I have much more physical activity - I walk more with my dog, play basketball, and go to the gym. There are days when I'm not so keen on working out or walking, especially when it's raining outside, but the most important thing is to be consistent. Motivation comes and goes, but being consistent doesn't come and go unless we choose to break it.
 Sometimes the best thing we can do to solve a problem is to take a 20-minute walk or go to the gym.
 
